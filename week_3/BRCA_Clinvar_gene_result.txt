@@ -1,0 +1,2230 @@
+BRCA1 BRCA1, DNA repair associated[Homo sapiens]
+Gene ID: 672, updated on 29-Jun-2016
+
+
+SUMMARY
+-------------------------------------------------------------------------------------------------
+
+Official Symbol: BRCA1 (provided by HGNC)
+Official full name: BRCA1, DNA repair associated (provided by HGNC)
+Primary source: HGNC:HGNC:1100
+See related: Ensembl:ENSG00000012048; HPRD:00218; MIM:113705; Vega:OTTHUMG00000157426
+Gene type: protein coding
+RefSeq status: REVIEWED
+Organism: Homo sapiens
+
+Lineage: Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae; Homo
+
+Also known as: IRIS; PSCP; BRCAI; BRCC1; FANCS; PNCA4; RNF53; BROVCA1; PPP1R53
+
+Summary: This gene encodes a nuclear phosphoprotein that plays a role in maintaining
+genomic stability, and it also acts as a tumor suppressor. The encoded protein
+combines with other tumor suppressors, DNA damage sensors, and signal transducers
+to form a large multi-subunit protein complex known as the BRCA1-associated
+genome surveillance complex (BASC). This gene product associates with RNA
+polymerase II, and through the C-terminal domain, also interacts with histone
+deacetylase complexes. This protein thus plays a role in transcription, DNA
+repair of double-stranded breaks, and recombination. Mutations in this gene are
+responsible for approximately 40% of inherited breast cancers and more than 80%
+of inherited breast and ovarian cancers. Alternative splicing plays a role in
+modulating the subcellular localization and physiological function of this gene. 
+Many alternatively spliced transcript variants, some of which are
+disease-associated mutations, have been described for this gene, but the
+full-length natures of only some of these variants has been described. A related 
+pseudogene, which is also located on chromosome 17, has been identified.
+[provided by RefSeq, May 2009]
+
+Orthologsall (/gene/?Term=ortholog_gene_672[group]), mouse (http://www.ncbi.nlm.nih.gov/gene/12189)
+
+GENOMIC CONTEXT
+-------------------------------------------------------------------------------------------------
+
+See BRCA1 in: 	Epigenomics: http://130.14.18.100/epigenomics/view/genome/672?term=BRCA1
+	MapViewer: /mapview/map_search.cgi?direct=on&amp;idtype=gene&amp;id=672
+
+Location: 17q21
+
+Annotation release	Status	Assembly	Chromosome	Location
+-------------------------------------------------------------------------------------------------
+108	current	GRCh38.p7 (GCF_000001405.33)	17	NC_000017.11 (43044295..43125483, complement) 
+105	previous assembly	GRCh37.p13 (GCF_000001405.25)	17	NC_000017.10 (41196312..41277500, complement) 
+Exont count: 24
+
+
+BIBLIOGRAPHY
+-------------------------------------------------------------------------------------------------
+
+
+Related Articles in PubMed
+
+1. Alzheimer disease. BRCA1 involved in AD-related cognitive deficits. Fyfe I. Nat
+Rev Neurol, 2016 Jan, PMID 26714653.
+2. Brca1 Mutations Enhance Mouse Reproductive Functions by Increasing Responsiveness
+to Male-Derived Scent. Liu Y, . PLoS One, 2015, PMID 26488398., Free PMC Article(s): PMC4619541
+3. Large-scale genomic analyses link reproductive aging to hypothalamic signaling,
+breast cancer susceptibility and BRCA1-mediated DNA repair. Day FR, . Nat Genet, 
+2015 Nov, PMID 26414677., Free PMC Article(s): PMC4661791
+4. Oophorectomy benefits in breast cancer patients with BRCA1 mutation. Brown S.
+Post Reprod Health, 2015 Jun, PMID 26269803.
+5. BRCA1 5382insC founder mutation has not a significative recurrent presence in
+Northeastern Romanian cancer patients. Negură L, . Rom J Morphol Embryol, 2015,
+PMID 26193202.
+6. Occurrence of a non deleterious gene conversion event in the BRCA1 gene.
+Tessereau C, . Genes Chromosomes Cancer, 2015 Oct, PMID 26171949.
+<pre>
+PHENOTYPES
+-------------------------------------------------------------------------------------------------
+
+Review eQTL and phenotype association data in this region using PheGenI
+	http://www.ncbi.nlm.nih.gov/gap/PheGenI?chr=17&amp;from=43125482&amp;fromto=43125482+43044294&amp;tab=0
+
+Professional guidelines
+-------------------------------------------------------------------------------------------------
+Professional guideline
+	ACMG 2013		
+		The ACMG recommends that laboratories performing clinical sequencing seek and report mutations in BRCA1 that are pathogenic or expected to be pathogenic.
+			
+			Guideline(http://www.acmg.net/docs/ACMG_Releases_Highly-Anticipated_Recommendations_on_Incidental_Findings_in_Clinical_Exome_and_Genome_Sequencing.pdf)
+			PubMed(/pubmed/23788249)
+Associated conditions
+-------------------------------------------------------------------------------------------------
+Description	Tests
+-------------------------------------------------------------------------------------------------
+
+Breast-ovarian cancer, familial 1
+	MedGen: C2676676 OMIM:  604370 GeneReviews: BRCA1 and BRCA2 Hereditary Breast/Ovarian Cancer	
+Familial cancer of breast
+	MedGen: C0346153 OMIM:  114480 GeneReviews: BRCA1 and BRCA2 Hereditary Breast/Ovarian Cancer	
+Hereditary breast and ovarian cancer syndrome
+	MedGen: C0677776 GeneReviews: BRCA1 and BRCA2 Hereditary Breast/Ovarian Cancer	
+Pancreatic cancer 4
+	MedGen: C3280442 OMIM:  614320 GeneReviews: <span>Not available</span>	
+
+Copy number response
+-------------------------------------------------------------------------------------------------
+Copy number response
+	Triplosensitivity		
+		No evidence available (Last evaluated (2015-11-16)
+			
+			ClinGen Genome Curation Page(http://www.ncbi.nlm.nih.gov/projects/dbvar/ISCA/isca_gene.cgi?sym=BRCA1)Haploinsufficency		
+		Sufficient evidence for dosage pathogenicity (Last evaluated (2015-11-16)
+			
+			ClinGen Genome Curation Page(http://www.ncbi.nlm.nih.gov/projects/dbvar/ISCA/isca_gene.cgi?sym=BRCA1)</pre>
+
+VARIATION
+-------------------------------------------------------------------------------------------------
+
+See variants in ClinVar, http://130.14.18.100/sites/gene/clinvar/?term=BRCA1[gene]
+See studies and variants in dbVar, http://130.14.18.100/sites/gene
+See Variation Viewer (GRCh37.p13), http://130.14.18.100/sites/gene/variation/view/?q=672[geneid]&amp;assm=GCF_000001405.25
+See Variation Viewer (GRCh38), http://130.14.18.100/sites/gene/variation/view/?q=672[geneid]<pre/><pre>
+Genotypes
+	See  SNP Geneview Report, http%3A%2F%2Fwww.ncbi.nlm.nih.gov%2FSNP%2Fsnp_ref.cgi%3FlocusId%3D672
+	See 1000 Genomes Browser (GCF_000001405.25), http://130.14.18.100/sites/gene/variation/tools/1000genomes/?q=672[geneid]&amp;assm=GCF_000001405.25</pre>
+
+HIV-1 INTERACTIONS
+-------------------------------------------------------------------------------------------------
+Replication interactions
+Interaction		Pubs
+-------------------------------------------------------------------------------------------------
+Knockdown of breast cancer 1, early onset (BRCA1) by siRNA inhibits HIV-1 replication in HeLa P4/R5 cells		18976975Protein interactions
+Protein			Gene						Interaction		Pubs
+-------------------------------------------------------------------------------------------------
+/protein/9629358		/gene/155871		HIV-1 Tat associates with BRCA1 in cells and the amino-acid 504-802 region of BRCA1 physically interacts with HIV-1 Tat		25879655
+/protein/9629358		/gene/155871		BRCA1 enhances HIV-1 Tat-dependent transcription in cells, and BRCA1 phosphorylation at positions S1387, S1423, S1457, and S1524 is important for the enhancement of Tat-dependent transcription		25879655
+/protein/28872817		/gene/155807		HIV-1 Vpr stimulates the focus formation of Rad51 and BRCA1, which are involved in repair of DNA double-strand breaks (DSBs) by homologous recombination (HR)		19275588,19275580,19275579,16983346
+/protein/28872817		/gene/155807		HIV-1 Vpr induces phosphorylation of BRCA1 at serine 1423 in an ATR-dependent manner		19275580,15650754
+/protein/28872817		/gene/155807		HIV-1 Vpr expression in HeLa cells induces formation of nuclear foci containing H2AFX and BRCA1		24158819,19275588,19275579,16983346,15485898
+
+Go to the HIV-1, Human Interaction Database: http://130.14.18.100/genome/viruses/retroviruses/hiv-1/interactions/
+
+INTERACTION
+-------------------------------------------------------------------------------------------------
+
+Description of Gene Interaction table
+
+Product		Interactant	Other Gene    Complex	Source		Pubs
+-------------------------------------------------------------------------------------------------
+
+ETS2 (Ets-2) interacts with BRCA1 promoter. This interaction was modeled on a demonstrated interaction between ETS2 from an unspecified species and BRCA1 promoter from an unspecified species.
+NC_000017.9    	NP_005230.1    	ETS2       		BIND		PMID: 12637547
+TOP2A (Topo II) interacts with BRCA1
+TOP2A          	               	           		BIND		PMID: 15965487
+CBP interacts with BRCA1.  This interaction was modelled on a demonstrated interaction between human BRCA1 and mouse CBP.
+NP_009225.1    	NP_004371.1    	CREBBP     		BIND		PMID: 10655477
+p300 interacts with BRCA1.
+NP_009225.1    	NP_001420.1    	EP300      		BIND		PMID: 10655477
+BRCA1 interacts with MEKK3.
+NP_009225.1    	NP_002392.2    	MAP3K3     		BIND		PMID: 15205325
+BRCA1 possesses E3 ubiquitin ligase activity and auto-ubiquitinates
+NP_009226.1    	NP_009226.1    	BRCA1      		BIND		PMID: 11320250
+BRCA1 interacts with Smad2.  This interaction was modeled on a demonstrated interaction between BRCA1 from human and Smad2 from an unspecified species.
+NP_009226.1    	NP_005892.1    	SMAD2      		BIND		PMID: 15735739
+BRCA1 interacts with Smad3.
+NP_009226.1    	NP_005893.1    	SMAD3      		BIND		PMID: 15735739
+BRCA1 interacts with Smad4.  This interaction was modeled on a demonstrated interaction between BRCA1 from human and Smad4 from an unspecified species.
+NP_009226.1    	NP_005350.1    	SMAD4      		BIND		PMID: 15735739
+BRCA1 interacts with Ub. This interaction was modelled on a demonstrated interaction between human BRCA1 and Ub from an unspecified source.
+NP_009226.1    	NP_061828.1    	UBB        		BIND		PMID: 11320250
+BRCA1 interacts with acetyl-CoA carboxylase.
+NP_009227.1    	NP_000655.1    	ACACA      		BIND		PMID: 12360400
+BRCA1 physically and functionally interacts with ATR during genotoxic stress
+NP_009227.1    	NP_001175.1    	ATR        		BIND		PMID: 11278964,11016625
+BRCA1 interacts with BRCA2.
+NP_009227.1    	NP_000050.1    	BRCA2      		BIND		PMID: 9774970
+BRCA1 associates with Cyclin A
+NP_009227.1    	NP_003905.1    	CCNA1      		BIND		PMID: 10373534,9244350
+BRCA1 is a tyrosine phosphoprotein that associates with Cyclin B1
+NP_009227.1    	NP_114172.1    	CCNB1      		BIND		PMID: 9244350
+BRCA1 associates with Cyclin D1
+NP_009227.1    	NP_444284.1    	CCND1      		BIND		PMID: 9244350
+BRCA1 associates with CDK2
+NP_009227.1    	NP_001789.2    	CDK2       		BIND		PMID: 10373534,9244350
+BRCA1 associates with CDK4
+NP_009227.1    	NP_000066.1    	CDK4       		BIND		PMID: 9244350
+BRCA1 is phosphorylated by Casein kinase 2 through a physical interaction with CSNK2B
+NP_009227.1    	NP_001311.3    	CSNK2B     		BIND		PMID: 10403822
+BRCA1 associates with E2F-1
+NP_009227.1    	NP_005216.1    	E2F1       		BIND		PMID: 9244350
+BRCA1 associates with E2F-4
+NP_009227.1    	NP_001941.2    	E2F4       		BIND		PMID: 9244350
+BRCA1 interacts with FANCA.
+NP_009227.1    	NP_000126.1    	FANCA      		BIND		PMID: 12354784
+BRCA1 interacts with HDAC1
+NP_009227.1    	NP_004955.2    	HDAC1      		BIND		PMID: 10220405
+BRCA1 interacts with HDAC2
+NP_009227.1    	NP_001518.1    	HDAC2      		BIND		PMID: 10220405
+BRCA1 interacts with c-Jun.
+NP_009227.1    	NP_002219.1    	JUN        		BIND		PMID: 12080089
+BRCA1 interacts with JunB.
+NP_009227.1    	NP_002220.1    	JUNB       		BIND		PMID: 12080089
+BRCA1 interacts with JunD.
+NP_009227.1    	NP_005345.2    	JUND       		BIND		PMID: 12080089
+The LIM domain protein LMO4 interacts with BRCA1
+NP_009227.1    	NP_006760.1    	LMO4       		BIND		PMID: 11751867
+BRCA1 interacts with MSH2 in the absence of ADP-MSH2 interaction.
+NP_009227.1    	NP_000242.1    	MSH2       		BIND		PMID: 10783165
+BRCA1 associates with MSH6.
+NP_009227.1    	NP_000170.1    	MSH6       		BIND		PMID: 11498787,10783165
+BRCA1 association with c-Myc, a proto-oncogene that is implicated in tumorigenesis, embryonic development and apoptosis, inhibits its transcriptional and transforming activity in cells.
+NP_009227.1    	NP_002458.1    	MYC        		BIND		PMID: 9788437
+BRCA1 interacts with NF-YA
+NP_009227.1    	NP_002496.1    	NFYA       		BIND		PMID: 11777930
+BRCA1 interacts with Nmi.
+NP_009227.1    	NP_004679.1    	NMI        		BIND		PMID: 11916966
+BRCA1 interacts with NUFIP.
+NP_009227.1    	NP_036477.1    	NUFIP1     		BIND		PMID: 15107825
+BRCA1 interacts with Oct-1.
+NP_009227.1    	NP_002688.2    	POU2F1     		BIND		PMID: 11777930
+BRCA1 and Rad51 associate in mitotic and meiotic cells
+NP_009227.1    	NP_002866.2    	RAD51      		BIND		PMID: 9008167
+BRCA1 and Rad51 associate in mitotic and meiotic cells
+NP_009227.1    	NP_597994.1    	RAD51      		BIND		PMID: 9008167
+BRCA1 interacts with Rb.
+NP_009227.1    	NP_000312.1    	RB1        		BIND		PMID: 10518542
+BRCA1 interacts with RbAp48.
+NP_009227.1    	NP_005601.1    	RBBP4      		BIND		PMID: 10220405
+BRCA1 interacts with RbAp46.
+NP_009227.1    	NP_002884.1    	RBBP7      		BIND		PMID: 10220405
+BRCA1 interacts with CtIP.
+NP_009227.1    	NP_002885.1    	RBBP8      		BIND		PMID: 9811458
+BRCA1 interacts with Sp1.
+NP_009227.1    	AAF67726.1     	SP1        		BIND		PMID: 12706836
+BRCA1 physically associates with p53 and stimulates its transcriptional activity
+NP_009227.1    	NP_000537.2    	TP53       		BIND		PMID: 9582019
+BRCA1 interacts with Nmi homodimer
+NP_009227.1    	               	           		BIND		PMID: 11916966
+BRCA1a interacts with p53.
+NP_009235.1    	NP_000537.2    	TP53       		BIND		PMID: 9926942
+P38398         	P00519         	ABL1       		HPRD		PMID: 12024016
+P38398         	Q13085         	ACACA      		HPRD		PMID: 19061860,16326698,12360400
+P38398         	P31749         	AKT1       		HPRD		PMID: 10542266
+P38398         	P10275         	AR         		HPRD		PMID: 11085509,11016951
+P38398         	P18846         	ATF1       		HPRD		PMID: 10945975
+P38398         	Q13535         	ATR        		HPRD		PMID: 11278964,11114888
+P38398         	Q92560         	BAP1       		HPRD		PMID: 9528852
+P38398         	Q99728         	BARD1      		HPRD		PMID: 15265711,15184379,12438698,12431996,11773071,11573085,11278247,10026184,9342365,8944023
+P38398         	BRAP2          	BRAP       		HPRD		PMID: 9497340
+P38398         	P38398         	BRCA1      		HPRD		PMID: 12611903,11751867,9159119
+P38398         	P51587         	BRCA2      		HPRD		PMID: 11477095,9774970
+P38398         	P46736         	BRCC3      		HPRD		PMID: 14636569
+P38398         	Q9BX63         	BRIP1      		HPRD		PMID: 15242590,11877378,11301010
+P38398         	P42574         	CASP3      		HPRD		PMID: 12149654
+P38398         	P78396         	CCNA1      		HPRD		PMID: 10373534,9244350
+P38398         	P20248         	CCNA2      		HPRD		PMID: 10373534,9244350
+P38398         	P14635         	CCNB1      		HPRD		PMID: 11278247,9244350
+P38398         	P24385         	CCND1      		HPRD		PMID: 9244350
+P38398         	P06493         	CDK1       		HPRD		PMID: 9244350
+P38398         	P24941         	CDK2       		HPRD		PMID: 10373534
+P38398         	P11802         	CDK4       		HPRD		PMID: 9244350
+P38398         	P50613         	CDK7       		HPRD		PMID: 15282296
+P38398         	O96017         	CHEK2      		HPRD		PMID: 12111733,10724175
+P38398         	Q9HAW4         	CLSPN      		HPRD		PMID: 15096610
+P38398         	Q92793         	CREBBP     		HPRD		PMID: 10655477
+P38398         	P68400         	CSNK2A1    		HPRD		PMID: 10403822
+P38398         	P67870         	CSNK2B     		HPRD		PMID: 10403822
+P38398         	Q05048         	CSTF1      		HPRD		PMID: 11278247
+P38398         	Q13363         	CTBP1      		HPRD		PMID: 10196224
+P38398         	Q96SD1         	DCLRE1C    		HPRD		PMID: 15456891
+P38398         	Q08211         	DHX9       		HPRD		PMID: 12592385,9662397
+P38398         	Q01094         	E2F1       		HPRD		PMID: 11278247,9244350
+P38398         	Q16254         	E2F4       		HPRD		PMID: 9244350
+P38398         	P19419         	ELK1       		HPRD		PMID: 11313879
+P38398         	Q09472         	EP300      		HPRD		PMID: 10655477
+P38398         	P03372         	ESR1       		HPRD		PMID: 12400015,11244506,10334989
+P38398         	Q6UWZ7         	FAM175A    		HPRD		PMID: 17525340
+P38398         	O15360         	FANCA      		HPRD		PMID: 12354784
+P38398         	Q9BXW9         	FANCD2     		HPRD		PMID: 11239454
+P38398         	Q14192         	FHL2       		HPRD		PMID: 14550570
+P38398         	Growth factor independent 1B	GFI1B      		HPRD		PMID: 16713569
+P38398         	P16104         	H2AFX      		HPRD		PMID: 12419185
+P38398         	Q13547         	HDAC1      		HPRD		PMID: 10220405
+P38398         	Q92769         	HDAC2      		HPRD		PMID: 10220405
+P38398         	Q16666         	IFI16      		HPRD		PMID: 14654789
+P38398         	P23458         	JAK1       		HPRD		PMID: 11163768
+P38398         	O60674         	JAK2       		HPRD		PMID: 11163768
+P38398         	P05412         	JUN        		HPRD		PMID: 12080089
+P38398         	P17275         	JUNB       		HPRD		PMID: 12080089
+P38398         	P17535         	JUND       		HPRD		PMID: 12080089
+P38398         	P52292         	KPNA2      		HPRD		PMID: 9497340
+P38398         	O60684         	KPNA6      		HPRD		PMID: 8955125
+P38398         	P61968         	LMO4       		HPRD		PMID: 12925972,11751867
+P38398         	Q99759         	MAP3K3     		HPRD		PMID: 15205325
+P38398         	Q14676         	MDC1       		HPRD		PMID: 12607005
+P38398         	Q13503         	MED21      		HPRD		PMID: 9159119
+P38398         	P40692         	MLH1       		HPRD		PMID: 10783165
+P38398         	P51948         	MNAT1      		HPRD		PMID: 15282296
+P38398         	P01106         	MYC        		HPRD		PMID: 12646176,9788437
+P38398         	O60934         	NBN        		HPRD		PMID: 10783165,10426999
+P38398         	Q8WX92         	NELFB      		HPRD		PMID: 12612062,11739404
+P38398         	P19838         	NFKB1      		HPRD		PMID: 12700228
+P38398         	P23511         	NFYA       		HPRD		PMID: 11777930
+P38398         	Q13287         	NMI        		HPRD		PMID: 11916966
+P38398         	Q9UHK0         	NUFIP1     		HPRD		PMID: 15107825
+P38398         	P24928         	POLR2A     		HPRD		PMID: 14506230,12955082,10725406
+P38398         	P53803         	POLR2K     		HPRD		PMID: 10725406
+P38398         	P14859         	POU2F1     		HPRD		PMID: 11777930
+P38398         	P62136         	PPP1CA     		HPRD		PMID: 12438214
+P38398         	P07602         	PSAP       		HPRD		PMID: 11313879
+P38398         	Q06609         	RAD51      		HPRD		PMID: 9774970,9008167
+P38398         	P06400         	RB1        		HPRD		PMID: 10220405
+P38398         	Q09028         	RBBP4      		HPRD		PMID: 10220405
+P38398         	Q16576         	RBBP7      		HPRD		PMID: 11394910,10220405
+P38398         	Q99708         	RBBP8      		HPRD		PMID: 10196224,9811458,9738006
+P38398         	Q04206         	RELA       		HPRD		PMID: 12700228
+P38398         	P35251         	RFC1       		HPRD		PMID: 10783165
+P38398         	Q15796         	SMAD2      		HPRD		PMID: 15735739
+P38398         	P84022         	SMAD3      		HPRD		PMID: 15735739
+P38398         	Q13485         	SMAD4      		HPRD		PMID: 15735739
+P38398         	P51531         	SMARCA2    		HPRD		PMID: 15034933
+P38398         	P51532         	SMARCA4    		HPRD		PMID: 15034933,10943845
+P38398         	Q14683         	SMC1A      		HPRD		PMID: 11877377
+P38398         	P08047         	SP1        		HPRD		PMID: 14710355,10720440
+P38398         	P42224         	STAT1      		HPRD		PMID: 10792030
+P38398         	P40763         	STAT3      		HPRD		PMID: 11163768
+P38398         	P42229         	STAT5A     		HPRD		PMID: 12459499
+P38398         	P11388         	TOP2A      		HPRD		PMID: 15965487
+P38398         	P04637         	TP53       		HPRD		PMID: 14978302,14710355,9926942,9582019,9482880
+P38398         	Q12888         	TP53BP1    		HPRD		PMID: 12364621
+P38398         	P68366         	TUBA4A     		HPRD		PMID: 12353262
+P38398         	P07437         	TUBB       		HPRD		PMID: 12353262
+P38398         	P23258         	TUBG1      		HPRD		PMID: 11691781,9789027
+P38398         	Ubiquitin B    	UBB        		HPRD		PMID: 11320250
+P38398         	P61077         	UBE2D3     		HPRD		PMID: 16628214,12732733
+P38398         	P68036         	UBE2L3     		HPRD		PMID: 12732733
+P38398         	Q15853         	USF2       		HPRD		PMID: 14502648
+P38398         	P55072         	VCP        		HPRD		PMID: 10855792
+P38398         	P18887         	XRCC1      		HPRD		PMID: 11352725
+P38398         	P25490         	YY1        		HPRD		PMID: 11777930
+P38398         	Q9GZX5         	ZNF350     		HPRD		PMID: 11090615
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:115372 	ABCF2      		BioGRID		PMID: 25184681
+Affinity Capture-Western; Biochemical Activity; FRET; Reconstituted Complex
+BioGRID:107140 	BioGRID:106543 	ABL1       		BioGRID		PMID: 17352427,12024016
+Two-hybrid
+BioGRID:107140 	BioGRID:116552 	ABLIM3     		BioGRID		PMID: 25184681
+Affinity Capture-MS; Affinity Capture-Western; Co-crystal Structure; Protein-peptide; Reconstituted Complex
+BioGRID:107140 	BioGRID:106549 	ACACA      		BioGRID		PMID: 24565757,19061860,18452305,16698035,16326698,12360400
+Two-hybrid
+BioGRID:107140 	BioGRID:106586 	ACTG1      		BioGRID		PMID: 22990118
+Two-hybrid
+BioGRID:107140 	BioGRID:106604 	ACTN3      		BioGRID		PMID: 25184681
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:121895 	AFAP1      		BioGRID		PMID: 25184681
+Affinity Capture-Western; Reconstituted Complex
+BioGRID:107140 	BioGRID:106699 	AHR        		BioGRID		PMID: 18259752
+Affinity Capture-Western; Biochemical Activity; Reconstituted Complex
+BioGRID:107140 	BioGRID:106710 	AKT1       		BioGRID		PMID: 21242970,19074868,10542266
+Affinity Capture-Western; Two-hybrid
+BioGRID:107140 	BioGRID:106725 	ALDH9A1    		BioGRID		PMID: 22990118
+Two-hybrid
+BioGRID:107140 	BioGRID:127358 	ALS2CR11   		BioGRID		PMID: 25184681
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:116523 	ANKRD26    		BioGRID		PMID: 22990118
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:116847 	ANKRD28    		BioGRID		PMID: 22990118
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:124841 	ANKRD44    		BioGRID		PMID: 22990118
+Two-hybrid
+BioGRID:107140 	BioGRID:114421 	AP1M1      		BioGRID		PMID: 25184681
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:106669 	AP2A1      		BioGRID		PMID: 21880590
+Far Western
+BioGRID:107140 	BioGRID:106831 	APLP2      		BioGRID		PMID: 11746496
+Reconstituted Complex; Two-hybrid
+BioGRID:107140 	BioGRID:106862 	AR         		BioGRID		PMID: 11085509,11016951
+Affinity Capture-Western; Reconstituted Complex
+BioGRID:107140 	BioGRID:106898 	ARNT       		BioGRID		PMID: 16567799
+Two-hybrid
+BioGRID:107140 	BioGRID:114528 	ASH2L      		BioGRID		PMID: 22990118
+Synthetic Rescue
+BioGRID:107140 	BioGRID:31972  	ASM4       		BioGRID		PMID: 18197258
+Synthetic Rescue
+BioGRID:107140 	BioGRID:33229  	ATE1       		BioGRID		PMID: 18197258
+Affinity Capture-Western; Reconstituted Complex; Two-hybrid
+BioGRID:107140 	BioGRID:106956 	ATF1       		BioGRID		PMID: 10945975
+Affinity Capture-Western; Biochemical Activity; Co-purification; Protein-peptide; Reconstituted Complex
+BioGRID:107140 	BioGRID:106962 	ATM        		BioGRID		PMID: 18344987,17478428,11114888,10866324,10783165,10608806,10550055
+Two-hybrid
+BioGRID:107140 	BioGRID:106971 	ATP1B1     		BioGRID		PMID: 22990118
+Two-hybrid
+BioGRID:107140 	BioGRID:106973 	ATP1B3     		BioGRID		PMID: 22990118
+Affinity Capture-Western; Biochemical Activity; Protein-peptide; Reconstituted Complex
+BioGRID:107140 	BioGRID:107027 	ATR        		BioGRID		PMID: 23901102,17478428,11278964,11114888,11016625,10608806
+Affinity Capture-Western; Co-crystal Structure; Reconstituted Complex
+BioGRID:107140 	BioGRID:313463 	ATRIP      		BioGRID		PMID: 24073851,17616665
+Affinity Capture-Western; Biochemical Activity; Reconstituted Complex
+BioGRID:107140 	BioGRID:112666 	AURKA      		BioGRID		PMID: 22110403
+Two-hybrid
+BioGRID:107140 	BioGRID:112671 	AURKC      		BioGRID		PMID: 22990118
+Affinity Capture-MS; Affinity Capture-Western; Reconstituted Complex
+BioGRID:107140 	BioGRID:118855 	BABAM1     		BioGRID		PMID: 25184681,22792303,19261749,19261746
+Affinity Capture-MS; Affinity Capture-Western; Co-crystal Structure; Protein-peptide; Reconstituted Complex
+BioGRID:107140 	BioGRID:107047 	BACH1      		BioGRID		PMID: 25252691,19369211,17664283,17525340,16391231,15242590,15125843,11301010
+Affinity Capture-Western; Reconstituted Complex; Two-hybrid
+BioGRID:107140 	BioGRID:113911 	BAP1       		BioGRID		PMID: 9528852
+Affinity Capture-MS; Affinity Capture-Western; Biochemical Activity; Co-crystal Structure; Co-localization; Co-purification; FRET; PCA; Reconstituted Complex; Two-hybrid
+BioGRID:107140 	BioGRID:107056 	BARD1      		BioGRID		PMID: 25823446,25634209,25252691,25184681,24695549,24289923,24085845,23416467,23086937,21901007,20681793,20215511,20060929,19916563,19766185,19369211,19176389,19117993,18936166,18493658,17664283,17525341,16489000,16403807,16391231,15855157,15569676,15159397,14647430,14638690,14636569,12951069,12890688,12732733,12700228,12485996,12438698,12431996,11927591,11925436,11773071,11573085,11526114,11504724,11498787,11301010,11278247,11257228,10635334,10477523,10026184,9798686,9788437,9738006,9342365,8944023
+Synthetic Rescue
+BioGRID:107140 	BioGRID:33738  	BBC1       		BioGRID		PMID: 18197258
+Affinity Capture-Western; FRET
+BioGRID:107140 	BioGRID:107068 	BCL2       		BioGRID		PMID: 21444675
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:114226 	BECN1      		BioGRID		PMID: 24378767
+Synthetic Rescue
+BioGRID:107140 	BioGRID:36022  	BEM4       		BioGRID		PMID: 18197258
+Affinity Capture-Western; Co-purification
+BioGRID:107140 	BioGRID:107110 	BLM        		BioGRID		PMID: 25084169,10783165
+Affinity Capture-MS; Affinity Capture-Western
+BioGRID:107140 	BioGRID:122954 	BORA       		BioGRID		PMID: 24067368,22990118
+Reconstituted Complex; Two-hybrid
+BioGRID:107140 	BioGRID:113912 	BRAP       		BioGRID		PMID: 9497340,8955125
+Affinity Capture-Western; Co-crystal Structure; Reconstituted Complex
+BioGRID:107140 	BioGRID:128767 	BRAT1      		BioGRID		PMID: 24073851,16452482
+Affinity Capture-MS; Affinity Capture-Western; Biochemical Activity; Co-crystal Structure; Protein-peptide; Reconstituted Complex
+BioGRID:107140 	BioGRID:107140 	BRCA1      		BioGRID		PMID: 25184681,21965653,21880590,21532592,20351172,16818604,16403807,15448696,14578343,12438698,11927591,11573086,9525870
+Affinity Capture-MS; Affinity Capture-Western; Co-purification; Reconstituted Complex; Two-hybrid
+BioGRID:107140 	BioGRID:107142 	BRCA2      		BioGRID		PMID: 25184681,24085845,21135251,19369211,17664283,14636569,14499622,11477095,9774970
+Affinity Capture-MS; Affinity Capture-Western; Co-purification
+BioGRID:107140 	BioGRID:122599 	BRCC3      		BioGRID		PMID: 25252691,25184681,22990118,19305427,17664283,14636569
+Affinity Capture-Western; Co-localization; Two-hybrid
+BioGRID:107140 	BioGRID:118883 	BRD7       		BioGRID		PMID: 20215511
+Affinity Capture-MS; Affinity Capture-Western; Co-purification
+BioGRID:107140 	BioGRID:114946 	BRE        		BioGRID		PMID: 25184681,22990118,14636569
+Affinity Capture-MS; Affinity Capture-Western; Co-crystal Structure; Co-localization; Protein-peptide; Reconstituted Complex
+BioGRID:107140 	BioGRID:123841 	BRIP1      		BioGRID		PMID: 25184681,22032289,21240188,20681793,20173781,20159462,19452558,18717574,18285836,17596542,17581638,17525342,17525341,15242590,15133502,14578343,14576433,11877378
+Two-hybrid
+BioGRID:107140 	BioGRID:124084 	BRSK1      		BioGRID		PMID: 25184681
+Synthetic Rescue
+BioGRID:107140 	BioGRID:31493  	BUR2       		BioGRID		PMID: 18197258
+Two-hybrid
+BioGRID:107140 	BioGRID:222625 	Bap1       		BioGRID		PMID: 9528852
+Two-hybrid
+BioGRID:107140 	BioGRID:198301 	Bard1      		BioGRID		PMID: 9798686
+Two-hybrid
+BioGRID:107140 	BioGRID:122804 	C22orf29   		BioGRID		PMID: 25184681
+Two-hybrid
+BioGRID:107140 	BioGRID:117642 	CABYR      		BioGRID		PMID: 22990118
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:107282 	CAPZB      		BioGRID		PMID: 22990118
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:107292 	CASP9      		BioGRID		PMID: 16322207
+Reconstituted Complex
+BioGRID:107140 	BioGRID:116151 	CBX1       		BioGRID		PMID: 25634209
+Affinity Capture-MS; Reconstituted Complex
+BioGRID:107140 	BioGRID:116463 	CBX3       		BioGRID		PMID: 25634209,25184681
+Reconstituted Complex
+BioGRID:107140 	BioGRID:117030 	CBX5       		BioGRID		PMID: 25634209
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:121775 	CCAR2      		BioGRID		PMID: 20160719
+Two-hybrid
+BioGRID:107140 	BioGRID:124658 	CCDC120    		BioGRID		PMID: 25184681
+Affinity Capture-Western; Reconstituted Complex
+BioGRID:107140 	BioGRID:107331 	CCNA2      		BioGRID		PMID: 10373534,9244350
+Reconstituted Complex
+BioGRID:107140 	BioGRID:107332 	CCNB1      		BioGRID		PMID: 9244350
+Biochemical Activity; Reconstituted Complex
+BioGRID:107140 	BioGRID:107067 	CCND1      		BioGRID		PMID: 17334399,9244350
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:107338 	CCNE1      		BioGRID		PMID: 17525332
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:107342 	CCNH       		BioGRID		PMID: 15282296
+Synthetic Rescue
+BioGRID:107140 	BioGRID:31745  	CCR4       		BioGRID		PMID: 18197258
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:114400 	CDC16      		BioGRID		PMID: 25184681
+Synthetic Rescue
+BioGRID:107140 	BioGRID:34473  	CDC21      		BioGRID		PMID: 18197258
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:127593 	CDCA2      		BioGRID		PMID: 25184681
+Reconstituted Complex
+BioGRID:107140 	BioGRID:107420 	CDK1       		BioGRID		PMID: 9244350
+Affinity Capture-MS; Two-hybrid
+BioGRID:107140 	BioGRID:111154 	CDK16      		BioGRID		PMID: 26186194,25184681,22990118,9738006
+Affinity Capture-Western; Biochemical Activity; Reconstituted Complex
+BioGRID:107140 	BioGRID:107452 	CDK2       		BioGRID		PMID: 10373534,9244350,8764100
+Biochemical Activity; Reconstituted Complex
+BioGRID:107140 	BioGRID:107454 	CDK4       		BioGRID		PMID: 17334399,12509456,9244350
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:107457 	CDK7       		BioGRID		PMID: 15282296
+Co-purification
+BioGRID:107140 	BioGRID:107458 	CDK8       		BioGRID		PMID: 9159119
+Two-hybrid
+BioGRID:107140 	BioGRID:107459 	CDK9       		BioGRID		PMID: 22990118
+Affinity Capture-Western; Co-localization
+BioGRID:107140 	BioGRID:107463 	CDKN2A     		BioGRID		PMID: 18703154
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:120743 	CDKN2AIP   		BioGRID		PMID: 22990118
+Affinity Capture-Western; Biochemical Activity; Reconstituted Complex
+BioGRID:107140 	BioGRID:107466 	CDKN2D     		BioGRID		PMID: 17334399
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:107480 	CEBPB      		BioGRID		PMID: 25184681
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:107488 	CENPB      		BioGRID		PMID: 25184681
+Affinity Capture-MS; Affinity Capture-Western
+BioGRID:107140 	BioGRID:115191 	CEP350     		BioGRID		PMID: 22990118
+Two-hybrid
+BioGRID:107140 	BioGRID:130198 	CEP57L1    		BioGRID		PMID: 25184681
+Co-localization
+BioGRID:107140 	BioGRID:107495 	CETN1      		BioGRID		PMID: 22833046
+Affinity Capture-Western; Biochemical Activity
+BioGRID:107140 	BioGRID:107536 	CHEK1      		BioGRID		PMID: 17380128,11836499
+Affinity Capture-Western; Biochemical Activity; Reconstituted Complex
+BioGRID:107140 	BioGRID:116369 	CHEK2      		BioGRID		PMID: 18804494,17380128,12438214,10724175
+Affinity Capture-Western; Two-hybrid
+BioGRID:107140 	BioGRID:107607 	CLK2       		BioGRID		PMID: 25184681
+Affinity Capture-Western; Biochemical Activity
+BioGRID:107140 	BioGRID:122015 	CLSPN      		BioGRID		PMID: 22863316,15096610
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:120993 	CMAS       		BioGRID		PMID: 25184681
+Affinity Capture-Western; Two-hybrid
+BioGRID:107140 	BioGRID:117427 	CNRIP1     		BioGRID		PMID: 22990118
+Two-hybrid
+BioGRID:107140 	BioGRID:120223 	CNTLN      		BioGRID		PMID: 22990118
+Two-hybrid
+BioGRID:107140 	BioGRID:127444 	CNTN4      		BioGRID		PMID: 22990118
+Two-hybrid
+BioGRID:107140 	BioGRID:107674 	COL1A1     		BioGRID		PMID: 22990118
+Affinity Capture-Western; Two-hybrid
+BioGRID:107140 	BioGRID:127317 	COMMD1     		BioGRID		PMID: 22990118
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:116447 	COPE       		BioGRID		PMID: 22990118
+Phenotypic Enhancement
+BioGRID:107140 	BioGRID:107775 	CREB1      		BioGRID		PMID: 10945975
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:114954 	CREB5      		BioGRID		PMID: 25184681
+Affinity Capture-Western; Phenotypic Suppression; Reconstituted Complex
+BioGRID:107140 	BioGRID:107777 	CREBBP     		BioGRID		PMID: 16860316,16417649,12700228,11782371,10655477,9926942,9443979
+Two-hybrid
+BioGRID:107140 	BioGRID:130121 	CRIPAK     		BioGRID		PMID: 22990118
+Two-hybrid
+BioGRID:107140 	BioGRID:107798 	CRY2       		BioGRID		PMID: 25184681
+Affinity Capture-Western; Two-hybrid
+BioGRID:107140 	BioGRID:115271 	CRYZL1     		BioGRID		PMID: 22990118
+Affinity Capture-MS; Two-hybrid
+BioGRID:107140 	BioGRID:107837 	CSNK1D     		BioGRID		PMID: 25184681
+Reconstituted Complex
+BioGRID:107140 	BioGRID:107841 	CSNK2A1    		BioGRID		PMID: 10403822
+Reconstituted Complex; Two-hybrid
+BioGRID:107140 	BioGRID:107843 	CSNK2B     		BioGRID		PMID: 10403822
+Reconstituted Complex
+BioGRID:107140 	BioGRID:107859 	CSTF1      		BioGRID		PMID: 11257228
+Affinity Capture-Western; Co-purification
+BioGRID:107140 	BioGRID:107860 	CSTF2      		BioGRID		PMID: 11257228,10477523
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:107869 	CTBP1      		BioGRID		PMID: 10196224
+Protein-peptide
+BioGRID:107140 	BioGRID:126653 	CTCFL      		BioGRID		PMID: 14578343
+Synthetic Rescue
+BioGRID:107140 	BioGRID:33997  	CTK1       		BioGRID		PMID: 18197258
+Affinity Capture-Western; Reconstituted Complex
+BioGRID:107140 	BioGRID:107880 	CTNNB1     		BioGRID		PMID: 20215423
+Two-hybrid
+BioGRID:107140 	BioGRID:113724 	CUBN       		BioGRID		PMID: 22990118
+Two-hybrid
+BioGRID:107140 	BioGRID:126821 	CWF19L2    		BioGRID		PMID: 25184681
+Two-hybrid
+BioGRID:107140 	BioGRID:120455 	DALRD3     		BioGRID		PMID: 22990118
+Synthetic Rescue
+BioGRID:107140 	BioGRID:33905  	DAN1       		BioGRID		PMID: 18197258
+Affinity Capture-RNA
+BioGRID:107140 	BioGRID:117730 	DAZAP1     		BioGRID		PMID: 18391021
+Two-hybrid
+BioGRID:107140 	BioGRID:116129 	DBF4       		BioGRID		PMID: 22990118
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:122170 	DCLRE1C    		BioGRID		PMID: 15456891
+Two-hybrid
+BioGRID:107140 	BioGRID:108002 	DCN        		BioGRID		PMID: 22990118
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:108009 	DDB1       		BioGRID		PMID: 25184681
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:114811 	DDX23      		BioGRID		PMID: 25184681
+Two-hybrid
+BioGRID:107140 	BioGRID:121353 	DDX24      		BioGRID		PMID: 22990118
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:115507 	DDX39A     		BioGRID		PMID: 25184681
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:122503 	DDX54      		BioGRID		PMID: 25184681
+Synthetic Rescue
+BioGRID:107140 	BioGRID:34079  	DEF1       		BioGRID		PMID: 18197258
+Two-hybrid
+BioGRID:107140 	BioGRID:108038 	DES        		BioGRID		PMID: 25184681
+Synthetic Rescue
+BioGRID:107140 	BioGRID:31903  	DHH1       		BioGRID		PMID: 18197258
+Two-hybrid
+BioGRID:107140 	BioGRID:108070 	DHPS       		BioGRID		PMID: 25184681
+Affinity Capture-Western; Reconstituted Complex; Two-hybrid
+BioGRID:107140 	BioGRID:108025 	DHX9       		BioGRID		PMID: 12592385,9662397
+Affinity Capture-MS; Two-hybrid
+BioGRID:107140 	BioGRID:109534 	DNAJA1     		BioGRID		PMID: 25184681,22990118
+Protein-peptide
+BioGRID:107140 	BioGRID:114547 	DNAJA3     		BioGRID		PMID: 14578343
+Two-hybrid
+BioGRID:107140 	BioGRID:109569 	DNAJB1     		BioGRID		PMID: 22990118
+Two-hybrid
+BioGRID:107140 	BioGRID:126834 	DNHD1      		BioGRID		PMID: 22990118
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:108123 	DNMT1      		BioGRID		PMID: 25184681
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:110810 	DRG1       		BioGRID		PMID: 22990118
+Two-hybrid
+BioGRID:107140 	BioGRID:108117 	DYNC1H1    		BioGRID		PMID: 22990118
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:108201 	E2F1       		BioGRID		PMID: 21880590
+Reconstituted Complex
+BioGRID:107140 	BioGRID:108206 	E2F4       		BioGRID		PMID: 9244350
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:116166 	EBNA1BP2   		BioGRID		PMID: 25184681
+Reconstituted Complex
+BioGRID:107140 	BioGRID:114265 	EED        		BioGRID		PMID: 23624935
+Two-hybrid
+BioGRID:107140 	BioGRID:114211 	EIF3B      		BioGRID		PMID: 22990118
+Two-hybrid
+BioGRID:107140 	BioGRID:108290 	EIF4A2     		BioGRID		PMID: 22990118
+Co-fractionation
+BioGRID:107140 	BioGRID:108296 	EIF4G1     		BioGRID		PMID: 23805307
+Two-hybrid
+BioGRID:107140 	BioGRID:115024 	EIF5B      		BioGRID		PMID: 22990118
+Affinity Capture-Western; Reconstituted Complex
+BioGRID:107140 	BioGRID:108320 	ELK4       		BioGRID		PMID: 11313879
+Two-hybrid
+BioGRID:107140 	BioGRID:108338 	ENO1       		BioGRID		PMID: 22990118
+Affinity Capture-Western; Phenotypic Suppression; Reconstituted Complex
+BioGRID:107140 	BioGRID:108347 	EP300      		BioGRID		PMID: 22787115,21212407,19887647,11782371,10655477
+Affinity Capture-Western; Biochemical Activity
+BioGRID:107140 	BioGRID:108386 	ERCC6      		BioGRID		PMID: 21756275
+Two-hybrid
+BioGRID:107140 	BioGRID:121155 	ERO1B      		BioGRID		PMID: 22990118
+Affinity Capture-Western; Co-localization; Reconstituted Complex
+BioGRID:107140 	BioGRID:108403 	ESR1       		BioGRID		PMID: 25499220,20060929,19887647,17505062,16860316,16061635,15674350,12400015,11782371,11493692,11244506
+Reconstituted Complex
+BioGRID:107140 	BioGRID:108414 	ETS1       		BioGRID		PMID: 11313879
+FRET
+BioGRID:107140 	BioGRID:108420 	ETV5       		BioGRID		PMID: 21282464
+Affinity Capture-Western; Reconstituted Complex
+BioGRID:107140 	BioGRID:108446 	EZH2       		BioGRID		PMID: 25531315,23624935
+Affinity Capture-MS; Affinity Capture-Western
+BioGRID:107140 	BioGRID:113271 	EZR        		BioGRID		PMID: 21282464
+Two-hybrid
+BioGRID:107140 	BioGRID:123909 	FAM161A    		BioGRID		PMID: 25184681
+Affinity Capture-MS; Affinity Capture-Western; Co-localization; Reconstituted Complex
+BioGRID:107140 	BioGRID:123911 	FAM175A    		BioGRID		PMID: 25184681,23416467,22357538,21282113,19766185,19305427,19261749,19261748,19261746,17643122,17643121,17525340
+Two-hybrid
+BioGRID:107140 	BioGRID:122762 	FAM184A    		BioGRID		PMID: 25184681
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:124411 	FAM83A     		BioGRID		PMID: 25184681
+Affinity Capture-Western; Reconstituted Complex; Two-hybrid
+BioGRID:107140 	BioGRID:108472 	FANCA      		BioGRID		PMID: 21240188,12354784
+Affinity Capture-Western; Biochemical Activity; Two-hybrid
+BioGRID:107140 	BioGRID:108474 	FANCD2     		BioGRID		PMID: 14499622,12887909,11239454
+Affinity Capture-Western; Biochemical Activity
+BioGRID:107140 	BioGRID:125038 	FBXO44     		BioGRID		PMID: 23086937
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:117655 	FBXO5      		BioGRID		PMID: 23086937
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:116291 	FGFR1OP    		BioGRID		PMID: 22990118
+Affinity Capture-MS; Affinity Capture-Western; Reconstituted Complex; Two-hybrid
+BioGRID:107140 	BioGRID:108565 	FHL2       		BioGRID		PMID: 25184681,21988832,14986435,14550570
+Reconstituted Complex
+BioGRID:107140 	BioGRID:108602 	FLI1       		BioGRID		PMID: 11313879
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:108603 	FLII       		BioGRID		PMID: 22990118
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:108605 	FLNA       		BioGRID		PMID: 22990118
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:123983 	FLYWCH1    		BioGRID		PMID: 25184681
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:108638 	FOSL2      		BioGRID		PMID: 25184681
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:108598 	FOXO3      		BioGRID		PMID: 18344987
+Two-hybrid
+BioGRID:107140 	BioGRID:114890 	FXR2       		BioGRID		PMID: 25184681
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:119949 	GAR1       		BioGRID		PMID: 25184681
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:108895 	GATA3      		BioGRID		PMID: 22120723
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:121529 	GATAD2B    		BioGRID		PMID: 25184681
+Two-hybrid
+BioGRID:107140 	BioGRID:122718 	GCC1       		BioGRID		PMID: 25184681
+Two-hybrid
+BioGRID:107140 	BioGRID:113924 	GFI1B      		BioGRID		PMID: 16713569
+Two-hybrid
+BioGRID:107140 	BioGRID:128266 	GGN        		BioGRID		PMID: 22990118
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:120037 	GNL3L      		BioGRID		PMID: 25184681
+Two-hybrid
+BioGRID:107140 	BioGRID:132550 	GOLGA8DP   		BioGRID		PMID: 25184681
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:116452 	GPN1       		BioGRID		PMID: 22990118
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:119359 	GPN3       		BioGRID		PMID: 22990118
+Co-purification
+BioGRID:107140 	BioGRID:109215 	GTF2E1     		BioGRID		PMID: 9159119
+Co-purification
+BioGRID:107140 	BioGRID:109217 	GTF2F1     		BioGRID		PMID: 9159119
+Co-purification
+BioGRID:107140 	BioGRID:109223 	GTF2H4     		BioGRID		PMID: 9159119
+Affinity Capture-Western; Co-localization; Reconstituted Complex
+BioGRID:107140 	BioGRID:109224 	GTF2I      		BioGRID		PMID: 21407215
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:114939 	GTF2IRD1   		BioGRID		PMID: 25184681
+Two-hybrid
+BioGRID:107140 	BioGRID:114738 	GTF3C4     		BioGRID		PMID: 22990118
+Two-hybrid
+BioGRID:107140 	BioGRID:608838 	GUSBP1     		BioGRID		PMID: 22990118
+Synthetic Rescue
+BioGRID:107140 	BioGRID:35914  	GYP5       		BioGRID		PMID: 18197258
+Affinity Capture-Western; Biochemical Activity; Co-localization; Reconstituted Complex
+BioGRID:107140 	BioGRID:109268 	H2AFX      		BioGRID		PMID: 20681793,19805520,19766185,18344987,12485996,11927591,10959836
+Co-localization
+BioGRID:107140 	BioGRID:114927 	H2AFY      		BioGRID		PMID: 12419249
+Synthetic Rescue
+BioGRID:107140 	BioGRID:36351  	HDA3       		BioGRID		PMID: 18197258
+Reconstituted Complex
+BioGRID:107140 	BioGRID:109315 	HDAC1      		BioGRID		PMID: 10220405
+Affinity Capture-Western; Negative Genetic; Reconstituted Complex
+BioGRID:107140 	BioGRID:109316 	HDAC2      		BioGRID		PMID: 21946536,10220405
+Two-hybrid
+BioGRID:107140 	BioGRID:122781 	HECTD3     		BioGRID		PMID: 22990118
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:114439 	HERC1      		BioGRID		PMID: 25184681
+Affinity Capture-Western; Biochemical Activity
+BioGRID:107140 	BioGRID:114438 	HERC2      		BioGRID		PMID: 25480944,20631078
+Two-hybrid
+BioGRID:107140 	BioGRID:109330 	HGF        		BioGRID		PMID: 25184681
+Affinity Capture-Western; Two-hybrid
+BioGRID:107140 	BioGRID:116289 	HIBADH     		BioGRID		PMID: 22990118
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:109338 	HIF1A      		BioGRID		PMID: 16543242
+Biochemical Activity
+BioGRID:107140 	BioGRID:113931 	HIST1H2AB  		BioGRID		PMID: 25355358,25131202
+Biochemical Activity
+BioGRID:107140 	BioGRID:163543 	HIST1H2AC  		BioGRID		PMID: 11320250
+Proximity Label-MS
+BioGRID:107140 	BioGRID:113935 	HIST1H2BG  		BioGRID		PMID: 25281560
+Biochemical Activity
+BioGRID:107140 	BioGRID:113934 	HIST2H2AC  		BioGRID		PMID: 19916563,11927591
+Co-localization
+BioGRID:107140 	BioGRID:126025 	HIST2H3C   		BioGRID		PMID: 12419249
+Two-hybrid
+BioGRID:107140 	BioGRID:109343 	HIVEP1     		BioGRID		PMID: 21988832
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:112480 	HLTF       		BioGRID		PMID: 23901102
+Affinity Capture-MS; Affinity Capture-Western
+BioGRID:107140 	BioGRID:109404 	HMMR       		BioGRID		PMID: 25184681,22110403
+Affinity Capture-RNA
+BioGRID:107140 	BioGRID:109420 	HNRNPA1    		BioGRID		PMID: 18391021
+Affinity Capture-RNA
+BioGRID:107140 	BioGRID:109422 	HNRNPA2B1  		BioGRID		PMID: 18391021
+Protein-RNA
+BioGRID:107140 	BioGRID:109424 	HNRNPC     		BioGRID		PMID: 23585894
+Affinity Capture-RNA; Two-hybrid
+BioGRID:107140 	BioGRID:109425 	HNRNPD     		BioGRID		PMID: 22431556,15231747
+Two-hybrid
+BioGRID:107140 	BioGRID:123867 	HORMAD1    		BioGRID		PMID: 25184681
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:109552 	HSP90AA1   		BioGRID		PMID: 24085845
+Two-hybrid
+BioGRID:107140 	BioGRID:119358 	HSPA14     		BioGRID		PMID: 22990118
+Two-hybrid
+BioGRID:107140 	BioGRID:109544 	HSPA8      		BioGRID		PMID: 9738006
+Affinity Capture-Western; Two-hybrid
+BioGRID:107140 	BioGRID:109561 	HSPD1      		BioGRID		PMID: 21988832
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:115385 	HUWE1      		BioGRID		PMID: 24342616
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:109654 	IFI16      		BioGRID		PMID: 14654789
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:115704 	IFI30      		BioGRID		PMID: 26186194
+Affinity Capture-Western; Two-hybrid
+BioGRID:107140 	BioGRID:109840 	INPP1      		BioGRID		PMID: 22990118
+Two-hybrid
+BioGRID:107140 	BioGRID:123294 	ITIH5      		BioGRID		PMID: 22990118
+Affinity Capture-Western; Co-fractionation; FRET; Reconstituted Complex
+BioGRID:107140 	BioGRID:109913 	ITPR1      		BioGRID		PMID: 25645916
+Affinity Capture-Western; Co-localization
+BioGRID:107140 	BioGRID:200523 	Ifi204     		BioGRID		PMID: 14654789
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:109919 	JAK1       		BioGRID		PMID: 11163768
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:109920 	JAK2       		BioGRID		PMID: 11163768
+Affinity Capture-Western; Reconstituted Complex
+BioGRID:107140 	BioGRID:109928 	JUN        		BioGRID		PMID: 12080089
+Affinity Capture-MS; Affinity Capture-Western; Reconstituted Complex; Two-hybrid
+BioGRID:107140 	BioGRID:109929 	JUNB       		BioGRID		PMID: 25184681,18259752,12080089
+Affinity Capture-Western; Reconstituted Complex; Two-hybrid
+BioGRID:107140 	BioGRID:109930 	JUND       		BioGRID		PMID: 12080089
+Two-hybrid
+BioGRID:107140 	BioGRID:109931 	JUP        		BioGRID		PMID: 21988832
+Two-hybrid
+BioGRID:107140 	BioGRID:115779 	KAT5       		BioGRID		PMID: 25184681
+Affinity Capture-Western; Two-hybrid
+BioGRID:107140 	BioGRID:116667 	KDM1A      		BioGRID		PMID: 22990118
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:115114 	KIAA0101   		BioGRID		PMID: 21673012
+Protein-peptide
+BioGRID:107140 	BioGRID:116723 	KIF1B      		BioGRID		PMID: 14578343
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:115418 	KIF20A     		BioGRID		PMID: 25184681
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:110033 	KIF22      		BioGRID		PMID: 25184681
+Affinity Capture-MS; Two-hybrid
+BioGRID:107140 	BioGRID:110036 	KPNA2      		BioGRID		PMID: 25184681,8955125
+Two-hybrid
+BioGRID:107140 	BioGRID:110124 	LCK        		BioGRID		PMID: 25184681
+Two-hybrid
+BioGRID:107140 	BioGRID:119549 	LCMT1      		BioGRID		PMID: 22990118
+Two-hybrid
+BioGRID:107140 	BioGRID:110140 	LDHC       		BioGRID		PMID: 22990118
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:110149 	LGALS3     		BioGRID		PMID: 24755837
+Two-hybrid
+BioGRID:107140 	BioGRID:127760 	LMNTD1     		BioGRID		PMID: 25184681
+Affinity Capture-Western; Phenotypic Suppression; Reconstituted Complex; Two-hybrid
+BioGRID:107140 	BioGRID:114113 	LMO4       		BioGRID		PMID: 12925972,11751867
+Two-hybrid
+BioGRID:107140 	BioGRID:124867 	LONRF1     		BioGRID		PMID: 22493164
+Affinity Capture-Western; Two-hybrid
+BioGRID:107140 	BioGRID:110296 	MAN2C1     		BioGRID		PMID: 22990118
+Two-hybrid
+BioGRID:107140 	BioGRID:110378 	MAP3K1     		BioGRID		PMID: 22990118
+Two-hybrid
+BioGRID:107140 	BioGRID:114487 	MAP3K14    		BioGRID		PMID: 25184681
+Affinity Capture-Western; Two-hybrid
+BioGRID:107140 	BioGRID:110379 	MAP3K3     		BioGRID		PMID: 15205325
+Protein-peptide
+BioGRID:107140 	BioGRID:114838 	MAP4K4     		BioGRID		PMID: 14578343
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:111580 	MAPK1      		BioGRID		PMID: 18593910
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:111581 	MAPK3      		BioGRID		PMID: 18593910
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:122551 	MAPKAP1    		BioGRID		PMID: 22990118
+Two-hybrid
+BioGRID:107140 	BioGRID:122395 	MARCKSL1   		BioGRID		PMID: 25184681
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:110315 	MATK       		BioGRID		PMID: 23901102
+Affinity Capture-Western; Two-hybrid
+BioGRID:107140 	BioGRID:115710 	MCRS1      		BioGRID		PMID: 25184681
+Affinity Capture-Western; Co-localization
+BioGRID:107140 	BioGRID:115014 	MDC1       		BioGRID		PMID: 21622030,19766185,17525332,15569676,12611903,12607005
+Co-purification
+BioGRID:107140 	BioGRID:114830 	MED17      		BioGRID		PMID: 12154023,11504724
+Affinity Capture-Western; Co-purification
+BioGRID:107140 	BioGRID:114807 	MED21      		BioGRID		PMID: 9159119
+Synthetic Rescue
+BioGRID:107140 	BioGRID:34863  	MET18      		BioGRID		PMID: 18197258
+Two-hybrid
+BioGRID:107140 	BioGRID:116231 	MID2       		BioGRID		PMID: 25184681
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:110434 	MKI67      		BioGRID		PMID: 25184681
+Affinity Capture-MS; Affinity Capture-Western; Co-purification
+BioGRID:107140 	BioGRID:110438 	MLH1       		BioGRID		PMID: 25184681,21240188,17148452,10783165
+Synthetic Rescue
+BioGRID:107140 	BioGRID:34226  	MLP1       		BioGRID		PMID: 18197258
+Synthetic Rescue
+BioGRID:107140 	BioGRID:34843  	MLP2       		BioGRID		PMID: 18197258
+Affinity Capture-Western; Two-hybrid
+BioGRID:107140 	BioGRID:110474 	MNAT1      		BioGRID		PMID: 22493164,15282296
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:116134 	MORF4L1    		BioGRID		PMID: 20332121
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:115001 	MORF4L2    		BioGRID		PMID: 25184681
+Affinity Capture-MS; Affinity Capture-Western; Co-localization; Co-purification; Reconstituted Complex
+BioGRID:107140 	BioGRID:110501 	MRE11A     		BioGRID		PMID: 25184681,17349954,16391231,11504724,11353843,10783165,10426999
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:118996 	MRM2       		BioGRID		PMID: 22990118
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:122366 	MRPL36     		BioGRID		PMID: 16462773
+Synthetic Rescue
+BioGRID:107140 	BioGRID:35160  	MRPL39     		BioGRID		PMID: 18197258
+Affinity Capture-Western; Co-purification; Reconstituted Complex; Two-hybrid
+BioGRID:107140 	BioGRID:110573 	MSH2       		BioGRID		PMID: 15886699,11498787,10783165
+Protein-peptide; Reconstituted Complex
+BioGRID:107140 	BioGRID:110574 	MSH3       		BioGRID		PMID: 14578343,11498787
+Affinity Capture-MS; Co-purification; Reconstituted Complex; Two-hybrid
+BioGRID:107140 	BioGRID:109211 	MSH6       		BioGRID		PMID: 25184681,11498787,10783165
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:110584 	MSN        		BioGRID		PMID: 21282464
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:114652 	MTA2       		BioGRID		PMID: 25184681,19703393
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:108757 	MTOR       		BioGRID		PMID: 22990118
+Affinity Capture-Western; Co-localization; Reconstituted Complex; Two-hybrid
+BioGRID:107140 	BioGRID:110694 	MYC        		BioGRID		PMID: 20215511,14612409,12646176,11916966,9788437
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:115871 	MYL12A     		BioGRID		PMID: 22990118
+Two-hybrid
+BioGRID:107140 	BioGRID:121849 	MYOZ1      		BioGRID		PMID: 25184681
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:122500 	NABP2      		BioGRID		PMID: 25184681
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:120521 	NAT10      		BioGRID		PMID: 25184681
+Affinity Capture-MS; Affinity Capture-Western; Co-localization; Co-purification
+BioGRID:107140 	BioGRID:110763 	NBN        		BioGRID		PMID: 25939603,25184681,19244116,18171670,11504724,10783165,10426999
+Affinity Capture-Western; Reconstituted Complex
+BioGRID:107140 	BioGRID:114200 	NCOA1      		BioGRID		PMID: 16860316
+Protein-peptide; Reconstituted Complex
+BioGRID:107140 	BioGRID:115761 	NCOA2      		BioGRID		PMID: 16860316,14578343,11085509
+Affinity Capture-Western; Protein-peptide; Reconstituted Complex
+BioGRID:107140 	BioGRID:113841 	NCOA3      		BioGRID		PMID: 16860316,14578343
+Two-hybrid
+BioGRID:107140 	BioGRID:110631 	ND1        		BioGRID		PMID: 22990118
+Affinity Capture-Western; Reconstituted Complex; Two-hybrid
+BioGRID:107140 	BioGRID:117421 	NELFB      		BioGRID		PMID: 11739404
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:110852 	NFE2L2     		BioGRID		PMID: 23857982
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:110866 	NFYA       		BioGRID		PMID: 11777930
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:116630 	NINL       		BioGRID		PMID: 19509300
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:117363 	NIPBL      		BioGRID		PMID: 25184681
+Two-hybrid
+BioGRID:107140 	BioGRID:128814 	NKAPL      		BioGRID		PMID: 22990118
+Affinity Capture-Western; Reconstituted Complex; Two-hybrid
+BioGRID:107140 	BioGRID:114561 	NMI        		BioGRID		PMID: 11916966
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:117426 	NOL11      		BioGRID		PMID: 25184681
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:110902 	NOP2       		BioGRID		PMID: 25184681
+Two-hybrid
+BioGRID:107140 	BioGRID:115828 	NPC2       		BioGRID		PMID: 22990118
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:110929 	NPM1       		BioGRID		PMID: 15184379
+Synthetic Rescue
+BioGRID:107140 	BioGRID:35649  	NPR1       		BioGRID		PMID: 18197258
+Two-hybrid
+BioGRID:107140 	BioGRID:113843 	NRIP1      		BioGRID		PMID: 25184681
+Affinity Capture-Western; Reconstituted Complex; Two-hybrid
+BioGRID:107140 	BioGRID:117807 	NUFIP1     		BioGRID		PMID: 15107825
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:110980 	NUMA1      		BioGRID		PMID: 25184681
+Synthetic Rescue
+BioGRID:107140 	BioGRID:34076  	NUP120     		BioGRID		PMID: 18197258
+Synthetic Rescue
+BioGRID:107140 	BioGRID:34213  	NUP133     		BioGRID		PMID: 18197258
+Protein-peptide
+BioGRID:107140 	BioGRID:115297 	NUP153     		BioGRID		PMID: 14578343
+Synthetic Rescue
+BioGRID:107140 	BioGRID:32624  	NUP170     		BioGRID		PMID: 18197258
+Synthetic Rescue
+BioGRID:107140 	BioGRID:35040  	NUP188     		BioGRID		PMID: 18197258
+Synthetic Rescue
+BioGRID:107140 	BioGRID:31599  	NUP2       		BioGRID		PMID: 18197258
+Synthetic Rescue
+BioGRID:107140 	BioGRID:35328  	NUP53      		BioGRID		PMID: 18197258
+Two-hybrid
+BioGRID:107140 	BioGRID:123847 	OBSCN      		BioGRID		PMID: 25184681
+Co-localization
+BioGRID:107140 	BioGRID:111010 	ODF2       		BioGRID		PMID: 22833046
+Affinity Capture-Western; Reconstituted Complex
+BioGRID:107140 	BioGRID:118917 	OLA1       		BioGRID		PMID: 24289923
+Affinity Capture-MS; Affinity Capture-Western
+BioGRID:107140 	BioGRID:111041 	ORC2       		BioGRID		PMID: 25184681,17525332
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:117130 	ORC3       		BioGRID		PMID: 17525332
+Affinity Capture-Western; Co-fractionation; Far Western; Reconstituted Complex
+BioGRID:107140 	BioGRID:117939 	PABPC1     		BioGRID		PMID: 23805307,16782705
+Affinity Capture-MS; Affinity Capture-Western; Reconstituted Complex
+BioGRID:107140 	BioGRID:122843 	PALB2      		BioGRID		PMID: 26649820,25184681,24085845,23585894,23038782,22193777,19584259,19553677,19369211,19268590
+Biochemical Activity
+BioGRID:107140 	BioGRID:114077 	PARG       		BioGRID		PMID: 25252691
+Affinity Capture-Western; Biochemical Activity
+BioGRID:107140 	BioGRID:106652 	PARP1      		BioGRID		PMID: 25252691
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:111110 	PAX2       		BioGRID		PMID: 21880590
+Affinity Capture-RNA
+BioGRID:107140 	BioGRID:111127 	PCBP2      		BioGRID		PMID: 22431556
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:111142 	PCNA       		BioGRID		PMID: 25184681
+Far Western
+BioGRID:107140 	BioGRID:111204 	PEG3       		BioGRID		PMID: 11746496
+Two-hybrid
+BioGRID:107140 	BioGRID:111788 	PEX5       		BioGRID		PMID: 21988832
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:128154 	PGAM5      		BioGRID		PMID: 25184681
+Affinity Capture-Western; Reconstituted Complex
+BioGRID:107140 	BioGRID:111260 	PGR        		BioGRID		PMID: 16109739
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:116459 	PHB2       		BioGRID		PMID: 22990118
+Two-hybrid
+BioGRID:107140 	BioGRID:121686 	PHF12      		BioGRID		PMID: 22990118
+Biochemical Activity; Co-localization
+BioGRID:107140 	BioGRID:114124 	PIAS1      		BioGRID		PMID: 20016603,20016594
+Biochemical Activity; Co-localization
+BioGRID:107140 	BioGRID:119624 	PIAS4      		BioGRID		PMID: 20016603,20016594
+Reconstituted Complex
+BioGRID:107140 	BioGRID:111313 	PIK3R1     		BioGRID		PMID: 16135792
+Two-hybrid
+BioGRID:107140 	BioGRID:119015 	PILRB      		BioGRID		PMID: 22990118
+Two-hybrid
+BioGRID:107140 	BioGRID:117262 	PISD       		BioGRID		PMID: 22990118
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:111362 	PLK1       		BioGRID		PMID: 25483079,24067368
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:111404 	PMS2       		BioGRID		PMID: 25184681
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:111425 	POLH       		BioGRID		PMID: 23901102
+Affinity Capture-MS; Affinity Capture-Western; Biochemical Activity; Co-purification
+BioGRID:107140 	BioGRID:111426 	POLR2A     		BioGRID		PMID: 25184681,22990118,18197258,15886201,14506230,12955082,11504724,9159119
+Affinity Capture-Western; Reconstituted Complex
+BioGRID:107140 	BioGRID:159574 	POLR2A     		BioGRID		PMID: 12955082,10725406
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:111428 	POLR2C     		BioGRID		PMID: 22990118
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:111429 	POLR2D     		BioGRID		PMID: 22990118
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:111430 	POLR2E     		BioGRID		PMID: 22990118
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:111432 	POLR2G     		BioGRID		PMID: 22990118
+Biochemical Activity
+BioGRID:107140 	BioGRID:111433 	POLR2H     		BioGRID		PMID: 25436519,17283126
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:111434 	POLR2I     		BioGRID		PMID: 22990118
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:111435 	POLR2J     		BioGRID		PMID: 22990118
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:123498 	POLR2M     		BioGRID		PMID: 22990118
+Two-hybrid
+BioGRID:107140 	BioGRID:115214 	POM121     		BioGRID		PMID: 25184681
+Synthetic Rescue
+BioGRID:107140 	BioGRID:31292  	POM34      		BioGRID		PMID: 18197258
+Two-hybrid
+BioGRID:107140 	BioGRID:120763 	POMGNT1    		BioGRID		PMID: 21988832
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:111447 	POU2F1     		BioGRID		PMID: 18000219,11777930
+Affinity Capture-Western; Two-hybrid
+BioGRID:107140 	BioGRID:114072 	PPFIA1     		BioGRID		PMID: 25184681
+Two-hybrid
+BioGRID:107140 	BioGRID:119596 	PPHLN1     		BioGRID		PMID: 22990118
+Affinity Capture-MS; Affinity Capture-Western; Biochemical Activity; Reconstituted Complex
+BioGRID:107140 	BioGRID:111493 	PPP1CA     		BioGRID		PMID: 25056273,22990118,17511879,12438214
+Affinity Capture-Western; Reconstituted Complex
+BioGRID:107140 	BioGRID:111494 	PPP1CB     		BioGRID		PMID: 17511879
+Two-hybrid
+BioGRID:107140 	BioGRID:116948 	PPP1R13B   		BioGRID		PMID: 25184681
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:128092 	PPP1R18    		BioGRID		PMID: 22990118
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:111499 	PPP1R3A    		BioGRID		PMID: 17511879
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:124202 	PPP1R9B    		BioGRID		PMID: 22990118
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:111507 	PPP2CA     		BioGRID		PMID: 22990118
+Affinity Capture-Western; Two-hybrid
+BioGRID:107140 	BioGRID:111519 	PPP2R5C    		BioGRID		PMID: 22990118
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:111529 	PPP6C      		BioGRID		PMID: 22990118
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:116537 	PPP6R1     		BioGRID		PMID: 22990118
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:120579 	PPP6R3     		BioGRID		PMID: 22990118
+Two-hybrid
+BioGRID:107140 	BioGRID:111541 	PREP       		BioGRID		PMID: 22990118
+Affinity Capture-Western; Two-hybrid
+BioGRID:107140 	BioGRID:111550 	PRKAA2     		BioGRID		PMID: 25184681
+Two-hybrid
+BioGRID:107140 	BioGRID:119791 	PRKAG3     		BioGRID		PMID: 25184681
+Protein-peptide
+BioGRID:107140 	BioGRID:111577 	PRKDC      		BioGRID		PMID: 10608806
+Biochemical Activity; Reconstituted Complex
+BioGRID:107140 	BioGRID:109512 	PRMT1      		BioGRID		PMID: 20614009
+Two-hybrid
+BioGRID:107140 	BioGRID:114577 	PRPF3      		BioGRID		PMID: 25184681
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:120755 	PRR5       		BioGRID		PMID: 22990118
+Two-hybrid
+BioGRID:107140 	BioGRID:111639 	PSAP       		BioGRID		PMID: 22990118
+Two-hybrid
+BioGRID:107140 	BioGRID:111660 	PSMA6      		BioGRID		PMID: 22990118
+Affinity Capture-Western; Biochemical Activity; Far Western
+BioGRID:107140 	BioGRID:111661 	PSMA7      		BioGRID		PMID: 25620702
+Two-hybrid
+BioGRID:107140 	BioGRID:111687 	PSMD9      		BioGRID		PMID: 25184681
+Two-hybrid
+BioGRID:107140 	BioGRID:114179 	PSMG1      		BioGRID		PMID: 22990118
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:115671 	RACK1      		BioGRID		PMID: 22990118
+Synthetic Rescue
+BioGRID:107140 	BioGRID:32817  	RAD16      		BioGRID		PMID: 18197258
+Affinity Capture-MS; Affinity Capture-Western
+BioGRID:107140 	BioGRID:121212 	RAD18      		BioGRID		PMID: 25184681,23901102
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:111822 	RAD21      		BioGRID		PMID: 25184681
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:111824 	RAD23B     		BioGRID		PMID: 16712842
+Affinity Capture-MS; Affinity Capture-Western; Co-localization; Co-purification; Reconstituted Complex; Two-hybrid
+BioGRID:107140 	BioGRID:115417 	RAD50      		BioGRID		PMID: 25184681,25084169,18171670,16391231,11504724,10783165,10426999
+Synthetic Rescue
+BioGRID:107140 	BioGRID:35589  	RAD50      		BioGRID		PMID: 18197258
+Affinity Capture-MS; Affinity Capture-Western; Co-localization; Co-purification; Reconstituted Complex
+BioGRID:107140 	BioGRID:111825 	RAD51      		BioGRID		PMID: 25499220,24085845,19766185,14636569,11498787,9774970,9008167
+Synthetic Rescue
+BioGRID:107140 	BioGRID:36841  	RAD51      		BioGRID		PMID: 18197258
+Synthetic Rescue
+BioGRID:107140 	BioGRID:32131  	RAD55      		BioGRID		PMID: 18197258
+Two-hybrid
+BioGRID:107140 	BioGRID:115359 	RANBP9     		BioGRID		PMID: 22990118
+Affinity Capture-Western; Co-localization; Reconstituted Complex
+BioGRID:107140 	BioGRID:111860 	RB1        		BioGRID		PMID: 11521194,10518542,10220405
+Affinity Capture-Western; Reconstituted Complex
+BioGRID:107140 	BioGRID:111863 	RBBP4      		BioGRID		PMID: 10220405
+Affinity Capture-Western; Far Western; Reconstituted Complex; Two-hybrid
+BioGRID:107140 	BioGRID:111866 	RBBP7      		BioGRID		PMID: 11746496,11394910,10220405
+Affinity Capture-MS; Affinity Capture-Western; Biochemical Activity; Co-localization; Protein-peptide; Reconstituted Complex; Two-hybrid
+BioGRID:107140 	BioGRID:111867 	RBBP8      		BioGRID		PMID: 25310973,25252691,25184681,24085845,23416467,21908405,20351172,19452558,18285836,18171670,17525342,17525340,16843262,16818604,14578343,11689934,10910365,10764811,10196224,9811458,9738006
+Co-localization; Reconstituted Complex
+BioGRID:107140 	BioGRID:111868 	RBL1       		BioGRID		PMID: 11521194
+Co-localization; Reconstituted Complex
+BioGRID:107140 	BioGRID:111869 	RBL2       		BioGRID		PMID: 11521194
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:120437 	RBM28      		BioGRID		PMID: 25184681
+Affinity Capture-Western; Two-hybrid
+BioGRID:107140 	BioGRID:123518 	RCC1L      		BioGRID		PMID: 22990118
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:115473 	RCL1       		BioGRID		PMID: 25184681
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:111894 	RDX        		BioGRID		PMID: 21282464
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:114797 	RECQL5     		BioGRID		PMID: 22990118
+Affinity Capture-Western; Reconstituted Complex
+BioGRID:107140 	BioGRID:111902 	RELA       		BioGRID		PMID: 21908405,12700228
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:119551 	REV1       		BioGRID		PMID: 23901102
+Affinity Capture-MS; Co-purification
+BioGRID:107140 	BioGRID:111913 	RFC1       		BioGRID		PMID: 25184681,10783165
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:111914 	RFC2       		BioGRID		PMID: 25184681,22990118
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:111916 	RFC4       		BioGRID		PMID: 25184681
+Affinity Capture-MS; Affinity Capture-Western
+BioGRID:107140 	BioGRID:128962 	RICTOR     		BioGRID		PMID: 22990118
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:129022 	RNF169     		BioGRID		PMID: 25184681
+Two-hybrid
+BioGRID:107140 	BioGRID:119981 	RNF216     		BioGRID		PMID: 22990118
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:114270 	RNGTT      		BioGRID		PMID: 22990118
+Affinity Capture-Western; Co-localization
+BioGRID:107140 	BioGRID:112037 	RPA1       		BioGRID		PMID: 23901102,21240188,19766185
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:122959 	RPAP2      		BioGRID		PMID: 22990118
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:122783 	RPAP3      		BioGRID		PMID: 22990118
+Synthetic Rescue
+BioGRID:107140 	BioGRID:33617  	RPB4       		BioGRID		PMID: 18197258
+Affinity Capture-Western; Two-hybrid
+BioGRID:107140 	BioGRID:121364 	RPGRIP1    		BioGRID		PMID: 22990118
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:112064 	RPL21      		BioGRID		PMID: 25184681
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:112077 	RPL28      		BioGRID		PMID: 25184681
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:112042 	RPL3       		BioGRID		PMID: 25184681
+Far Western; Reconstituted Complex
+BioGRID:107140 	BioGRID:112079 	RPL31      		BioGRID		PMID: 11746496
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:112080 	RPL32      		BioGRID		PMID: 25184681
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:112083 	RPL34      		BioGRID		PMID: 25184681
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:120494 	RPRD1A     		BioGRID		PMID: 22990118
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:121820 	RPRD1B     		BioGRID		PMID: 22990118
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:112121 	RPS13      		BioGRID		PMID: 25184681
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:112146 	RPS27      		BioGRID		PMID: 25184681
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:112115 	RPS7       		BioGRID		PMID: 25184681
+Co-localization
+BioGRID:107140 	BioGRID:110115 	RPSA       		BioGRID		PMID: 22814251
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:117587 	RSL1D1     		BioGRID		PMID: 25184681
+Two-hybrid
+BioGRID:107140 	BioGRID:128576 	RTKN2      		BioGRID		PMID: 22990118
+Two-hybrid
+BioGRID:107140 	BioGRID:107310 	RUNX1T1    		BioGRID		PMID: 25184681
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:116067 	RUVBL2     		BioGRID		PMID: 25184681
+Two-hybrid
+BioGRID:107140 	BioGRID:115380 	RWDD2B     		BioGRID		PMID: 25184681
+Two-hybrid
+BioGRID:107140 	BioGRID:128409 	RWDD4      		BioGRID		PMID: 22990118
+Two-hybrid
+BioGRID:107140 	BioGRID:120034 	SDK2       		BioGRID		PMID: 22990118
+Affinity Capture-MS; Affinity Capture-Western; Reconstituted Complex; Synthetic Growth Defect; Two-hybrid
+BioGRID:107140 	BioGRID:116699 	SETX       		BioGRID		PMID: 25699710,25184681
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:117455 	SH2B1      		BioGRID		PMID: 17565041
+Two-hybrid
+BioGRID:107140 	BioGRID:113692 	SHFM1      		BioGRID		PMID: 17563742
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:112391 	SKP1       		BioGRID		PMID: 23086937
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:112393 	SKP2       		BioGRID		PMID: 23086937
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:121654 	SLAIN2     		BioGRID		PMID: 25184681
+Synthetic Rescue
+BioGRID:107140 	BioGRID:32855  	SLI15      		BioGRID		PMID: 18197258
+Affinity Capture-Western; Reconstituted Complex
+BioGRID:107140 	BioGRID:110263 	SMAD3      		BioGRID		PMID: 19768112,15735739
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:112479 	SMARCA2    		BioGRID		PMID: 15034933
+Affinity Capture-Western; Co-purification; Reconstituted Complex
+BioGRID:107140 	BioGRID:112481 	SMARCA4    		BioGRID		PMID: 23438604,15034933,10943845
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:114045 	SMARCA5    		BioGRID		PMID: 25184681
+Co-purification
+BioGRID:107140 	BioGRID:112482 	SMARCB1    		BioGRID		PMID: 10943845
+Co-purification
+BioGRID:107140 	BioGRID:112483 	SMARCC1    		BioGRID		PMID: 10943845
+Co-purification
+BioGRID:107140 	BioGRID:112485 	SMARCC2    		BioGRID		PMID: 10943845
+Co-purification
+BioGRID:107140 	BioGRID:112487 	SMARCD2    		BioGRID		PMID: 10943845
+Affinity Capture-MS; Affinity Capture-Western
+BioGRID:107140 	BioGRID:113871 	SMC1A      		BioGRID		PMID: 25184681,11877377
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:114574 	SMC3       		BioGRID		PMID: 25184681
+Affinity Capture-Western; Two-hybrid
+BioGRID:107140 	BioGRID:116661 	SNRNP200   		BioGRID		PMID: 22990118
+Affinity Capture-Western; Two-hybrid
+BioGRID:107140 	BioGRID:114263 	SNX3       		BioGRID		PMID: 22990118
+Two-hybrid
+BioGRID:107140 	BioGRID:121852 	SNX6       		BioGRID		PMID: 22990118
+Two-hybrid
+BioGRID:107140 	BioGRID:116247 	SOX30      		BioGRID		PMID: 22990118
+Affinity Capture-Western; Reconstituted Complex
+BioGRID:107140 	BioGRID:112550 	SP1        		BioGRID		PMID: 17766039,12706836
+Two-hybrid
+BioGRID:107140 	BioGRID:126337 	SPATA4     		BioGRID		PMID: 22990118
+Affinity Capture-Western; Synthetic Rescue
+BioGRID:107140 	BioGRID:33308  	SPT4       		BioGRID		PMID: 18197258
+Synthetic Rescue
+BioGRID:107140 	BioGRID:35159  	SPT5       		BioGRID		PMID: 18197258
+Affinity Capture-MS; Affinity Capture-RNA
+BioGRID:107140 	BioGRID:112324 	SRSF1      		BioGRID		PMID: 22990118,18391021
+Two-hybrid
+BioGRID:107140 	BioGRID:112622 	SSFA2      		BioGRID		PMID: 22990118
+Synthetic Rescue
+BioGRID:107140 	BioGRID:36137  	SSN3       		BioGRID		PMID: 18197258
+Co-localization; Synthetic Growth Defect
+BioGRID:107140 	BioGRID:112627 	SSRP1      		BioGRID		PMID: 25184681
+Two-hybrid
+BioGRID:107140 	BioGRID:125567 	SSX2IP     		BioGRID		PMID: 25184681
+Two-hybrid
+BioGRID:107140 	BioGRID:131192 	STAC2      		BioGRID		PMID: 25184681
+Affinity Capture-Western; Reconstituted Complex; Two-hybrid
+BioGRID:107140 	BioGRID:112649 	STAT1      		BioGRID		PMID: 10792030
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:112653 	STAT5A     		BioGRID		PMID: 12459499
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:112674 	STRN       		BioGRID		PMID: 22990118
+Synthetic Rescue
+BioGRID:107140 	BioGRID:35211  	SUB1       		BioGRID		PMID: 18197258
+Affinity Capture-Western; FRET; Reconstituted Complex; Two-hybrid
+BioGRID:107140 	BioGRID:113188 	SUMO1      		BioGRID		PMID: 20016594,18025037
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:112497 	SUMO2      		BioGRID		PMID: 22689573
+Co-localization; Synthetic Growth Defect
+BioGRID:107140 	BioGRID:116367 	SUPT16H    		BioGRID		PMID: 25184681
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:112697 	SUPT5H     		BioGRID		PMID: 18197258
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:112698 	SUPT6H     		BioGRID		PMID: 22990118
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:117059 	SUZ12      		BioGRID		PMID: 23624935
+Two-hybrid
+BioGRID:107140 	BioGRID:127139 	SYT6       		BioGRID		PMID: 25184681
+Affinity Capture-RNA
+BioGRID:107140 	BioGRID:117003 	TARDBP     		BioGRID		PMID: 18391021
+Two-hybrid
+BioGRID:107140 	BioGRID:112760 	TARS       		BioGRID		PMID: 22990118
+Two-hybrid
+BioGRID:107140 	BioGRID:115140 	TATDN2     		BioGRID		PMID: 22990118
+Synthetic Growth Defect; Two-hybrid
+BioGRID:107140 	BioGRID:112781 	TCEA2      		BioGRID		PMID: 25184681
+Synthetic Growth Defect; Two-hybrid
+BioGRID:107140 	BioGRID:127996 	TCEANC     		BioGRID		PMID: 25184681
+Two-hybrid
+BioGRID:107140 	BioGRID:112786 	TCEB3      		BioGRID		PMID: 25184681
+Two-hybrid
+BioGRID:107140 	BioGRID:129118 	TCTEX1D2   		BioGRID		PMID: 22990118
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:112872 	TERF1      		BioGRID		PMID: 19797051
+Affinity Capture-MS; Affinity Capture-Western
+BioGRID:107140 	BioGRID:112873 	TERF2      		BioGRID		PMID: 25184681,19797051
+Two-hybrid
+BioGRID:107140 	BioGRID:123703 	TEX101     		BioGRID		PMID: 22990118
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:112878 	TFAP2A     		BioGRID		PMID: 21363924
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:112880 	TFAP2C     		BioGRID		PMID: 21363924
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:112881 	TFAP4      		BioGRID		PMID: 19505873
+Two-hybrid
+BioGRID:107140 	BioGRID:124047 	THOC3      		BioGRID		PMID: 22990118
+Affinity Capture-Western; Two-hybrid
+BioGRID:107140 	BioGRID:112946 	TLE4       		BioGRID		PMID: 22990118
+Synthetic Rescue
+BioGRID:107140 	BioGRID:33770  	TMA22      		BioGRID		PMID: 18197258
+Two-hybrid
+BioGRID:107140 	BioGRID:129574 	TMPRSS12   		BioGRID		PMID: 25184681
+Two-hybrid
+BioGRID:107140 	BioGRID:116951 	TNS2       		BioGRID		PMID: 25184681
+Affinity Capture-MS; Affinity Capture-Western; Co-localization; Synthetic Growth Defect
+BioGRID:107140 	BioGRID:110863 	TONSL      		BioGRID		PMID: 25184681
+Affinity Capture-MS; Affinity Capture-Western; Reconstituted Complex
+BioGRID:107140 	BioGRID:113006 	TOP2A      		BioGRID		PMID: 25184681,15965487
+Affinity Capture-MS; Affinity Capture-Western; Co-localization
+BioGRID:107140 	BioGRID:116256 	TOPBP1     		BioGRID		PMID: 25184681,23901102,19766185,16391231
+Affinity Capture-MS; Affinity Capture-Western; Co-purification; Reconstituted Complex
+BioGRID:107140 	BioGRID:113010 	TP53       		BioGRID		PMID: 21742769,19509300,16969499,16677609,15571721,14710355,14636569,9926942,9582019,9482880
+Affinity Capture-Western; Co-localization
+BioGRID:107140 	BioGRID:113011 	TP53BP1    		BioGRID		PMID: 21552324,17525332,12364621
+Affinity Capture-Western; Co-localization
+BioGRID:107140 	BioGRID:114181 	TP63       		BioGRID		PMID: 24556685,21363924
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:113014 	TP73       		BioGRID		PMID: 20807817
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:113021 	TPM1       		BioGRID		PMID: 22990118
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:113023 	TPM3       		BioGRID		PMID: 22990118
+Two-hybrid
+BioGRID:107140 	BioGRID:125031 	TPTE2      		BioGRID		PMID: 22990118
+Affinity Capture-MS; Affinity Capture-Western
+BioGRID:107140 	BioGRID:116624 	TPX2       		BioGRID		PMID: 25184681,22110403
+Two-hybrid
+BioGRID:107140 	BioGRID:114333 	TRIM24     		BioGRID		PMID: 21988832
+Two-hybrid
+BioGRID:107140 	BioGRID:123129 	TRIM46     		BioGRID		PMID: 22493164
+Two-hybrid
+BioGRID:107140 	BioGRID:132031 	TRIM74     		BioGRID		PMID: 22493164
+Two-hybrid
+BioGRID:107140 	BioGRID:129721 	TSEN54     		BioGRID		PMID: 22990118
+Two-hybrid
+BioGRID:107140 	BioGRID:129021 	TSGA10IP   		BioGRID		PMID: 25184681
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:128444 	TUBB       		BioGRID		PMID: 12353262
+Affinity Capture-Western; Biochemical Activity; Co-localization; Co-purification; Reconstituted Complex
+BioGRID:107140 	BioGRID:113134 	TUBG1      		BioGRID		PMID: 24289923,22833046,22262852,15367667,11691781,9789027
+Affinity Capture-Western; Two-hybrid
+BioGRID:107140 	BioGRID:113139 	TULP2      		BioGRID		PMID: 22990118
+Two-hybrid
+BioGRID:107140 	BioGRID:128297 	TXLNA      		BioGRID		PMID: 25184681
+Biochemical Activity; Reconstituted Complex
+BioGRID:107140 	BioGRID:113164 	UBC        		BioGRID		PMID: 17525341,17349954
+Co-crystal Structure; Reconstituted Complex; Two-hybrid
+BioGRID:107140 	BioGRID:113169 	UBE2D1     		BioGRID		PMID: 24507701,19916563,19712108,16403807,14638690,14636569,12890688,12887909,12732733,12485996,11278247
+Co-crystal Structure; Reconstituted Complex; Two-hybrid
+BioGRID:107140 	BioGRID:113170 	UBE2D2     		BioGRID		PMID: 21113135,19712108
+Affinity Capture-Western; Co-crystal Structure; Reconstituted Complex; Two-hybrid
+BioGRID:107140 	BioGRID:113171 	UBE2D3     		BioGRID		PMID: 25355358,22863316,21965653,21756275,21532592,21113135,20351172,19712108,17349954,17283126,16818604,16628214,15905410,15886201,15367667,12438698,11927591
+Co-crystal Structure; Reconstituted Complex; Two-hybrid
+BioGRID:107140 	BioGRID:113172 	UBE2E1     		BioGRID		PMID: 21965653,19712108,17873885
+Co-crystal Structure; Reconstituted Complex; Two-hybrid
+BioGRID:107140 	BioGRID:113173 	UBE2E2     		BioGRID		PMID: 21965653,19712108,17873885
+Co-crystal Structure; Reconstituted Complex; Two-hybrid
+BioGRID:107140 	BioGRID:115740 	UBE2E3     		BioGRID		PMID: 21965653,19712108,17873885
+Affinity Capture-Western; Biochemical Activity; FRET
+BioGRID:107140 	BioGRID:113177 	UBE2I      		BioGRID		PMID: 20016594,19287951
+Two-hybrid
+BioGRID:107140 	BioGRID:119555 	UBE2J1     		BioGRID		PMID: 19690564
+Co-crystal Structure; Reconstituted Complex; Two-hybrid
+BioGRID:107140 	BioGRID:109340 	UBE2K      		BioGRID		PMID: 21965653,19712108,17873885
+Co-crystal Structure; Reconstituted Complex; Two-hybrid
+BioGRID:107140 	BioGRID:113180 	UBE2L3     		BioGRID		PMID: 19712108,12732733
+Co-crystal Structure; Reconstituted Complex; Two-hybrid
+BioGRID:107140 	BioGRID:113182 	UBE2N      		BioGRID		PMID: 21965653,19712108,17873885
+Reconstituted Complex
+BioGRID:107140 	BioGRID:118858 	UBE2T      		BioGRID		PMID: 19887602
+Co-crystal Structure; Reconstituted Complex; Two-hybrid
+BioGRID:107140 	BioGRID:120572 	UBE2W      		BioGRID		PMID: 25436519,21965653,19712108,17873885
+Reconstituted Complex
+BioGRID:107140 	BioGRID:113185 	UBE3A      		BioGRID		PMID: 12890688
+Affinity Capture-Western; Reconstituted Complex
+BioGRID:107140 	BioGRID:119239 	UBXN1      		BioGRID		PMID: 20351172
+Affinity Capture-MS; Affinity Capture-Western; Co-localization; Reconstituted Complex
+BioGRID:107140 	BioGRID:119697 	UIMC1      		BioGRID		PMID: 25252691,25184681,24085845,21622030,19766185,19615732,19305427,19261748,17621610,17525342,17525341,17525340
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:113238 	USF2       		BioGRID		PMID: 14502648
+Two-hybrid
+BioGRID:107140 	BioGRID:113242 	USH2A      		BioGRID		PMID: 22990118
+Two-hybrid
+BioGRID:107140 	BioGRID:114553 	USP2       		BioGRID		PMID: 23105109,22990118
+Proximity Label-MS
+BioGRID:107140 	BioGRID:121720 	USP37      		BioGRID		PMID: 26299517
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:113622 	USP7       		BioGRID		PMID: 25184681
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:124353 	UTP4       		BioGRID		PMID: 25184681
+Affinity Capture-Western; Reconstituted Complex
+BioGRID:107140 	BioGRID:113258 	VCP        		BioGRID		PMID: 10855792
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:113264 	VDR        		BioGRID		PMID: 19074549
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:133813 	VSIG8      		BioGRID		PMID: 22990118
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:116698 	WAPL       		BioGRID		PMID: 25184681
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:121649 	WDR48      		BioGRID		PMID: 19615732
+Two-hybrid
+BioGRID:107140 	BioGRID:116350 	WDR6       		BioGRID		PMID: 22990118
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:121845 	WIZ        		BioGRID		PMID: 25184681
+Far Western
+BioGRID:107140 	BioGRID:113319 	WNT2B      		BioGRID		PMID: 11746496
+Affinity Capture-Western; Reconstituted Complex
+BioGRID:107140 	BioGRID:106828 	XIAP       		BioGRID		PMID: 16322207
+Co-localization
+BioGRID:107140 	BioGRID:113340 	XIST       		BioGRID		PMID: 15065664,12419249
+Affinity Capture-Western; Reconstituted Complex
+BioGRID:107140 	BioGRID:113353 	XRCC5      		BioGRID		PMID: 23344954,18936166
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:108822 	XRCC6      		BioGRID		PMID: 22990118
+Synthetic Rescue
+BioGRID:107140 	BioGRID:32428  	XRS2       		BioGRID		PMID: 18197258
+Synthetic Rescue
+BioGRID:107140 	BioGRID:35717  	YAF9       		BioGRID		PMID: 18197258
+Synthetic Rescue
+BioGRID:107140 	BioGRID:36414  	YAP3       		BioGRID		PMID: 18197258
+Synthetic Rescue
+BioGRID:107140 	BioGRID:33187  	YBP2       		BioGRID		PMID: 18197258
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:110959 	YBX1       		BioGRID		PMID: 22990118
+Synthetic Rescue
+BioGRID:107140 	BioGRID:33298  	YGR053C    		BioGRID		PMID: 18197258
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:113366 	YWHAZ      		BioGRID		PMID: 22990118
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:113373 	ZBTB14     		BioGRID		PMID: 21880590
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:115208 	ZC3H11A    		BioGRID		PMID: 25184681
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:121203 	ZC3HAV1    		BioGRID		PMID: 25184681
+Affinity Capture-Western
+BioGRID:107140 	BioGRID:120739 	ZCCHC8     		BioGRID		PMID: 17525332
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:117422 	ZDHHC5     		BioGRID		PMID: 22990118
+Two-hybrid
+BioGRID:107140 	BioGRID:120173 	ZNF280D    		BioGRID		PMID: 22990118
+Affinity Capture-Western; Reconstituted Complex; Two-hybrid
+BioGRID:107140 	BioGRID:121889 	ZNF350     		BioGRID		PMID: 23991171,16843262,11090615
+Two-hybrid
+BioGRID:107140 	BioGRID:116718 	ZNF423     		BioGRID		PMID: 25184681
+Two-hybrid
+BioGRID:107140 	BioGRID:113416 	ZSCAN21    		BioGRID		PMID: 22990118
+Affinity Capture-MS
+BioGRID:107140 	BioGRID:117482 	ZZZ3       		BioGRID		PMID: 25184681
+
+Pathways from BioSystems
+-------------------------------------------------------------------------------------------------
+
+ATF-2 transcription factor network, organism-specific biosystem (from Pathway Interaction Database)
+Androgen receptor signaling pathway, organism-specific biosystem (from WikiPathways)
+Aurora A signaling, organism-specific biosystem (from Pathway Interaction Database)
+BARD1 signaling events, organism-specific biosystem (from Pathway Interaction Database)
+BRCA1-associated genome surveillance complex (BASC), organism-specific biosystem (from KEGG)
+BRCA1-associated genome surveillance complex (BASC), conserved biosystem (from KEGG)
+Cell Cycle, organism-specific biosystem (from REACTOME)
+Cell Cycle Checkpoints, organism-specific biosystem (from REACTOME)
+Coregulation of Androgen receptor activity, organism-specific biosystem (from Pathway Interaction Database)
+DNA Double Strand Break Response, organism-specific biosystem (from REACTOME)
+DNA Double-Strand Break Repair, organism-specific biosystem (from REACTOME)
+DNA Repair, organism-specific biosystem (from REACTOME)
+DNA damage response, organism-specific biosystem (from WikiPathways)
+E2F transcription factor network, organism-specific biosystem (from Pathway Interaction Database)
+FOXA1 transcription factor network, organism-specific biosystem (from Pathway Interaction Database)
+Fanconi anemia pathway, organism-specific biosystem (from KEGG)
+Fanconi anemia pathway, conserved biosystem (from KEGG)
+G2/M Checkpoints, organism-specific biosystem (from REACTOME)
+G2/M DNA damage checkpoint, organism-specific biosystem (from REACTOME)
+Gene Expression, organism-specific biosystem (from REACTOME)
+Generic Transcription Pathway, organism-specific biosystem (from REACTOME)
+HDR through Homologous Recombination (HR) or Single Strand Annealing (SSA), organism-specific biosystem (from REACTOME)
+HDR through Homologous Recombination (HRR), organism-specific biosystem (from REACTOME)
+HDR through Single Strand Annealing (SSA), organism-specific biosystem (from REACTOME)
+Homologous DNA Pairing and Strand Exchange, organism-specific biosystem (from REACTOME)
+Homology Directed Repair, organism-specific biosystem (from REACTOME)
+Integrated Breast Cancer Pathway, organism-specific biosystem (from WikiPathways)
+Integrated Cancer pathway, organism-specific biosystem (from WikiPathways)
+Integrated Pancreatic Cancer Pathway, organism-specific biosystem (from WikiPathways)
+Meiosis, organism-specific biosystem (from REACTOME)
+Meiotic recombination, organism-specific biosystem (from REACTOME)
+Meiotic synapsis, organism-specific biosystem (from REACTOME)
+Metabolism of proteins, organism-specific biosystem (from REACTOME)
+MicroRNAs in cancer, organism-specific biosystem (from KEGG)
+MicroRNAs in cancer, conserved biosystem (from KEGG)
+Nonhomologous End-Joining (NHEJ), organism-specific biosystem (from REACTOME)
+PI3K-Akt signaling pathway, organism-specific biosystem (from KEGG)
+PI3K-Akt signaling pathway, conserved biosystem (from KEGG)
+Post-translational protein modification, organism-specific biosystem (from REACTOME)
+Presynaptic phase of homologous DNA pairing and strand exchange, organism-specific biosystem (from REACTOME)
+Processing of DNA double-strand break ends, organism-specific biosystem (from REACTOME)
+Prostate Cancer, organism-specific biosystem (from WikiPathways)
+Recruitment and ATM-mediated phosphorylation of repair and signaling proteins at DNA double strand breaks, organism-specific biosystem (from REACTOME)
+Regulation of TP53 Activity, organism-specific biosystem (from REACTOME)
+Regulation of TP53 Activity through Phosphorylation, organism-specific biosystem (from REACTOME)
+Resolution of D-Loop Structures, organism-specific biosystem (from REACTOME)
+Resolution of D-loop Structures through Holliday Junction Intermediates, organism-specific biosystem (from REACTOME)
+Resolution of D-loop Structures through Synthesis-Dependent Strand Annealing (SDSA), organism-specific biosystem (from REACTOME)
+SUMO E3 ligases SUMOylate target proteins, organism-specific biosystem (from REACTOME)
+SUMOylation, organism-specific biosystem (from REACTOME)
+SUMOylation of DNA damage response and repair proteins, organism-specific biosystem (from REACTOME)
+Signaling Pathways in Glioblastoma, organism-specific biosystem (from WikiPathways)
+TP53 Regulates Transcription of DNA Repair Genes, organism-specific biosystem (from REACTOME)
+Transcriptional Regulation by TP53, organism-specific biosystem (from REACTOME)
+Ubiquitin mediated proteolysis, organism-specific biosystem (from KEGG)
+Ubiquitin mediated proteolysis, conserved biosystem (from KEGG)
+Validated targets of C-MYC transcriptional repression, organism-specific biosystem (from Pathway Interaction Database)
+
+
+GENERAL GENE INFO
+-------------------------------------------------------------------------------------------------
+
+Marker
+	GDB:454458           	(e-PCR)	Links:UniSTS:157440
+	GDB:454462           	(e-PCR)	Links:UniSTS:157441
+	GDB:454466           	(e-PCR)	Links:UniSTS:157442
+	PMC280658P1          	(e-PCR)	Links:UniSTS:272396
+	PMC280658P2          	(e-PCR)	Links:UniSTS:272397
+	RH79896              	(e-PCR)	Links:UniSTS:90392
+	PMC139147P1          	(e-PCR)	Links:UniSTS:270874
+	PMC13918P1           	(e-PCR)	Links:UniSTS:270877
+	NoName               	(e-PCR)	Links:UniSTS:482866
+	D17S1322             	(e-PCR)	Links:UniSTS:150079
+	D17S1323             	(e-PCR)	Links:UniSTS:150080
+	BRCA1_4046           	(e-PCR)	Links:UniSTS:464465
+	G60034               	(e-PCR)	Links:UniSTS:137300
+	BRCA1                	(e-PCR)	Links:UniSTS:262743
+	D17S932              	(e-PCR)	Links:UniSTS:49519
+	PMC110706P1          	(e-PCR)	Links:UniSTS:270193
+	PMC310899P11         	(e-PCR)	Links:UniSTS:272801
+	PMC310899P12         	(e-PCR)	Links:UniSTS:272802
+	PMC310899P2          	(e-PCR)	Links:UniSTS:272804
+	PMC310899P3          	(e-PCR)	Links:UniSTS:272805
+	PMC310899P5          	(e-PCR)	Links:UniSTS:272806
+	PMC310899P6          	(e-PCR)	Links:UniSTS:272807
+	PMC310899P8          	(e-PCR)	Links:UniSTS:272808
+	GDB:626829           	(e-PCR)	Links:UniSTS:158401
+	G10044               	(e-PCR)	Links:UniSTS:1986
+	GDB:626905           	(e-PCR)	Links:UniSTS:158402
+	D17S855              	(e-PCR)	Links:UniSTS:147918
+	D17S1198             	(e-PCR)	Links:UniSTS:56291
+	GDB:388557           	(e-PCR)	Links:UniSTS:157159
+	GDB:388674           	(e-PCR)	Links:UniSTS:157161
+	GDB:388688           	(e-PCR)	Links:UniSTS:157162
+	D5S1597E             	(e-PCR)	Links:UniSTS:151019
+	GDB:389033           	(e-PCR)	Links:UniSTS:157163
+	GDB:389047           	(e-PCR)	Links:UniSTS:157164
+	GDB:389054           	(e-PCR)	Links:UniSTS:157165
+	GDB:631944           	(e-PCR)	Links:UniSTS:158446
+	GDB:391358           	(e-PCR)	Links:UniSTS:157167
+	GDB:391365           	(e-PCR)	Links:UniSTS:157168
+	GDB:454227           	(e-PCR)	Links:UniSTS:157424
+	GDB:391372           	(e-PCR)	Links:UniSTS:157169
+	GDB:454278           	(e-PCR)	Links:UniSTS:157425
+	GDB:391818           	(e-PCR)	Links:UniSTS:157170
+	GDB:454349           	(e-PCR)	Links:UniSTS:157426
+	GDB:391825           	(e-PCR)	Links:UniSTS:157171
+	GDB:454353           	(e-PCR)	Links:UniSTS:157427
+	GDB:391832           	(e-PCR)	Links:UniSTS:157172
+	GDB:454372           	(e-PCR)	Links:UniSTS:157428
+	GDB:391839           	(e-PCR)	Links:UniSTS:157173
+	GDB:454381           	(e-PCR)	Links:UniSTS:157429
+	GDB:391846           	(e-PCR)	Links:UniSTS:157174
+	GDB:454417           	(e-PCR)	Links:UniSTS:157430
+	GDB:391853           	(e-PCR)	Links:UniSTS:157175
+	GDB:454421           	(e-PCR)	Links:UniSTS:157431
+	GDB:391860           	(e-PCR)	Links:UniSTS:157176
+	GDB:454425           	(e-PCR)	Links:UniSTS:157432
+	GDB:391867           	(e-PCR)	Links:UniSTS:157177
+	GDB:454429           	(e-PCR)	Links:UniSTS:157433
+	GDB:391874           	(e-PCR)	Links:UniSTS:157178
+	GDB:454433           	(e-PCR)	Links:UniSTS:157434
+	SHGC-151111          	(e-PCR)	Links:UniSTS:173306
+	GDB:391881           	(e-PCR)	Links:UniSTS:157179
+	GDB:454437           	(e-PCR)	Links:UniSTS:157435
+	GDB:454441           	(e-PCR)	Links:UniSTS:157436
+	GDB:454446           	(e-PCR)	Links:UniSTS:157437
+	GDB:454450           	(e-PCR)	Links:UniSTS:157438
+	SHGC-152118          	(e-PCR)	Links:UniSTS:177406
+	GDB:454454           	(e-PCR)	Links:UniSTS:157439
+
+Related pseudogene(s)
+	1 foundReview record(s) in Gene, http://130.14.18.100/gene/?Term=related_functional_gene_672%5Bgroup%5D
+
+Potential readthrough
+	Included gene: LOC101929767
+
+
+Homology
+	Homologs of the BRCA1 gene
+		The BRCA1 gene is conserved in chimpanzee, Rhesus monkey, dog, cow, mouse, rat, and chicken.
+	Orthologs from Annotation Pipeline (/gene/?Term=ortholog_gene_672[group]): 
+	Map Viewer (Mouse, Rat)
+
+
+Gene Ontology Provided by GOA (www.ebi.ac.uk/GOA)
+
+Function				      GO ID		Evidence
+-------------------------------------------------------------------------------------------------
+DNA binding                                   GO:0000000	PMID: 9662397
+RNA binding                                   GO:0000000	PMID: 12419249
+androgen receptor binding                     GO:0000000	PMID: 15572661
+chromatin binding                             GO:0000000	-
+damaged DNA binding                           GO:0000000	-
+enzyme binding                                GO:0000000	PMID: 15965487
+ligase activity                               GO:0000000	-
+protein binding                               GO:0000000	PMID: 8944023,9497340,9528852,9774970,9811458,10477523,10855792,11090615,11301010,11739404,11751867,11836499,11877377,12242698,12419185,14550570,14576433,14654789,15107825,15265711,15674350,16326698,16452482,17334399,17511879,17525332,17525340,17581638,17643121,18001824,18001825,18716619,19117993,19261748,19369211,20160719,20351172,21240188,21407215,21444675,21673012,21988832,22193777,23624935,23680151,26807646
+transcription coactivator activity            GO:0000000	PMID: 15572661
+transcription regulatory region DNA bind...   GO:0000000	PMID: 20820192
+tubulin binding                               GO:0000000	PMID: 12214252
+ubiquitin protein ligase binding              GO:0000000	PMID: 17873885
+ubiquitin-protein transferase activity        GO:0000000	PMID: 12890688,17349954,19117993,20351172
+zinc ion binding                              GO:0000000	-
+
+Processs				      GO ID		Evidence
+-------------------------------------------------------------------------------------------------
+DNA damage response, signal transduction...   GO:0000000	PMID: 10918303
+DNA double-strand break processing            GO:0000000	-
+DNA replication                               GO:0000000	-
+DNA synthesis involved in DNA repair          GO:0000000	-
+G2 DNA damage checkpoint                      GO:0000000	PMID: 17525340,17643121,19261748
+androgen receptor signaling pathway           GO:0000000	PMID: 15572661
+apoptotic process                             GO:0000000	PMID: 10918303
+brain development                             GO:0000000	-
+cellular response to DNA damage stimulus      GO:0000000	PMID: 10910365
+cellular response to indole-3-methanol        GO:0000000	PMID: 10868478
+cellular response to tumor necrosis fact...   GO:0000000	PMID: 23415688
+centrosome cycle                              GO:0000000	-
+chordate embryonic development                GO:0000000	-
+chromosome breakage                           GO:0000000	-
+chromosome segregation                        GO:0000000	PMID: 15965487
+dosage compensation by inactivation of X...   GO:0000000	-
+double-strand break repair                    GO:0000000	PMID: 22186889
+double-strand break repair                    GO:0000000	PMID: 17525340,17643121,19261748
+double-strand break repair via homologou...   GO:0000000	PMID: 17349954
+double-strand break repair via nonhomolo...   GO:0000000	-
+fatty acid biosynthetic process               GO:0000000	-
+intrinsic apoptotic signaling pathway in...   GO:0000000	PMID: 14654789
+negative regulation of centriole replica...   GO:0000000	PMID: 12214252
+negative regulation of extrinsic apoptot...   GO:0000000	PMID: 23415688
+negative regulation of fatty acid biosyn...   GO:0000000	PMID: 16326698
+negative regulation of histone H3-K4 met...   GO:0000000	-
+negative regulation of histone H3-K9 met...   GO:0000000	PMID: 20820192
+negative regulation of histone acetylati...   GO:0000000	-
+negative regulation of intracellular est...   GO:0000000	PMID: 17505062
+negative regulation of reactive oxygen s...   GO:0000000	PMID: 23415688
+negative regulation of transcription, DN...   GO:0000000	PMID: 16288014
+positive regulation of DNA repair             GO:0000000	PMID: 17525340,17643121,19261748
+positive regulation of angiogenesis           GO:0000000	PMID: 23415688
+positive regulation of cell cycle arrest      GO:0000000	PMID: 21102443
+positive regulation of gene expression        GO:0000000	PMID: 23415688
+positive regulation of histone H3-K4 met...   GO:0000000	PMID: 20820192
+positive regulation of histone H3-K9 ace...   GO:0000000	PMID: 20820192
+positive regulation of histone H3-K9 met...   GO:0000000	-
+positive regulation of histone H4-K16 ac...   GO:0000000	PMID: 20820192
+positive regulation of histone H4-K20 me...   GO:0000000	PMID: 20820192
+positive regulation of histone acetylati...   GO:0000000	PMID: 20820192
+positive regulation of protein import in...   GO:0000000	-
+positive regulation of protein ubiquitin...   GO:0000000	PMID: 15965487
+positive regulation of transcription fro...   GO:0000000	PMID: 16331276
+positive regulation of transcription fro...   GO:0000000	PMID: 20820192
+positive regulation of transcription, DN...   GO:0000000	PMID: 20160719
+positive regulation of transcription, DN...   GO:0000000	PMID: 15572661
+positive regulation of transcription, DN...   GO:0000000	PMID: 10918303
+positive regulation of vascular endothel...   GO:0000000	PMID: 23415688
+postreplication repair                        GO:0000000	PMID: 17349954
+protein K6-linked ubiquitination              GO:0000000	PMID: 12890688,20351172
+protein autoubiquitination                    GO:0000000	PMID: 12890688,20351172
+protein sumoylation                           GO:0000000	-
+protein ubiquitination                        GO:0000000	PMID: 17349954
+regulation of DNA methylation                 GO:0000000	-
+regulation of apoptotic process               GO:0000000	PMID: 10918303
+regulation of cell proliferation              GO:0000000	PMID: 10918303
+regulation of gene expression by genetic...   GO:0000000	-
+regulation of signal transduction by p53...   GO:0000000	-
+regulation of transcription from RNA pol...   GO:0000000	PMID: 10910365
+regulation of transcription from RNA pol...   GO:0000000	PMID: 10918303
+response to estradiol                         GO:0000000	-
+response to estrogen                          GO:0000000	PMID: 8895509
+response to ionizing radiation                GO:0000000	PMID: 17525340,17643121,19261748
+response to nutrient                          GO:0000000	-
+strand displacement                           GO:0000000	-
+transcription, DNA-templated                  GO:0000000	-
+
+Component				      GO ID		Evidence
+-------------------------------------------------------------------------------------------------
+BRCA1-A complex                               GO:0000000	PMID: 17525340,17525341,17525342,19261748,19261749
+BRCA1-BARD1 complex                           GO:0000000	PMID: 12890688,15265711,19117993,20351172
+chromosome                                    GO:0000000	-
+condensed nuclear chromosome                  GO:0000000	-
+cytoplasm                                     GO:0000000	PMID: 20160719
+gamma-tubulin ring complex                    GO:0000000	PMID: 12214252
+intracellular ribonucleoprotein complex       GO:0000000	PMID: 18809582
+mitochondrial matrix                          GO:0000000	-
+nucleoplasm                                   GO:0000000	-
+nucleus                                       GO:0000000	PMID: 17525340,17643121,20160719,23855721
+plasma membrane                               GO:0000000	PMID: 21282464
+protein complex                               GO:0000000	PMID: 9774970
+ubiquitin ligase complex                      GO:0000000	PMID: 14976165
+
+GENERAL PROTEIN INFORMATION
+-------------------------------------------------------------------------------------------------
+Preferred Names
+	breast cancer type 1 susceptibility protein
+Names
+	BRCA1/BRCA2-containing complex, subunit 1
+	Fanconi anemia, complementation group S
+	RING finger protein 53
+	breast and ovarian cancer susceptibility protein 1
+	breast and ovarian cancer sususceptibility protein 1
+	breast cancer 1
+	breast cancer 1, early onset
+	early onset breast cancer 1
+	protein phosphatase 1, regulatory subunit 53
+	truncated BRCA1
+	truncated breast and ovarian cancer susceptibility protein 1
+	truncated breast and ovarian cancer sususceptibility protein 1
+	truncated breast cancer type 1 susceptibility protein
+
+NCBI REFERENCE SEQUENCES (RefSeq)
+-------------------------------------------------------------------------------------------------
+
+RefSeqs maintained independently of Annotated Genomes
+
+These reference sequences exist independently of genome builds.
+These reference sequences are curated independently of the genome annotation cycle, 
+so their versions may not match the RefSeq versions in the current genome build. 
+Identify version mismatches by comparing the version of the RefSeq in this section to 
+the one reported in Genomic regions, transcripts, and products section above.
+
+	Genomic
+		NG_005905.2 RefSeqGene
+		Range   	92500..173688
+		Download	GenBank FASTA Sequence Viewer (Graphics) 
+
+
+
+	mRNA and Protein(s) 
+
+	NM_007294.3 → NP_009225.1  REVIEWEDbreast cancer type 1 susceptibility protein isoform 1
+
+	See proteins identical to NP_009225.1 at http://130.14.18.100/protein?LinkName=protein_protein_identical%26from_uid=6552299
+
+	  Description: Transcript Variant: This variant (1, also known...
+	  Source sequence(s): AL701927, BC072418, BU617173, BU679389, U14680 
+	  Consensus CDS: CCDS11453.1
+	  UniProtKB/Swiss-Prot: P38398
+
+	  Related Ensembl: ENSP00000350283, OTTHUMP00000212143, ENST00000357654, OTTHUMT00000348798
+	  Conserved Domains (4)summary
+		pfam12820: 
+		Location:344 - 507
+		BRCT_assoc; Serine-rich domain associated with BRCT
+		cd00027: 
+		Location:1650 - 1724
+		BRCT; Breast Cancer Suppressor Protein (BRCA1), carboxy-terminal domain. The BRCT domain is found wi...
+		cd00162: 
+		Location:23 - 68
+		RING; RING-finger (Really Interesting New Gene) domain, a specialized type of Zn-finger of 40 to 60 ...
+		pfam04873: 
+		Location:648 - 978
+		EIN3; Ethylene insensitive 3
+
+	NM_007297.3 → NP_009228.2  REVIEWEDbreast cancer type 1 susceptibility protein isoform 3
+	  Description: Transcript Variant: This variant (3) differs in...
+	  Source sequence(s): BC072418, BU617173, BU679389, U14680 
+	  Consensus CDS: CCDS11459.2
+	  UniProtKB/Swiss-Prot: P38398
+
+	  Related Ensembl: ENSP00000418775, OTTHUMP00000212148, ENST00000493795, OTTHUMT00000348803
+	  Conserved Domains (3)summary
+		pfam12820: 
+		Location:297 - 460
+		BRCT_assoc; Serine-rich domain associated with BRCT
+		cd00027: 
+		Location:1603 - 1677
+		BRCT; Breast Cancer Suppressor Protein (BRCA1), carboxy-terminal domain. The BRCT domain is found wi...
+		pfam04873: 
+		Location:601 - 931
+		EIN3; Ethylene insensitive 3
+
+	NM_007298.3 → NP_009229.2  REVIEWEDbreast cancer type 1 susceptibility protein isoform 4
+
+	See proteins identical to NP_009229.2 at http://130.14.18.100/protein?LinkName=protein_protein_identical%26from_uid=237681123
+
+	  Description: Transcript Variant: This variant (4, also known...
+	  Source sequence(s): AL701927, BC072418, BU617173, BU679389, U64805 
+	  Consensus CDS: CCDS11454.2
+	  UniProtKB/TrEMBL: A0A024R1V0
+	  UniProtKB/Swiss-Prot: P38398
+
+	  Related Ensembl: ENSP00000420705, OTTHUMP00000212155, ENST00000491747, OTTHUMT00000348811
+	  Conserved Domains (2)summary
+		cd00027: 
+		Location:546 - 620
+		BRCT; Breast Cancer Suppressor Protein (BRCA1), carboxy-terminal domain. The BRCT domain is found wi...
+		cd00162: 
+		Location:23 - 68
+		RING; RING-finger (Really Interesting New Gene) domain, a specialized type of Zn-finger of 40 to 60 ...
+
+	NM_007299.3 → NP_009230.2  REVIEWEDbreast cancer type 1 susceptibility protein isoform 5
+
+	See proteins identical to NP_009230.2 at http://130.14.18.100/protein?LinkName=protein_protein_identical%26from_uid=237681125
+
+	  Description: Transcript Variant: This variant (5) differs in...
+	  Source sequence(s): BC072418, BU617173, BU679389 
+	  Consensus CDS: CCDS11455.2
+	  UniProtKB/Swiss-Prot: P38398
+
+	  Related Ensembl: ENSP00000417148, OTTHUMP00000212149, ENST00000468300, OTTHUMT00000348804
+	  Conserved Domains (2)summary
+		cd00027: 
+		Location:546 - 620
+		BRCT; Breast Cancer Suppressor Protein (BRCA1), carboxy-terminal domain. The BRCT domain is found wi...
+		cd00162: 
+		Location:23 - 68
+		RING; RING-finger (Really Interesting New Gene) domain, a specialized type of Zn-finger of 40 to 60 ...
+
+	NM_007300.3 → NP_009231.2  REVIEWEDbreast cancer type 1 susceptibility protein isoform 2
+	  Description: Transcript Variant: This variant (2) includes a...
+	  Source sequence(s): AC135721, AL701927, BC072418, BC115037, BU617173, BU679389, U14680 
+	  Consensus CDS: CCDS11456.2
+	  UniProtKB/Swiss-Prot: P38398
+
+	  Related Ensembl: ENSP00000418960, OTTHUMP00000212147, ENST00000471181, OTTHUMT00000348802
+	  Conserved Domains (4)summary
+		pfam12820: 
+		Location:344 - 507
+		BRCT_assoc; Serine-rich domain associated with BRCT
+		cd00027: 
+		Location:1671 - 1745
+		BRCT; Breast Cancer Suppressor Protein (BRCA1), carboxy-terminal domain. The BRCT domain is found wi...
+		cd00162: 
+		Location:23 - 68
+		RING; RING-finger (Really Interesting New Gene) domain, a specialized type of Zn-finger of 40 to 60 ...
+		pfam04873: 
+		Location:648 - 978
+		EIN3; Ethylene insensitive 3
+
+RefSeqs of Annotated Genomes: Homo sapiens Annotation Release 108
+The following sections contain reference sequences that belong to a specific genome build. 
+This section includes genomic Reference Sequences (RefSeqs) from all assemblies on which 
+this gene is annotated, such as RefSeqs for chromosomes and scaffolds (contigs) from both 
+reference and alternate assemblies. Model RNAs and proteins are also reported here.
+
+Reference GRCh38.p7 Primary Assembly
+
+	Genomic
+		NC_000017.11 Reference GRCh38.p7 Primary Assembly
+		Range   	43044294..43125482, complement
+		Download	GenBank FASTA Sequence Viewer (Graphics) 
+
+Alternate CHM1_1.1
+
+	Genomic
+		NC_018928.2 Alternate CHM1_1.1
+		Range   	41431850..41513017, complement
+		Download	GenBank FASTA Sequence Viewer (Graphics) 
+
+
+
+Suppressed Reference Sequence(s)
+
+The following Reference Sequences have been suppressed. These RefSeqs were suppressed for the cited reason(s). Suppressed RefSeqs do not appear in BLAST databases, related sequence links, or BLAST links (BLink), but may still be retrieved by clicking on their accession.version below.NM_007295.2: Suppressed sequenceDescriptionNM_007295.2: This RefSeq was permanently suppressed because only partial transcript evidence exists for this transcript variant, and its full-length exon combination is unclear.NM_007296.2: Suppressed sequenceDescriptionNM_007296.2: This RefSeq was permanently suppressed because there is no full-length transcript support for the exon combination of this variant.NM_007301.2: Suppressed sequenceDescriptionNM_007301.2: This RefSeq was permanently suppressed because currently there is insufficient support for the transcript and the protein.NM_007302.2: Suppressed sequenceDescriptionNM_007302.2: This RefSeq was permanently suppressed because only partial transcript evidence exists for this transcript variant, and its full-length exon combination is unclear.NM_007303.2: Suppressed sequenceDescriptionNM_007303.2: This RefSeq was permanently suppressed because the full-length sequence of this transcript variant is unavailable, and its full-length exon combination is unclear.NM_007305.2: Suppressed sequenceDescriptionNM_007305.2: This RefSeq was permanently suppressed because the full-length sequence of this transcript variant is unavailable, and its full-length exon combination is unclear.NM_007306.2: Suppressed sequenceDescriptionNM_007306.2: This RefSeq was permanently suppressed because currently there is insufficient support for the transcript and the protein.
+
+RELATED SEQUENCES
+-------------------------------------------------------------------------------------------------
+
+Nucleotide			Protein
+-------------------------------------------------------------------------------------------------
+genomic             		AC135721.4(33970..115124)	None
+genomic             		AF110102.1	None
+genomic             		AF284812.1	AAF97939.1
+genomic             		AF288936.1	None
+genomic             		AF288937.1	None
+genomic             		AF507075.1	None
+genomic             		AF507076.1	AAN61423.1
+genomic             		AF507077.1	AAN61424.1
+genomic             		AF507078.1	AAN61425.1
+genomic             		AMYH02033449.1(12235..14160)	None
+genomic             		AMYH02033450.1	None
+genomic             		AY093484.1	AAM18218.1
+genomic             		AY093485.1	AAM18219.1
+genomic             		AY093486.1	AAM18220.1
+genomic             		AY093487.1	AAM18221.1
+genomic             		AY093488.1	None
+genomic             		AY093489.1	AAM18222.1
+genomic             		AY093490.1	AAM18223.1
+genomic             		AY093491.1	AAM18224.1
+genomic             		AY093492.1	AAM18225.1
+genomic             		AY093493.1	AAM18226.1
+genomic             		AY144588.1	AAN10167.1
+genomic             		AY150865.1	AAN71744.1
+genomic             		AY273801.1	AAP12647.1
+genomic             		AY304547.1	AAP70031.1
+genomic             		AY458144.1	None
+genomic             		AY706911.1	AAU21563.1
+genomic             		AY706912.1	AAU21564.1
+genomic             		AY706913.1	AAU21565.1
+genomic             		CH471152.1	EAW60922.1
+				EAW60923
+				EAW60924
+				EAW60925
+				EAW60926
+				EAW60927
+				EAW60928
+				EAW60929
+				EAW60930
+				EAW60931
+				EAW60932
+				EAW60933
+				EAW60934
+				EAW60935
+				EAW60936
+				EAW60937
+				EAW60938
+				EAW60939
+				EAW60940
+				EAW60941
+				EAW60942
+genomic             		DQ075361.1	AAZ05886.1
+genomic             		DQ077481.1	None
+genomic             		DQ077482.1	None
+genomic             		DQ077483.1	None
+genomic             		DQ077484.1	None
+genomic             		DQ077485.1	None
+genomic             		DQ077486.1	None
+genomic             		DQ116737.1	AAZ16492.1
+genomic             		DQ145822.1	AAZ79406.1
+genomic             		DQ145823.1	AAZ79407.1
+genomic             		DQ145824.1	AAZ79408.1
+genomic             		DQ145825.1	AAZ79409.1
+genomic             		DQ145826.1	AAZ79410.1
+genomic             		DQ190450.1	ABA29208.1
+genomic             		DQ190451.1	ABA29211.1
+genomic             		DQ190452.1	ABA29214.1
+genomic             		DQ190453.1	ABA29217.1
+genomic             		DQ190454.1	ABA29220.1
+genomic             		DQ190455.1	ABA29223.1
+genomic             		DQ190456.1	ABA29226.1
+genomic             		DQ190457.1	ABA29229.1
+genomic             		DQ299305.1	ABB87053.1
+genomic             		DQ299306.1	ABB87054.1
+genomic             		DQ299307.1	ABB87055.1
+genomic             		DQ299308.1	ABB87056.1
+genomic             		DQ299309.1	ABB87057.1
+genomic             		DQ299310.1	ABB87058.1
+genomic             		DQ299311.1	ABB87059.1
+genomic             		DQ299312.1	ABB87060.1
+genomic             		DQ299313.1	ABB87061.1
+genomic             		DQ299314.1	ABB87062.1
+genomic             		DQ299315.1	ABB87063.1
+genomic             		DQ299316.1	ABB87064.1
+genomic             		DQ299317.1	ABB87065.1
+genomic             		DQ299318.1	ABB87066.1
+genomic             		DQ299319.1	ABB87067.1
+genomic             		DQ299320.1	ABB87068.1
+genomic             		DQ299321.1	ABB87069.1
+genomic             		DQ299322.1	ABB87070.1
+genomic             		DQ299323.1	ABB87071.1
+genomic             		DQ299324.1	ABB87072.1
+genomic             		DQ299325.1	ABB87073.1
+genomic             		DQ299326.1	ABB87074.1
+genomic             		DQ299327.1	ABB87075.1
+genomic             		DQ299328.1	ABB87076.1
+genomic             		DQ299329.1	ABB87077.1
+genomic             		DQ299330.1	ABB87078.1
+genomic             		DQ299331.1	ABB87079.1
+genomic             		DQ478408.1	ABF14462.1
+genomic             		FJ940752.1	ACR33809.1
+genomic             		GU129207.1	None
+genomic             		GU129208.1	None
+genomic             		GU129209.1	None
+genomic             		HE600032.1	CCD57768.1
+genomic             		HE600033.1	CCD57769.1
+genomic             		HE600034.1	CCD57770.1
+genomic             		HE600035.1	CCD57771.1
+genomic             		HE600036.1	CCD57772.1
+genomic             		HE600037.1	CCD57773.1
+genomic             		HE600038.1	CCD57774.1
+genomic             		HQ221561.1	None
+genomic             		HQ221562.1	None
+genomic             		JN415144.1	None
+genomic             		JX480460.1	AFU88802.1
+genomic             		JX480461.1	AFU88803.1
+genomic             		JX480462.1	AFU88804.1
+genomic             		JX480463.1	AFU88805.1
+genomic             		JX480464.1	AFU88806.1
+genomic             		JX480465.1	AFU88807.1
+genomic             		JX480466.1	AFU88808.1
+genomic             		JX480467.1	AFU88809.1
+genomic             		KJ625149.1	AIC83575.1
+genomic             		KJ625150.1	AIC83576.1
+genomic             		KJ625151.1	AIC83574.1
+genomic             		KJ625152.1	AIC83571.1
+genomic             		KJ625153.1	AIC83572.1
+genomic             		KJ625154.1	AIC83573.1
+genomic             		KJ625155.1	AIC83545.1
+genomic             		KJ625156.1	AIC83546.1
+genomic             		KJ625157.1	AIC83547.1
+genomic             		KJ625158.1	AIC83548.1
+genomic             		KJ625159.1	AIC83549.1
+genomic             		KJ625160.1	AIC83550.1
+genomic             		KJ625161.1	AIC83551.1
+genomic             		KJ625162.1	AIC83552.1
+genomic             		KJ625163.1	AIC83553.1
+genomic             		KJ625164.1	AIC83554.1
+genomic             		KJ625165.1	AIC83555.1
+genomic             		KJ625166.1	AIC83556.1
+genomic             		KJ625167.1	AIC83557.1
+genomic             		KJ625168.1	AIC83558.1
+genomic             		KJ625169.1	AIC83559.1
+genomic             		KJ625170.1	AIC83544.1
+genomic             		KJ625171.1	AIC83542.1
+genomic             		KJ625172.1	AIC83541.1
+genomic             		KJ625173.1	AIC83540.1
+genomic             		KJ625174.1	AIC83539.1
+genomic             		KJ625175.1	AIC83577.1
+genomic             		KJ625176.1	AIC83578.1
+				AIC83579
+genomic             		KJ625177.1	AIC83580.1
+genomic             		KJ625178.1	AIC83581.1
+genomic             		KJ625179.1	AIC83582.1
+genomic             		KM434065.1	AIY34492.1
+genomic             		KP255396.1	AKE50574.1
+genomic             		KP255397.1	AKE50575.1
+genomic             		KP255398.1	AKE50576.1
+genomic             		KP255399.1	AKE50577.1
+genomic             		KP255400.1	AKE50578.1
+genomic             		KP255401.1	AKE50579.1
+genomic             		KP255402.1	AKE50580.1
+genomic             		KP255403.1	AKE50581.1
+genomic             		KP272102.1	AKG51644.1
+genomic             		KP272103.1	AKG51645.1
+genomic             		KP272104.1	AKG51646.1
+genomic             		KP404097.1	AKJ84699.1
+genomic             		KP455327.1	AKJ80194.1
+genomic             		KP701015.1	AKR15645.1
+genomic             		KP701016.1	AKR15646.1
+genomic             		KP729136.1	AKQ62933.1
+genomic             		KP729137.1	AKQ62934.1
+genomic             		KP744861.1	AKQ62935.1
+genomic             		KP753383.1	ALD10297.1
+genomic             		KT120061.1	ALF35866.1
+genomic             		KT152888.1	ALO20343.1
+genomic             		KT152889.1	ALO20344.1
+genomic             		KT152890.1	ALO20345.1
+genomic             		KT584071.1	None
+genomic             		KT844468.1	ALY05710.1
+genomic             		KT844469.1	ALY05711.1
+genomic             		KU359055.1	AMO12812.1
+genomic             		KU359056.1	AMO12813.1
+genomic             		KU359057.1	AMO12814.1
+genomic             		KU359058.1	AMO12815.1
+genomic             		KU359059.1	AMO12816.1
+genomic             		KU359060.1	AMO12817.1
+genomic             		KU359061.1	AMO12818.1
+genomic             		KU359062.1	AMO12819.1
+genomic             		KU359063.1	AMO12820.1
+genomic             		KU359064.1	AMO12821.1
+genomic             		KU578315.1	None
+genomic             		L78833.1	AAC37594.1
+genomic             		S78558.1	AAB34725.1
+genomic             		U15595.1	None
+genomic             		U37574.1	AAC50330.1
+genomic             		U61268.1	AAB40910.1
+genomic             		Y08757.1	CAA70003.1
+mRNA                		AB621825.1	BAK64160.1
+mRNA                		AF005068.1	AAB61673.1
+mRNA                		AF274503.1	None
+mRNA                		AK307553.1	None
+mRNA                		AK308084.1	None
+mRNA                		AK316200.1	BAH14571.1
+mRNA                		AL701927.1	None
+mRNA                		AY354539.2	AAQ92977.1
+mRNA                		AY751490.1	AAU93634.1
+mRNA                		BC012577.1	None
+mRNA                		BC030969.1	AAH30969.1
+mRNA                		BC038947.1	None
+mRNA                		BC046142.1	None
+mRNA                		BC062429.1	AAH62429.1
+mRNA                		BC072418.1	AAH72418.1
+mRNA                		BC085615.1	AAH85615.1
+mRNA                		BC106745.1	AAI06746.1
+mRNA                		BC106746.1	AAI06747.1
+mRNA                		BC114511.1	None
+mRNA                		BC114562.1	None
+mRNA                		BC115037.1	AAI15038.1
+mRNA                		BU617173.1	None
+mRNA                		BU679389.1	None
+mRNA                		DQ333386.1	ABC59810.1
+mRNA                		DQ333387.1	ABC59811.1
+mRNA                		DQ363751.1	ABC88652.1
+mRNA                		JN686490.1	AEQ98814.1
+mRNA                		KP272105.1	AKG51647.1
+mRNA                		KP272106.1	AKG51648.1
+mRNA                		U14680.1	AAA73985.1
+mRNA                		U64805.1	AAC00049.1
+mRNA                		U68041.1	AAB08105.1
+mRNA                		Y08864.1	None
+
+Protein Accession		Links
+-------------------------------------------------------------------------------------------------
+P38398.2       	GenPept		UniProtKB/Swiss-Prot:P38398.2
+
+GENE LINKOUT
+-------------------------------------------------------------------------------------------------
+The following LinkOut(www.ncbi.nlm.nih.gov/projects/linkout/index.html) resources
+are supplied by external providers. These providers are responsible for
+maintaining the links.
+
+Chemical Information
+  (Free resource) (free) Interologous Interaction Database
+	Interologous Interaction Database
+  (Order form) Novus Biologicals
+	Antibody PacksAntibody PacksRNAiRNAiPeptides and ProteinsPeptides and Proteins
+
+Medical
+  (Free resource) (free) Breast Cancer TissueBank Bioinformatics Portal
+	Breast Cancer TissueBank Bioinformatics Portal
+  (Free resource) (free) Genetics Home Reference
+	BRCA1 geneBRCA1 gene
+  (Free resource) (free) Pancreatic Expression Database
+	Pancreatic Expression Database
+
+Molecular Biology Databases
+  (Free resource) (free) BioGPS
+	BioGPS
+  (Free resource) (free) CREB Target Gene Database
+	CREB Target Gene Database
+  (Free resource) (free) CutDB, Proteolytic Event Database (part of Proteolysis MAP (PMAP), proteolysis reasoning environment)
+	CutDB, Proteolytic Event Database (part of Proteolysis MAP (PMAP), proteolysis reasoning environment)
+  (Free resource) (free) Domain Mapping of Disease Mutations
+	BRCA1BRCA1
+  (Free resource) (free) EVEX
+	EVEX text mining resourceEVEX text mining resource
+  (Free resource) (free) GenAge Database of Aging Related Genes
+	GenAge Database of Aging Related Genes
+  (Order form) GenScript:ORF Clones in your selected vector
+	GenScript:ORF Clones in your selected vector
+  (Free resource) (free) GeneNetwork
+	Records for gene expression in HumanRecords for gene expression in Human
+  (Free resource) (free) Genevisible
+	BRCA1BRCA1
+  GoPubMed Proteins
+	A selection of literature about the genesA selection of literature about the genes
+  (Free resource) (free) HuRef Browser
+	HuRef Genome AnnotationHuRef Genome Annotation
+  (Free resource) (Free registration required) (free) Human Gene Mutation Database
+	Human Gene Mutation Database
+  (Free resource) (free) Human eFP Browser
+	Human eFP BrowserHuman eFP BrowserHuman eFP Browser
+  Ingenuity Pathways Analysis
+	Ingenuity Pathways Analysis
+  (Free resource) (free) InnateDB
+	InnateDB
+  (Free resource) (free) InterMine
+	InterMine
+  (Free resource) (free) Kyoto Encyclopedia of Genes and Genomes
+	hsa:672hsa:672
+  (Free resource) (free) LSDB from Gene
+	BRCA1 @ ZAC-GGMBRCA1 @ ZAC-GGMDatabase of BRCA1 and BRCA2 sequence variants that have been clinically reclassified using a quantitative integrated evaluationDatabase of BRCA1 and BRCA2 sequence variants that have been clinically reclassified using a quantitative integrated evaluationBreast Cancer Information Core (BIC)Breast Cancer Information Core (BIC)
+  (Free resource) (free) NextBio
+	NextBio
+  (Free resource) (free) Nuclear Receptor Signaling Atlas (NURSA)
+	Transcriptomine: regulation of the BRCA1 gene by nuclear receptor signaling pathwaysTranscriptomine: regulation of the BRCA1 gene by nuclear receptor signaling pathways
+  (Free resource) (free) Pathway Interaction Database
+	Pathway Interaction Database
+  (Free resource) (free) Pharmacogenomics Knowledge Base
+	Annotated Pharmacogenomic Information for BRCA1 [PharmGKB]Annotated Pharmacogenomic Information for BRCA1 [PharmGKB]
+  (Free resource) (free) PhosphoSitePlus
+	PhosphoSitePlus® - comprehensive post-translational modification resourcePhosphoSitePlus® - comprehensive post-translational modification resource
+  (Free resource) (free) Protein Ontology Consortium
+	Protein Ontology Consortium
+  (Free resource) (Order form) (free) SeekQuence Research Antibodies
+	SeekQuence Research Antibodies
+  (Free resource) (free) The Gene Wiki
+	The Gene Wiki
+  (Free resource) (free) The Weizmann Institute of Science GeneCards and MalaCards databases
+	GeneCard for BRCA1GeneCard for BRCA1
+  (Free resource) (free) iHOP - Information Hyperlinked over Proteins
+	iHOP - Information Hyperlinked over Proteins
+  (Free resource) (free) iRefWeb - iRefIndex release 9.0 - Consolidated Interactome
+	iRefWeb - iRefIndex release 9.0 - Consolidated Interactome
+  (Free resource) (free) pfSNP
+	pfSNP
+
+Research Materials
+  (Order form) Addgene Non-profit plasmid repository
+	Get  Plasmids - AddgeneGet  Plasmids - Addgene
+  (Order form) Creative Biomart
+	Recombinant Human Breast Cancer 1, Early OnsetRecombinant Human Breast Cancer 1, Early Onset
+  ExactAntigen/Labome
+	reagentsreagentsreagent reviewreagent review
+  (Order form) GeneCopoeia Inc.
+	Order miRNA target clonesOrder miRNA target clonesOrder full-length ORF cloneOrder full-length ORF cloneOrder promoter cloneOrder promoter clone
+  (Order form) Kazusa DNA Research Institute
+	Kazusa DNA Research Institute
+  LifeSpan BioSciences, Inc.
+	LSBio BRCA1 AntibodiesLSBio BRCA1 AntibodiesLSBio BRCA1 Elisa KitsLSBio BRCA1 Elisa KitsLSBio BRCA1 ProteinsLSBio BRCA1 Proteins
+  (Order form) NITE Biological Resource Center
+	Human cDNA clones used in NEDO Project / AK308084Human cDNA clones used in NEDO Project / AK308084Human cDNA clones used in NEDO Project / AK307553Human cDNA clones used in NEDO Project / AK307553Human cDNA clones used in NEDO Project / AK293762Human cDNA clones used in NEDO Project / AK293762
+  (Order form) PlasmID Repository at Harvard Medical School
+	Order full-length cDNA cloneOrder full-length cDNA clone
+  (Order form) QIAGEN GeneGlobe
+	QIAGEN GeneGlobe
+  (Order form) Sino Biological Inc.
+	Human BRCA1 Gene cDNA Clone (full-length ORF Clone), expression ready, untaggedHuman BRCA1 Gene cDNA Clone (full-length ORF Clone), expression ready, untagged
+  (Order form) antibodies-online
+	antibodies-online
+
+Tools
+  (Free resource) (free) GeneMANIA
+	GeneMANIA

@@ -1,0 +1,32 @@
+
+---
+title: "Incidentalome Figure"
+author: "James Diao"
+date: "June 17, 2016"
+runtime: shiny
+output: html_document
+---
+
+### Method 1: simulation by expected values
+This method simply plots the expression $P(at least 1 false-positive) = 1-(1-false.positive.rate)^n$, which gives the expected value at each point.
+
+```{r, echo = FALSE}
+inputPanel(
+  sliderInput("log10test","log10(No. of Independent Tests):",
+                min = 1, max = 6, value = 4, step = 1),
+  sliderInput("log10fpr","log10(False-Positive Rate):",
+                min = -6, max = 0, value = -4, step = 1)
+)
+renderPlot({
+  fpr <- 10^input$log10fpr
+  test_num <- floor(seq(0,10^input$log10test,length.out = 150))[-1]
+  plot(test_num, 1-(1-fpr)^test_num, main = "Figure. Percentage of Total Population with a False-Positive Test Result", 
+       ylab = "Percentage of Total Population with a False-Positive Test Result", xlab = "No. of Independent Tests")
+})
+```
+
+------
+
+
+
+

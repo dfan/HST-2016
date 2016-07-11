@@ -1,0 +1,8 @@
+#library(RMySQL)
+library(RMySQL)#
+library(shiny)#
+setwd("/Users/jamesdiao/Documents/Kohane_Lab/Week_1/")#
+all_cons <- dbListConnections(MySQL())#
+for (con in all_cons)#
+  dbDisconnect(con)#
+runApp(paste(getwd(),"Incidentalome_Figure",sep="/"))

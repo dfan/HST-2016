@@ -1,0 +1,70 @@
+---
+title: "UCSC Genome Browser Queries (MYBPC3)"
+author: "James Diao"
+date: "June 20, 2016"
+output: html_document
+---
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+library(RMySQL)
+setwd("/Users/jamesdiao/Documents/Kohane_Lab/Week_2/")
+all_cons <- dbListConnections(MySQL())
+for (con in all_cons)
+  dbDisconnect(con)
+
+con <- dbConnect(MySQL(), user = 'genome', 
+                 dbname = 'hg19', host = 'genome-mysql.cse.ucsc.edu',
+                 unix.sock = "/Applications/MAMP/tmp/mysql/mysql.sock")
+query <- function (input) {
+  suppressWarnings(dbGetQuery(con, input))
+}
+```
+
+### Queries in relevant-looking tables in the hg19 database:
+
+> 1. refGene
+```{r}
+refGene.mybpc3 <- query("select * from refGene where name2 = \"MYBPC3\"")
+```
+```{r, echo = FALSE}
+refGene.mybpc3[,-c(10,11)]
+```
+
+> 2. knownGene 1-3
+```{r}
+knownGene.mybpc3 <- rbind(query("select * from knownGene where name = \"uc021qir.1\""),
+                      query("select * from knownGene where name = \"uc021qis.1\""), 
+                      query("select * from knownGene where name = \"uc010rhl.2\""))
+#MYH7 = \"uc001wjx.3\"
+```
+```{r, echo = FALSE}
+knownGene.mybpc3[,-c(9,10)]
+```
+
+> 3. geneReviews
+```{r}
+geneReviews.mybpc3 <- query("select * from geneReviews where name = \"MYBPC3\" limit 3")
+```
+```{r, echo = FALSE}
+geneReviews.mybpc3
+```
+
+> 4. geneReviewsDetail
+```{r}
+geneReviewsDetail.mybpc3 <- query("select * from geneReviewsDetail where geneSymbol = \"MYBPC3\" limit 3")
+```
+```{r, echo = FALSE}
+geneReviewsDetail.mybpc3
+```
+
+### MYBPC3 transcribed sequence
+```{r, echo = FALSE} 
+mybpc3_tx_refseq <- read.csv(paste(getwd(),"Sequences/mybpc3_tx_refseq.txt",sep = "/"), stringsAsFactors = FALSE)
+head(mybpc3_tx_refseq)
+```
+
+### MYBPC3 coding sequence
+```{r, echo = FALSE} 
+mybpc3_cd_refseq <- read.csv(paste(getwd(),"Sequences/mybpc3_cd_refseq.txt",sep = "/"), stringsAsFactors = FALSE)
+head(mybpc3_cd_refseq)
+```
