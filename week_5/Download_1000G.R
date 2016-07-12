@@ -37,7 +37,7 @@ num.genes <- length(gene.list)
 rm(ACMG.page, badrow, mismatch, row)
 
 #################################################################################
-###  Connecting USCS Genome Browser to extract gene info: chrom, start, stop  ###
+###  Connecting to UCSC Genome Browser to extract gene info: chrom, start, stop  ###
 #################################################################################
 for (con in dbListConnections(MySQL())) dbDisconnect(con)
 con <- dbConnect(MySQL(), user = 'genome',
@@ -93,5 +93,5 @@ download
 
 header <- c("CHROM", "POS", "ID", "REF", "ALT", "QUAL", "FILTER", "INFO", "FORMAT")
 
-save.image(file = paste(getwd(), "ACMG.files", sep = "/HST-2016/week_5/"))
+#save.image(file = paste(getwd(), "ACMG.files", sep = "/HST-2016/week_5/"))
 

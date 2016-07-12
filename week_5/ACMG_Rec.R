@@ -25,18 +25,20 @@ plot(af_cor, ylim = c(0,1))
 
 #Setup Data Table
 output <- lapply(1:num.genes, function(i) {
-  data.frame(
-    separate(freq.join[[i]], "ID", c("Chrom","Position","Ref","Alt")),
-    "Disease" = NA,
-    "Prevalence" = NA,
-    "Citation" = NA
+  temp <- separate(freq.join[[i]], "ID", c("Chrom","Position","Ref","Alt"))
+  temp$Position <- as.numeric(temp$Position)
+  data.frame(temp,
+    "Disease" = "Unknown",
+    "Prevalence" = 0,
+    "Citation" = "Unknown"
   )
 })
 output <- do.call(rbind, output)
 output <- data.frame("NumKey" = 1:nrow(output), output)
 
 setwd("/Users/jamesdiao/Documents/Kohane_Lab/")
-write.table(output, file = paste(getwd(),"ACMG_output.txt",sep="/HST-2016/week_5/"), sep = "\t", row.names = F)
+write.table(output, file = paste(getwd(),"ACMG_output.txt",sep="/HST-2016/week_5/"),
+            sep = "\t", quote = FALSE, row.names = FALSE, col.names = FALSE)
 
 
 
