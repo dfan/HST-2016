@@ -44,7 +44,7 @@ con <- dbConnect(MySQL(), user = 'genome',
                  dbname = 'hg19', host = 'genome-mysql.cse.ucsc.edu',
                  unix.sock = "/Applications/MAMP/tmp/mysql/mysql.sock")
 query <- function (input) { suppressWarnings(dbGetQuery(con, input)) }
-setwd("/Users/jamesdiao/Documents/Kohane_Lab/1000G_ACMG")
+setwd("/Users/jamesdiao/Documents/Kohane_Lab/1000G")
 
 ####################################################
 ###  Function for downloading 1000 genomes data  ###
@@ -55,14 +55,12 @@ download_1000g <- function(gene) {
   #geneReviews <- sprintf("select * from geneReviews where name = \"%s\" limit 3", gene) %>% query
   #UCSC <- select(geneReviews, chrom, start = chromStart, end = chromEnd)
   refGene <- sprintf("select * from refGene where name2 = \"%s\" limit 20", gene) %>% query
-  UCSC <- select(refGene, chrom, start = txStart, end = txEnd)
+  UCSC <- select(refGene, name, chrom, start = txStart, end = txEnd)
   if (nrow(UCSC) == 0) #No hit on geneReviews/refGene
     print("NOT FOUND")
   else {
     if (nrow(UCSC) > 1) { #Multiple hits: take the widest range
-      UCSC$start[1] <- min(UCSC$start)
-      UCSC$end[1] <- max(UCSC$end)
-      UCSC <- UCSC[1,]
+      UCSC <- UCSC[which.max(UCSC$end-UCSC$start),]
       #print("MULTIPLE")
     }
     # gets [n] from chr[n]
@@ -81,7 +79,7 @@ download_1000g <- function(gene) {
     exists <- grepl(paste(gene,"_genotypes.vcf",sep =""), system("ls", intern = T)) %>% sum > 0
     file.size <- strsplit(paste("stat ","_genotypes.vcf", sep = gene) %>% system(intern = T), " ")[[1]][8]
     if (exists & file.size > 0)
-      print("SUCCESS")
+      print(UCSC$name)
     else print("UNKNOWN FAILURE")
   }
 }
@@ -92,6 +90,10 @@ system("rm *.genotypes.vcf.gz.tbi; ls")
 download
 
 header <- c("CHROM", "POS", "ID", "REF", "ALT", "QUAL", "FILTER", "INFO", "FORMAT")
+
+setwd("/Users/jamesdiao/Documents/Kohane_Lab/")
+#write.table(as.matrix(download), quote = FALSE, sep = "\t", col.names = FALSE,
+#            paste(getwd(),"refGene_sources.txt",sep="/1000G/"))
 
 #save.image(file = paste(getwd(), "ACMG.files", sep = "/HST-2016/week_5/"))
 

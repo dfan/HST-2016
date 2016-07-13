@@ -14,14 +14,14 @@ load(file = paste(getwd(), "ACMG.files", sep = "/HST-2016/week_5/"))
 #########################################################
 
 import.file.exac <- function(gene) {
-  setwd("/Users/jamesdiao/Documents/Kohane_Lab/ExAC_ACMG")
+  setwd("/Users/jamesdiao/Documents/Kohane_Lab/ExAC")
   name <- paste(gene,"exac.csv", sep = "_")
   output <- read.csv(paste(getwd(),name,sep="/"), stringsAsFactors = FALSE)
   output[nchar(paste(output$Alternate,output$Reference))==3,]
 }
 
 import.file.1000g <- function(gene, cut) {
-  setwd("/Users/jamesdiao/Documents/Kohane_Lab/1000G_ACMG")
+  setwd("/Users/jamesdiao/Documents/Kohane_Lab/1000G")
   name <- paste(gene,"genotypes.vcf", sep = "_")
   output <- read.table(paste(getwd(),name,sep="/"), stringsAsFactors = FALSE)
   #Add header
