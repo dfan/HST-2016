@@ -53,20 +53,31 @@ con <- dbConnect(MySQL(), dbname = 'kohane_lab', host = 'localhost', user = 'roo
 query <- function (input) { suppressWarnings(dbGetQuery(con, input)) }
 
 #query("drop table ACMG_Variant")
-paste("create table ACMG_Variant (Gene varchar(20), Chrom varchar(3), Position int,Ref varchar(30),",
-      "Alt varchar(30), AF_1000G decimal(15,10), AF_ExAC decimal(15,10))", sep="") %>% query
+#query(paste("create table ACMG_Variant (Gene varchar(20), Chrom varchar(3), Position int,Ref varchar(30),",
+#      "Alt varchar(30), AF_1000G decimal(15,10), AF_ExAC decimal(15,10))", sep=""))
 query("describe ACMG_Variant")
 paste("load data local infile '",write.loc.ACMG.variant,"' into table ACMG_Variant lines terminated by '\n'", sep = "") %>% query
 query("select * from ACMG_Variant limit 3")
 
 #query("drop table ACMG_Disease")
-query("create table ACMG_Disease (Disease varchar(200), Disease_MIM varchar(10), Gene varchar(20), Gene_MIM varchar(10))")
+#query("create table ACMG_Disease (Disease varchar(200), Disease_MIM varchar(10), Gene varchar(20), Gene_MIM varchar(10))")
 query("describe ACMG_Disease")
 paste("load data local infile '",write.loc.ACMG.disease,"' into table ACMG_Disease lines terminated by '\n'", sep = "") %>% query
 query("select * from ACMG_Disease limit 3")
 
-write(ACMG.table$Disease_Name, paste(getwd(),"ACMG_Disease_Names.txt",sep="/HST-2016/week_5/"))
 
 
+#write(ACMG.table$Disease_Name, paste(getwd(),"ACMG_Disease_Names.txt",sep="/HST-2016/week_5/"))
+ACMG_lit <- read.delim(stringsAsFactors = F, sep = "\t", header = T, file = paste(getwd(),"ACMG_Lit_Full.txt",sep="/HST-2016/week_5/"))
+ACMG_lit$Prevalence <- 1/ACMG_lit$Inverse.Prevalence
+ACMG_lit <- select(ACMG_lit, Disease, Prevalence, Citation)
+write.loc.ACMG.lit <- paste(getwd(),"ACMG_Lit.txt",sep="/HST-2016/week_5/")
+write.table(ACMG_lit, file = write.loc.ACMG.lit, sep = "\t", na = "\\N", quote = FALSE, row.names = FALSE, col.names = FALSE)
+
+#query("drop table ACMG_Lit")
+#query("create table ACMG_Lit (Disease varchar(200), Prevalence decimal (10,9), Citation varchar(300))")
+query("describe ACMG_Lit")
+paste("load data local infile '",write.loc.ACMG.lit,"' into table ACMG_Lit lines terminated by '\n'", sep = "") %>% query
+query("select * from ACMG_Lit limit 5")
 
 

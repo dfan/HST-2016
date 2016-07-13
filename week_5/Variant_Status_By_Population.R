@@ -17,13 +17,13 @@ submap <- as.data.frame(sapply(populations, function(pop) {
 submap <- cbind(submap, "Total" = TRUE)
 row.names(submap) <- map$sample
 
-population.data <- t(sapply(ACMG.1000g, function(data) {
+population.data <- sapply(ACMG.1000g, function(data) {
   sapply(1:ncol(submap), function(i) {
     (subset(data, select = c(rep(FALSE,10), submap[,i])) %>% colSums > 0) %>% mean
   })
-}))
-
+}) %>% t %>% as.data.frame
 colnames(population.data) <- c(populations,"Total")
+
 write.table(population.data, sep = "\t", quote = FALSE,
   paste(getwd(), "Population_Variant_Status.txt",sep="/HST-2016/week_5/"))
 

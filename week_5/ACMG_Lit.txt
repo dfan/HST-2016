@@ -1,0 +1,57 @@
+Adenomatous polyposis coli	3.0000300003e-05	http://www.orpha.net/consor/cgi-bin/OC_Exp.php?Lng=GB&Expert=733
+Aortic aneurysm, familial thoracic 4	2.8999797001421e-05	http://www.ncbi.nlm.nih.gov/pubmed/10807810?dopt=Abstract
+Aortic aneurysm, familial thoracic 6	2.8999797001421e-05	http://www.ncbi.nlm.nih.gov/pubmed/10807810?dopt=Abstract
+Aortic aneurysm, familial thoracic 7	2.8999797001421e-05	http://www.ncbi.nlm.nih.gov/pubmed/10807810?dopt=Abstract
+Arrhythmogenic right ventricular cardiomyopathy, type 5	0.000316255534471853	http://www.ncbi.nlm.nih.gov/pubmed/21360243
+Arrhythmogenic right ventricular cardiomyopathy, type 8	0.000316255534471853	http://www.ncbi.nlm.nih.gov/pubmed/21360243
+Arrhythmogenic right ventricular cardiomyopathy, type 9	0.000316255534471853	http://www.ncbi.nlm.nih.gov/pubmed/21360243
+Arrhythmogenic right ventricular cardiomyopathy, type 10	0.000316255534471853	http://www.ncbi.nlm.nih.gov/pubmed/21360243
+Arrhythmogenic right ventricular cardiomyopathy, type 11	0.000316255534471853	http://www.ncbi.nlm.nih.gov/pubmed/21360243
+Breast-ovarian cancer, familial 1	0.00961538461538462	http://seer.cancer.gov/statfacts/html/breast.html
+Breast-ovarian cancer, familial 2	0.00961538461538462	http://seer.cancer.gov/statfacts/html/breast.html
+Brugada syndrome 1	0.001	www.orpha.net/consor/cgi-bin/OC_Exp.php?Expert=130
+Catecholaminergic polymorphic ventricular tachycardia	1e-04	https://ghr.nlm.nih.gov/condition/catecholaminergic-polymorphic-ventricular-tachycardia#statistics
+Dilated cardiomyopathy 1A	7.00035001750088e-05	http://www.ncbi.nlm.nih.gov/pubmed/9049523
+Ehlers-Danlos syndrome, type 4	2e-04	https://ghr.nlm.nih.gov/condition/ehlers-danlos-syndrome#statistics
+Fabry's disease	1e-05	https://ojrd.biomedcentral.com/articles/10.1186/1750-1172-5-30
+Familial hypercholesterolemia	0.002	http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1853359/
+Familial hypertrophic cardiomyopathy 1	0.002	https://ghr.nlm.nih.gov/condition/familial-hypertrophic-cardiomyopathy#statistics
+Familial hypertrophic cardiomyopathy 3	0.002	https://ghr.nlm.nih.gov/condition/familial-hypertrophic-cardiomyopathy#statistics
+Familial hypertrophic cardiomyopathy 4	0.002	https://ghr.nlm.nih.gov/condition/familial-hypertrophic-cardiomyopathy#statistics
+Familial hypertrophic cardiomyopathy 6	0.002	https://ghr.nlm.nih.gov/condition/familial-hypertrophic-cardiomyopathy#statistics
+Familial hypertrophic cardiomyopathy 7	0.002	https://ghr.nlm.nih.gov/condition/familial-hypertrophic-cardiomyopathy#statistics
+Familial hypertrophic cardiomyopathy 8	0.002	https://ghr.nlm.nih.gov/condition/familial-hypertrophic-cardiomyopathy#statistics
+Familial hypertrophic cardiomyopathy 10	0.002	https://ghr.nlm.nih.gov/condition/familial-hypertrophic-cardiomyopathy#statistics
+Familial hypertrophic cardiomyopathy 11	0.002	https://ghr.nlm.nih.gov/condition/familial-hypertrophic-cardiomyopathy#statistics
+Familial medullary thyroid carcinoma	6.99986000279994e-05	http://www.cancer.gov/types/thyroid/hp/thyroid-treatment-pdq
+Hypercholesterolemia, autosomal dominant, 3	0.002	http://www.acc.org/latest-in-cardiology/articles/2015/07/17/08/23/variation-in-the-prevalence-of-familial-hypercholesterolemia-around-the-world
+Left ventricular noncompaction 6	0.00060313630880579	http://www.omicsonline.org/open-access/left-ventricular-noncompaction-current-controversy-and-new-insights-2157-7412-6-255.php?aid=39346
+Li-Fraumeni syndrome 1	1e-04	http://www.ncbi.nlm.nih.gov/books/NBK1311/
+Loeys-Dietz syndrome type 1A	1e-05	http://ukgtn.nhs.uk/uploads/tx_ukgtn/Loeys-Dietz_Syndrome_TGFBR12_GD_Sept_10.pdf
+Loeys-Dietz syndrome type 1B	1e-05	http://ukgtn.nhs.uk/uploads/tx_ukgtn/Loeys-Dietz_Syndrome_TGFBR12_GD_Sept_10.pdf
+Loeys-Dietz syndrome type 2A	1e-05	http://ukgtn.nhs.uk/uploads/tx_ukgtn/Loeys-Dietz_Syndrome_TGFBR12_GD_Sept_10.pdf
+Loeys-Dietz syndrome type 2B	1e-05	http://ukgtn.nhs.uk/uploads/tx_ukgtn/Loeys-Dietz_Syndrome_TGFBR12_GD_Sept_10.pdf
+Loeys-Dietz syndrome type 3	1e-05	http://ukgtn.nhs.uk/uploads/tx_ukgtn/Loeys-Dietz_Syndrome_TGFBR12_GD_Sept_10.pdf
+Long QT syndrome 1	0.000142857142857143	http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1557415/
+Long QT syndrome 2	0.000142857142857143	http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1557415/
+Long QT syndrome 3	0.000142857142857143	http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1557415/
+Lynch syndrome	0.000870322019147084	http://www.ncbi.nlm.nih.gov/pubmed/16136383
+Malignant hyperthermia	2e-05	http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4524368/
+Marfan's syndrome	0.000244977951984321	http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1513064/
+Multiple endocrine neoplasia, type 1	3.33333333333333e-05	http://www.cancer.gov/types/thyroid/hp/medullary-thyroid-genetics-pdq
+Multiple endocrine neoplasia, type 2a	2.85714285714286e-05	http://www.cancer.gov/types/thyroid/hp/medullary-thyroid-genetics-pdq
+Multiple endocrine neoplasia, type 2b	2.85714285714286e-05	http://www.cancer.gov/types/thyroid/hp/medullary-thyroid-genetics-pdq
+MYH-associated polyposis	1e-04	https://www.researchgate.net/publication/47403108_Prevalence_of_MYH-associated_polyposis_related_to_three_recurrent_mutations_in_Morocco
+Neurofibromatosis, type 2	1.66666666666667e-05	http://www.orpha.net/consor/cgi-bin/OC_Exp.php?Expert=637
+Paragangliomas 1	4e-06	http://www.cancer.gov/types/pheochromocytoma/hp/pheochromocytoma-treatment-pdq
+Paragangliomas 2	4e-06	http://www.cancer.gov/types/pheochromocytoma/hp/pheochromocytoma-treatment-pdq
+Paragangliomas 3	4e-06	http://www.cancer.gov/types/pheochromocytoma/hp/pheochromocytoma-treatment-pdq
+Paragangliomas 4	4e-06	http://www.cancer.gov/types/pheochromocytoma/hp/pheochromocytoma-treatment-pdq
+Peutz-Jeghers syndrome	1.15469441012436e-05	http://www.orpha.net/consor/cgi-bin/OC_Exp.php?Expert=2869
+Pilomatrixoma	0.001	http://radiopaedia.org/articles/pilomatricoma
+PTEN hamartoma tumor syndrome	5e-06	http://www.ncbi.nlm.nih.gov/books/NBK1488/
+Retinoblastoma	6.2992125984252e-05	http://www.who.int/selection_medicines/committees/expert/20/applications/Retinoblastoma.pdf
+Tuberous sclerosis 1	0.000166666666666667	http://www.ninds.nih.gov/disorders/tuberous_sclerosis/detail_tuberous_sclerosis.htm
+Tuberous sclerosis 2	0.000166666666666667	http://www.ninds.nih.gov/disorders/tuberous_sclerosis/detail_tuberous_sclerosis.htm
+Von Hippel-Lindau syndrome	1.88679245283019e-05	http://www.orpha.net/consor/cgi-bin/OC_Exp.php?Expert=892
+Wilms' tumor	1e-04	http://www.ncbi.nlm.nih.gov/pubmed/7680412
