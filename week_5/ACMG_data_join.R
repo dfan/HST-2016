@@ -80,4 +80,21 @@ query("describe ACMG_Lit")
 paste("load data local infile '",write.loc.ACMG.lit,"' into table ACMG_Lit lines terminated by '\n'", sep = "") %>% query
 query("select * from ACMG_Lit limit 5")
 
+geneinfo <- read.delim(file = paste(getwd() , "ACMG_gene_info_tab_delim.txt", sep = "/")  )
+write.table(geneinfo, file = paste(getwd() , "ACMG_gene_info_tab_delim_no_header.txt", sep = "/"),
+            quote = F, col.names = F, row.names = F, sep = "\t")
+
+query("drop table ACMG_Gene")
+query("create table ACMG_Gene (gene varchar(20), chrom varchar (3), txstart int, txend int)")
+query("describe ACMG_Gene")
+paste("load data local infile '",paste(getwd() , "ACMG_gene_info_tab_delim_no_header.txt", sep = "/"), "' into table ACMG_Gene lines terminated by '\n'", sep = "") %>% query
+query("select * from ACMG_Gene")
+
+
+
+
+
+
+
+
 

@@ -72,9 +72,11 @@ download_1000g <- function(gene) {
     # tabix -h ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/
     # ALL.chr2.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz 2:39967768-39967768 |
     # vcf-subset -c HG00099 > test.vcf
+
     command <- paste("tabix -h ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/ALL.%s.",
                      "phase3_%s.20130502.genotypes.vcf.gz %s:%s-%s > %s_genotypes.vcf", sep = "")
     sprintf(command, UCSC$chrom, version, chrom.num, UCSC$start, UCSC$end, gene) %>% system
+
     # Checks whether the file exists
     exists <- grepl(paste(gene,"_genotypes.vcf",sep =""), system("ls", intern = T)) %>% sum > 0
     file.size <- strsplit(paste("stat ","_genotypes.vcf", sep = gene) %>% system(intern = T), " ")[[1]][8]
