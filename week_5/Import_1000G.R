@@ -87,7 +87,7 @@ ACMG.exac.id <- lapply(ACMG.exac, function(x) {
     arrange(Chrom, Position, Reference, Alternate) %>% unite("ID", c(Chrom,Position, Reference, Alternate), sep= "-")
 })
 
-# Import ExAC data for all ACMG
+# Import 1000G data for all ACMG
 ACMG.1000g <- lapply(gene.list, import.file.1000g, cut = F)
 #Take relevant subset (position, ref, alt, allele.freq)
 ACMG.1000g.id <- lapply(ACMG.1000g, function(x) {
