@@ -17,7 +17,9 @@ shinyUI(fluidPage(
            h4("Selected Genes:"),
            textOutput("update"),
            h2(" "),
-           tableOutput("selected")
+           tableOutput("selected"),
+           textOutput("failure"),
+           textOutput("time")
     )),
     column(12,wellPanel(
       plotOutput("pop_plot"),

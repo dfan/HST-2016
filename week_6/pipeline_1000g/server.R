@@ -13,6 +13,8 @@ library(ggbiplot)
 ###### Things to add: ######
 # Offline Cache
 # Tables of row 6
+# Autocomplete
+# Reactive Options (by gene.list)
 
 
 #################################
@@ -34,14 +36,20 @@ shinyServer(function(input, output) {
                      unix.sock = "/Applications/MAMP/tmp/mysql/mysql.sock")
     query <- function (input) { suppressWarnings(dbGetQuery(con, input)) }
     total.genes <- "select name2 from refGene" %>% query %>% unlist %>% unique
-    present.files <- system("ls", intern = T)
+    print.frac <- FALSE
 
     setProgress(0.6, detail ="Downloading Phase 3 Populations Map")
     ### Download phase 3 map from 1000 genomes FTP
-    if (!("phase3map.txt" %in% present.files))
-      system("wget -O phase3map.txt ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/integrated_call_samples_v3.20130502.ALL.panel")
+    system("wget -O phase3map.txt ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/integrated_call_samples_v3.20130502.ALL.panel")
     map <- read.table(file = paste(getwd(),"phase3map.txt",sep = "/"), header = T) %>% tbl_df
+    unlink("phase3map.txt")
     header <- c("CHROM", "POS", "ID", "REF", "ALT", "QUAL", "FILTER", "INFO", "FORMAT", map$sample %>% as.character)
+
+    #Download populations-superpoplations
+    pop.table <- (scrape(url ="http://www.1000genomes.org/category/population/")[[1]] %>% readHTMLTable)[[1]] %>% tbl_df %>% select(contains("Population"))
+    # Super and specific population codes
+    super <- pop.table$`Super Population Code` %>% as.character
+    names(super) <- pop.table$`Population Code`
 
     setProgress(0.9, detail ="Scraping LMM and Clinvar websites for HCM- and ACMG- relevant genes")
     ### Scrape from LMM and Clinvar websites for HCM- and ACMG- relevant genes
@@ -88,6 +96,7 @@ shinyServer(function(input, output) {
 
   ### Sets up new directory for relevant files
   observeEvent(input$set, {
+    setwd(input$wd)
     dir <- sprintf("%s/1000_genomes_populations_analysis_%s",input$wd,Sys.Date())
     system(paste("mkdir",dir))
     setwd(dir)
@@ -104,13 +113,16 @@ shinyServer(function(input, output) {
   observeEvent(input$run, {
 
   if(valid()) {
+    ptm <- proc.time()
+
+    present.files <- system("ls", intern = T)
     gene.list <- genes.all()
     num.genes <- genes.len()
 
     ####################################################################################
     ###  Connecting to UCSC Genome Browser to extract gene info: chrom, start, stop  ###
     ####################################################################################
-    withProgress(message = "Step 1 of 4: Connecting to UCSC Genome Browser", value = 0, {
+    withProgress(message = "Starting Downloads", value = 0, {
     for (con in dbListConnections(MySQL())) dbDisconnect(con)
     con <- dbConnect(MySQL(), user = 'genome',dbname = 'hg19', host = 'genome-mysql.cse.ucsc.edu',
                      unix.sock = "/Applications/MAMP/tmp/mysql/mysql.sock")
@@ -144,9 +156,11 @@ shinyServer(function(input, output) {
         exists <- grepl(paste(gene,"_genotypes.vcf",sep =""), system("ls", intern = T)) %>% sum > 0
         file.size <- strsplit(paste("stat ","_genotypes.vcf", sep = gene) %>% system(intern = T), " ")[[1]][8]
         if (exists & file.size > 0) {
-          print(UCSC$name)
+          print("SUCCESS")
           unlist(UCSC)
-        } else print("UNKNOWN FAILURE")
+        } else {
+          print("UNKNOWN FAILURE")
+        }
       }
     }
 
@@ -155,13 +169,27 @@ shinyServer(function(input, output) {
     ###################
     ###   Download  ###
     ###################
-    setProgress(0.1, message = sprintf("Step 2 of 4: Downloading VCF files from 1000 Genomes"))
-    present <- sapply(gene.list, function(x) paste(x,"genotypes.vcf",sep = "_") %in% present.files)
-    download <- sapply(1:num.genes, function(i) {
-      incProgress(0.4/num.genes, detail = sprintf("%s [%s/%s]", gene.list[[i]], i, num.genes))
+    setProgress(0.1, message = sprintf("Step 1 of 3: Downloading VCF files from 1000 Genomes"))
+    #present <- sapply(gene.list, function(x) paste(x,"genotypes.vcf",sep = "_") %in% present.files)
+    download <- lapply(1:num.genes, function(i) {
+      timing <- (proc.time()-ptm)['elapsed']
+      minutes <- floor(timing/60)
+      seconds <- round(timing - 60*minutes, 0)
+      incProgress(0.4/num.genes, message = sprintf("Step 1 of 3: Downloading VCF from 1000 Genomes - %s [%s/%s]", gene.list[[i]], i, num.genes),
+                  detail = sprintf("Elapsed Time: %s minutes, %s seconds", minutes, seconds))
       #if (!present[i])
-        download_1000g(gene.list[[i]])
-    }) %>% t %>% tbl_df
+      download_1000g(gene.list[[i]])
+    })
+    failed <- NULL
+    for (i in length(download):1) {
+      if (length(download[[i]]) != 4) {
+        failed <- c(failed, gene.list[i])
+        gene.list <- gene.list[-i]
+        num.genes <- num.genes -1
+        download[[i]] <- NULL
+      }
+    }
+    download <- do.call("rbind",download) %>% tbl_df
     download$start <- as.numeric(download$start)
     download$end <- as.numeric(download$end)
     system("rm *.genotypes.vcf.gz.tbi")
@@ -225,23 +253,21 @@ shinyServer(function(input, output) {
     }
 
     # Import 1000G data
-    setProgress(0.5, message = "Step 3 of 4: Importing VCF", detail = " ")
     data.1000g <- lapply(1:num.genes, function(i){
-      incProgress(0.4/num.genes, detail = sprintf("%s [%s/%s]", gene.list[[i]], i, num.genes))
+      timing <- (proc.time()-ptm)['elapsed']
+      minutes <- floor(timing/60)
+      seconds <- round(timing - 60*minutes, 0)
+      incProgress(0.4/num.genes, message = sprintf("Step 2 of 3: Importing %s VCF [%s/%s]",gene.list[[i]], i, num.genes),
+                  detail = sprintf("Elapsed Time: %s minutes, %s seconds", minutes, seconds))
       import.file.1000g(gene.list[[i]])
     })
     names(data.1000g) <- gene.list
 
     ### Contains information about what populations are found where-
-    setProgress(10/10, message = "Step 4 of 4: Finalizing Plot", detail = " ")
-    pop.table <- (scrape(url ="http://www.1000genomes.org/category/population/")[[1]] %>% readHTMLTable)[[1]] %>%
-      tbl_df %>% select(contains("Population"))
-
-    # Super and specific population codes
-    super <- pop.table$`Super Population Code` %>% as.character
-    names(super) <- pop.table$`Population Code`
+    setProgress(10/10, message = "Step 3 of 3: Finalizing Plots", detail = " ")
 
     ### Values to be plotted
+    values <- NULL
     sapply(levels(map$pop), function(pop) {
       temp <- sapply(data.1000g, function(data) {
         data[,10+which(map$pop == pop)] %>% colSums
@@ -290,6 +316,7 @@ shinyServer(function(input, output) {
     output$line_plot <- renderPlot({ plot.line })
 
     observeEvent(input$in.gene, {
+      print.frac <- TRUE
       if (input$select %in% gene.list) {
         pop.data <- data.frame("Population" = unique(map$pop) %>% as.character,
                                "Fraction" = population.data[,input$select] %>% unlist %>% setNames(NULL))
@@ -308,7 +335,7 @@ shinyServer(function(input, output) {
         pdf(file, onefile = TRUE, width = 8, height = 4)
         print(plot.pop)
         print(plot.line)
-        print(plot.frac)
+        if (print.frac) print(plot.frac)
         dev.off()
       }
     )
@@ -330,18 +357,29 @@ shinyServer(function(input, output) {
         write.table(values, file = file, col.names = T, row.names = F, quote = F, sep = "\t")
       }
     )
-
+    timing <- proc.time()-ptm
+    output$time <- renderText({
+      paste("Elapsed Time:", ceiling(timing['elapsed']), "seconds")
+    })
+    output$failure <- renderText({
+      if (is.null(failed)) failed <- "None"
+      paste("Failed Downloads:", failed)
+    })
 
     })
   }
   })
 })
 
+# 1 gene: 16.188
+# 5 genes: 70.963
+# 10 genes: 154.935
+# 50 genes: 875.523
+# 100 genes: 1505.531 (random)
 
-
-#plot(tx.length, var.num, xlab = "Gene Length (tx region)", ylab = "Number of Variants", main = title)
-#abline(a = 0, b = mean(var.num/tx.length))
-#text(min(tx.length),max(var.num), pos = 4, paste("Slope =", mean(var.num/tx.length) %>% round(3), "variants per nucleotide"))
-#text(min(tx.length),max(var.num)*0.95, pos = 4, paste("Correlation =", cor(tx.length, var.num) %>% round(3)))
+genes <- c(1,5,10,50,100)
+times <- c(16.188, 70.963, 154.935, 875.523, 1505.531)
+plot(genes, times, xlab = "Number of Genes", ylab = "Timing (seconds)")
+abline(a = 0, b = mean(times/genes))
 
 
