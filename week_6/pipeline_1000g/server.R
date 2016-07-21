@@ -10,6 +10,11 @@ library(scrapeR)
 library(RMySQL)
 library(ggbiplot)
 
+###### Things to add: ######
+# Offline Cache
+# Tables of row 6
+
+
 #################################
 ####    Main Shiny Server    ####
 #################################
@@ -83,7 +88,7 @@ shinyServer(function(input, output) {
 
   ### Sets up new directory for relevant files
   observeEvent(input$set, {
-    dir <- sprintf("%s1000_genomes_populations_analysis_%s",input$wd,Sys.Date())
+    dir <- sprintf("%s/1000_genomes_populations_analysis_%s",input$wd,Sys.Date())
     system(paste("mkdir",dir))
     setwd(dir)
   })
@@ -138,9 +143,10 @@ shinyServer(function(input, output) {
         # Checks whether the file exists
         exists <- grepl(paste(gene,"_genotypes.vcf",sep =""), system("ls", intern = T)) %>% sum > 0
         file.size <- strsplit(paste("stat ","_genotypes.vcf", sep = gene) %>% system(intern = T), " ")[[1]][8]
-        if (exists & file.size > 0)
+        if (exists & file.size > 0) {
           print(UCSC$name)
-        else print("UNKNOWN FAILURE")
+          unlist(UCSC)
+        } else print("UNKNOWN FAILURE")
       }
     }
 
@@ -153,9 +159,11 @@ shinyServer(function(input, output) {
     present <- sapply(gene.list, function(x) paste(x,"genotypes.vcf",sep = "_") %in% present.files)
     download <- sapply(1:num.genes, function(i) {
       incProgress(0.4/num.genes, detail = sprintf("%s [%s/%s]", gene.list[[i]], i, num.genes))
-      if (!present[i])
+      #if (!present[i])
         download_1000g(gene.list[[i]])
-    })
+    }) %>% t %>% tbl_df
+    download$start <- as.numeric(download$start)
+    download$end <- as.numeric(download$end)
     system("rm *.genotypes.vcf.gz.tbi")
 
 
@@ -253,24 +261,61 @@ shinyServer(function(input, output) {
                     Manual = paste(gene.list, collapse = "-"),
                     paste(input$add,"Genes"))
 
-    plot.out <- ggplot(values, aes(x=Population, y=Mean, fill = Superpopulation)) +
+    tx.length = download$end - download$start
+    var.num = sapply(data.1000g, nrow)
+    var.data <- data.frame(gene = gene.list, tx.length,var.num)
+
+    plot.pop <- ggplot(values, aes(x=Population, y=Mean, fill = Superpopulation)) +
       geom_bar(stat = "identity") + ylim(0,1.1*max(values$SD+values$Mean)) +
       geom_errorbar(aes(ymin=Mean - SD, ymax=Mean + SD, width = 0.5)) + theme_minimal() +
       ggtitle(title) + theme(axis.text.x = element_text(angle = -45, hjust = 0.4))
 
+    label.1 <- data.frame(x=min(tx.length), y=max(var.num), label = paste("Slope =", mean(var.num/tx.length) %>% round(3), "variants per nucleotide"))
+    label.2 <- data.frame(x=min(tx.length), y=max(var.num)*0.9, label = paste("Correlation =", cor(tx.length, var.num) %>% round(3)))
+
+    plot.line <- ggplot(var.data, aes(x = tx.length, y = var.num, label = gene.list)) +
+      geom_text(check_overlap = T, vjust = 0, nudge_y = max(var.num)/70) +
+      geom_point(size = 2) + geom_abline(intercept = 0, slope = mean(var.num/tx.length)) +
+      ggtitle(title) + xlab("Gene Length (tx region)") + ylab("Number of Variant Positions") +
+      geom_text(data = label.1, aes(x=x, y=y, label = label, hjust = 0), size = 6) +
+      geom_text(data = label.2, aes(x=x, y=y, label = label, hjust = 0), size = 6)
+
+    population.data <- sapply(data.1000g, function(data) {
+      sapply(levels(map$pop), function(pop) {
+        (subset(data, select = c(rep(FALSE,10), map$pop == pop)) %>% colSums > 0) %>% mean
+      })
+    }) %>% tbl_df
+
+    output$pop_plot <- renderPlot({ plot.pop })
+    output$line_plot <- renderPlot({ plot.line })
+
+    observeEvent(input$in.gene, {
+      if (input$select %in% gene.list) {
+        pop.data <- data.frame("Population" = unique(map$pop) %>% as.character,
+                               "Fraction" = population.data[,input$select] %>% unlist %>% setNames(NULL))
+        plot.frac <- ggplot(pop.data, aes(x=Population, y=Fraction)) + geom_bar(stat = "identity") +
+          theme_minimal() + xlab("Population") + ylab("Fraction with at least 1 alternate variant") +
+          ggtitle(input$select) + theme(axis.text.x = element_text(angle = -45, hjust = 0.4))
+      output$frac_plot <- renderPlot({ plot.frac })
+      }
+    })
 
     output$down <- downloadHandler(
       filename = function() {
-        sprintf("Plot_%s.%s", title, input$pic)
+        sprintf("Plots_%s.pdf", title)
       },
       content = function(file) {
-        ggsave(filename = file, plot = plot.out, device = input$pic, units = "in", width = 8, height = 4)
+        pdf(file, onefile = TRUE, width = 8, height = 4)
+        print(plot.pop)
+        print(plot.line)
+        print(plot.frac)
+        dev.off()
       }
     )
 
     output$export <- downloadHandler(
       filename = function() {
-        sprintf("Data_%s.%s", title, "RData")
+        sprintf("Data_%s.RData", title)
       },
       content = function(file) {
         save(data.1000g, file = file)
@@ -279,14 +324,12 @@ shinyServer(function(input, output) {
 
     output$tbl <- downloadHandler(
       filename = function() {
-        sprintf("Table_%s.%s", title, "txt")
+        sprintf("Table_%s.txt", title)
       },
       content = function(file) {
         write.table(values, file = file, col.names = T, row.names = F, quote = F, sep = "\t")
       }
     )
-
-    output$pop_plot <- renderPlot({ plot.out })
 
 
     })
@@ -296,5 +339,9 @@ shinyServer(function(input, output) {
 
 
 
+#plot(tx.length, var.num, xlab = "Gene Length (tx region)", ylab = "Number of Variants", main = title)
+#abline(a = 0, b = mean(var.num/tx.length))
+#text(min(tx.length),max(var.num), pos = 4, paste("Slope =", mean(var.num/tx.length) %>% round(3), "variants per nucleotide"))
+#text(min(tx.length),max(var.num)*0.95, pos = 4, paste("Correlation =", cor(tx.length, var.num) %>% round(3)))
 
 

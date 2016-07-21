@@ -55,11 +55,11 @@ tx.length <- (ACMG_tx$txend - ACMG_tx$txstart) %>% setNames(gene.list)
 var.num <- sapply(ACMG.1000g, nrow)
 barplot(var.num, main = "Number of Variants", las = 2)
 barplot(tx.length, main = "Gene Length (tx region)", las = 2)
-cor(var.num, tx.length)
-plot(var.num, tx.length, ylab = "Gene Length (tx region)", xlab = "Number of Variants")
-abline(a = 0, b = mean(tx.length/var.num))
-text(0,max(tx.length), pos = 4, paste("Slope =", mean(tx.length/var.num) %>% round(1), "nucleotides per variant"))
-
+cor(tx.length, var.num)
+plot(tx.length, var.num, xlab = "Gene Length (tx region)", ylab = "Number of Variants")
+abline(a = 0, b = mean(var.num/tx.length))
+text(0,max(var.num), pos = 4, paste("Slope =", mean(var.num/tx.length) %>% round(3), "variants per nucleotide"))
+text(0,max(var.num)*0.9, pos = 4, paste("Correlation =", cor(tx.length, var.num) %>% round(3)))
 
 ### (0|1)  (1|1)  (1|0)  Sites per Patient
 sapply(ACMG.1000g, function(acmg) {
