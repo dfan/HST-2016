@@ -1,0 +1,40 @@
+---
+title: "ROC_Incidentalome_App"
+author: "James Diao"
+date: "June 28, 2016"
+output: html_document
+runtime: shiny
+---
+
+## Inputs and Outputs
+```{r, echo = T}
+load("~/Documents/Kohane_Lab/week_3/ExAC_HCM.RData")
+```
+
+```{r, echo=FALSE}
+inputPanel(
+  selectInput("gene", label = "Gene:",
+              choices = HCM.panel),
+  selectInput("variant", label = "Variant Number:",
+              choices = c(1:100)),
+  selectInput("delta", label = "Change over:",
+              choices = c("Prevalence","Allelic Heterozygosity","Penetrance"))
+)
+
+inputPanel(
+  sliderInput("prevalence", label = "Prevalence:",
+              min = 0, max = 1, value = 1/500, step = 1/10000),
+  sliderInput("allelic.het", label = "Allelic Heterogeneity:",
+              min = 0, max = 1, value = 1/1000, step = 1/10000),
+  sliderInput("penetrance", label = "Penetrance Cutoff:",
+              min = 0, max = 1, value = 0.8, step = 0.05)
+)
+
+#af_threshold <- reactive({ input$prevalence*input$allelic.het/input$penetrance })
+
+renderPlot({
+  plot(1,input$prevalence*input$allelic.het/input$penetrance)
+})
+```
+
+

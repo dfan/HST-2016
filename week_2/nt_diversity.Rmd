@@ -1,0 +1,256 @@
+---
+title: "Nucleotide Diversity"
+author: "James Diao"
+date: "June 20, 2016"
+output: html_document
+---
+
+$$Nucleotide\ Diversity\ (\pi) = \sum_{ij} x_i x_j \pi_{ij}$$
+
+## QUESTIONS
+1. Can we see people who have the simple reference sequence? Or does this data only include sequences with variants? 
+2. Should I be trying to normalize Allele_Frequency to sum to 1?
+3. Am I able to generalize my nucleotide diversity statistic from the ExAC dataset to the general population? 
+4. Am I allowed to take the range of chromosome positions as the total number of nucleotides? 
+5. Can I assume that only 1 variant occurs per sequence? 
+
+```{r, echo = FALSE, warning=FALSE, message=FALSE}
+library(RMySQL)
+library(shiny)
+setwd("/Users/jamesdiao/Documents/Kohane_Lab/Week_2/")
+all_cons <- dbListConnections(MySQL())
+for (con in all_cons)
+  dbDisconnect(con)
+con <- dbConnect(MySQL(), user = 'root', 
+                 password = 'root', dbname = 'kohane_lab', host = 'localhost',
+                 unix.sock = "/Applications/MAMP/tmp/mysql/mysql.sock")
+query <- "select Position, Allele_Count,Allele_Number,Allele_Frequency,
+                Allele_Count_African, Allele_Number_African,
+                Allele_Count_East_Asian, Allele_Number_East_Asian,
+                Allele_Count_European_Non_Finnish, Allele_Number_European_Non_Finnish,
+                Allele_Count_Finnish, Allele_Number_Finnish,
+                Allele_Count_Latino, Allele_Number_Latino,
+                Allele_Count_Other, Allele_Number_Other,
+                Allele_Count_South_Asian, Allele_Number_South_Asian from"
+input.mybpc3 <- dbGetQuery(con, paste(query,"MYBPC3"))
+input.myh7 <- dbGetQuery(con, paste(query,"MYH7"))
+# Takes ancestry (African) and gene dataset input (input.MYBPC3) and outputs "Position, Count, Number, Freq" 
+# This also adds all counts from duplicate positions (totals appear to be the same across duplicates).
+process <- function(ancestry, gene.input) {
+  #Collect and name ancestry-specific columns
+  out <- data.frame(gene.input["Position"], 
+                    gene.input[paste("Allele_Count_", ancestry, sep = "")], 
+                    gene.input[paste("Allele_Number_", ancestry, sep = "")])
+  colnames(out) <- c("Position", "Count", "Number")
+  #Collect nonunique items
+  pos_table <- table(out$Position)
+  nonunique <- names(pos_table)[pos_table>1]
+  #create add_on = all duplicates that have been combined into a single data frame
+  add_on <- as.data.frame(t(sapply(nonunique, function(x) 
+            c(sum(out$Count[out$Position==x]), 
+              mean(out$Number[out$Position==x])))))
+  add_on <- cbind(rownames(add_on), add_on)
+  colnames(add_on) <- colnames(out)
+  #remove all duplicates
+  out <- out[!(out$Position %in% nonunique),]
+  #add combined duplicates back in
+  out <- rbind(out, add_on)
+  #remove all variants that have 0 counts
+  out <- out[out$Count!=0,]
+  rownames(out) <- NULL
+  #calculate and append Freq = count/number
+  out$Freq <- out$Count/out$Number
+  out
+}
+```
+
+### Calculate number of nucleotides in each gene
+```{r}
+nts.mybpc3 <- max(input.mybpc3$Position)-min(input.mybpc3$Position)+1
+nts.myh7 <- max(input.myh7$Position)-min(input.myh7$Position)+1
+```
+```{r, echo = FALSE}
+c("MYBPC3 gene length (nt)" = nts.mybpc3, "MYH7 gene length (nt)" = nts.myh7)
+```
+Assumption: nts = range in chromosomal positions of variants.
+I took this number because it's actually larger than the transcription region range given by UCSC GB. 
+
+### Extract data for MYBPC3 and MYH7
+```{r, echo = FALSE}
+ancestries <- c("African", "East_Asian", "European_Non_Finnish", "Finnish","Latino","Other","South_Asian")
+data.mybpc3 <- lapply(ancestries, function(x) process(x, input.mybpc3))
+data.myh7 <- lapply(ancestries, function(x) process(x, input.myh7))
+names(data.mybpc3) = names(data.myh7) = c("Afr", "E.Asian", "NFE", "Finnish","Latino","Other","S.Asian")
+```
+
+#### *data.mybpc3 is a list, containing a data frame for each ethnicity, with Position, Count, Number, and Freq  
+
+Note: I took all variants at each chromosomal position and summed their counts, including insertions and deletions. 
+```{r}
+str(data.mybpc3)
+```
+
+```{r, echo = FALSE}
+#Plot the number of unique variants
+counts <- rbind(sapply(data.mybpc3, nrow),sapply(data.myh7, nrow))
+rownames(counts) <- c("MYBPC3","MYH7")
+bp <- barplot(counts, ylim = c(0,max(apply(counts,2,sum))*1.2), main = "Unique Variant Counts by Ethnicity", ylab = "Number of Unique Variants", col = c("Black","Red"), beside = T)
+text(bp, counts, counts, pos = 3, cex = 0.8)
+legend("topright",c("MYBPC3","MYH7"), pch = 19, col = c("Black","Red"))
+```
+
+This probably follows relative sample sizes.
+
+### Calculating nucleotide diversity: 
+#### Multiply all pairs of sequence probabilities, multiply by 2/nts. Sum these up.
+Assumptions: variant occurances are independent, only 1 variant can appear per chromosome, no overlaps allowed. 
+```{r}
+ntd_one_per <- function(freq, nts) {
+  2*sum(apply(combn(freq,2),2,prod))*2/nts
+}
+```
+
+### Nucleotide diversity output
+```{r, echo = FALSE}
+ntd.mybpc3 <- sapply(data.mybpc3, function(x) ntd_one_per(x$Freq,nts.mybpc3))
+ntd.myh7 <- sapply(data.myh7, function(x) ntd_one_per(x$Freq,nts.myh7))
+ntd.1 <- rbind(ntd.mybpc3, ntd.myh7)
+ntd.1
+bp <- barplot(ntd.1, ylim = c(0,max(ntd.1)*1.3), 
+              ylab = "Nucleotide Diversity", col = c("Black","Red"), beside = T)
+legend("topright",c("MYBPC3","MYH7"), pch = 19, col = c("Black","Red"))
+```
+
+
+### Calculation takes 1-2 seconds
+```{r, echo = F}
+system.time(sapply(data.mybpc3, function(x) ntd_one_per(x$Freq,nts.mybpc3)))
+```
+
+### Variants/MYBPC3_gene = total_counts/mean_allele_number
+```{r}
+counts_per_chr <- sum(input.mybpc3$Allele_Count)/mean(input.mybpc3$Allele_Number)
+counts_per_chr
+```
+
+It seems like we would want to allow for 4-5 variants per gene. 
+This sounds really hard.
+
+### Combinatorial explosion with multiple variants per gene: 
+Let n be the number of possible variants and m be the max number of variants/gene allowed.  
+
+Possible sequences ($P$) = 100 choose m.  
+Possible sequence _pairs_ = ${P \choose 2}$, or approximately $P^2/2$ for large $P$.  
+
+m = 1 gives us `r choose(choose(100,1),2)` possibilities.  
+m = 4 gives us `r choose(choose(100,4),2)` possibilities.  
+
+Back of the envelope calculations: 1.4 billion times more operations = 50 Tb of storage (if vectorized) and 50 years.  
+
+-------
+
+### Addressing overlap: approximate $\pi_{ij}$ using its expected value:
+
+On the whole, you'd expect that taking into account overlap would improve estimates of 2 values:  
+1. Slightly increase $\pi$ because now you're including cases that you weren't including before (on the order of 0.5% - 5% ). This was estimated by choose(n, 3)/choose(n, 4) for n = 80 and 800.  
+2. Slightly decrease your $\hat{\pi_{ij}}$ because you're including cases that have fewer differences (on the order of 0.1% to 1.3%). This was estimated by pi.est(n,1, nts)/(2/nts) for n = 80 and 800.  
+
+$$\hat{\pi_{ij}} = weighted.average( \pi_{overlap = 0}, \pi_{overlap = 1}, ... \pi_{overlap = all})$$
+$$\hat{\pi_{ij}} = \frac{ 
+ \sum_{i=0}^m \left( weights*\pi_{overlap=i} \right) }
+{\sum_{i=0}^m (weights)}$$  
+where *weights* measure how many possible combinations can occur with m overlaps:  
+$$weights = {n \choose 2m-i} {2m-i \choose i} $$
+and *$\pi_{overlap = i}$* is given by the fraction:
+$$\pi_{overlap = i} = \frac{2m-i}{nts}$$
+
+$2m-i$ is the number of different variants,  
+
+$i$ is the number of overlaps,
+
+${n \choose 2m-i}$ is the number of ways that you can choose the nonoverlapping variants,  
+
+${2m-i \choose i}$ is the number of ways the two sequence variants can overlap,  
+
+$\frac{2m-i}{nts}$ is the proportion of mutually different sites in each type of overlap.  
+
+
+```{r}
+pi.avg <- function(nts, m) {
+  sapply(0:m, function(i) (2*m-i)/nts)
+}
+pi.weights <- function(n, m) {
+  sapply(0:m, function(i) 
+    choose(n, 2*m-i)*
+    choose(2*m-i, i)
+  )
+}
+#from n, pick m, with m possible overlaps
+pi.est <- function (n, m, nts) {
+  sum(pi.avg(nts,m)*pi.weights(n,m))/sum(pi.weights(n,m))
+}
+```
+
+### Calculating nucleotide diversity - WITH overlap
+This sums up 
+This means that the probability of getting any sequence pair is $n \choose 2m$, where n is the number of variant loci, and m is the number of variants per gene. 
+Cases of overlap are hopefully accounted for by $\hat{\pi}$
+```{r}
+ntd_m_per <- function(freq, nts, m) {
+  2*pi.est(length(freq),m,nts)* #pi is now a constant
+    sum(apply(combn(freq,2*m),2,prod))
+}
+ntd.mybpc3 <- sapply(data.mybpc3, function(x) ntd_m_per(x$Freq, nts.mybpc3, 1))
+ntd.myh7 <- sapply(data.myh7, function(x) ntd_m_per(x$Freq, nts.myh7, 1))
+ntd.m.2 <- rbind(ntd.mybpc3, ntd.myh7)
+ntd.m.2
+bp <- barplot(ntd.m.2, ylim = c(0,max(ntd.m.2)*1.3), 
+              ylab = "Nucleotide Diversity", col = c("Black","Red"), beside = T)
+legend("topright",c("MYBPC3","MYH7"), pch = 19, col = c("Black","Red"))
+method_cor <- sapply(c(1:2), function (x) cor(ntd.1[x,], ntd.m.2[x,]))
+names(method_cor) <- c("Cor_MYBPC3", "Cor_MYH7")
+method_cor
+method_diff <- sapply(c(1:2), function (x) mean(ntd.m.2[x,]-ntd.1[x,]))
+names(method_diff) <- c("Pct_Diff_MYBPC3", "Pct_Diff_MYH7")
+method_diff/mean(ntd.1)*100
+```
+
+This still does not overcome combinatorial complexity:  
+1. For m = 2 and 77  variants (Fin), we need to sum up more than choose(77 , 4) values = 1.5 million.  
+2. For m = 2 and 340 variants (Afr), we need to sum up more than choose(340, 4) values = 500 million.  
+3. For m = 2 and 850 variants (NFE), we need to sum up more than choose(850, 4) values = 20,000 million.  
+
+
+### Calculating nucleotide diversity - Bootstrap Simulation
+```{r}
+simul_cohort <- function(freq, size) {
+  t(sapply(1:size, function(x) rbinom(length(freq), 1, prob = freq)))
+}
+#cohort <- simul_cohort(data.mybpc3[[4]]$Freq,10000)
+#paste(c(1,0,0,1,0), collapse = "")
+```
+
+```{r}
+ntd_pair <- function(pair, nts) {
+  sum(xor(pair[1,], pair[2,]))/nts
+}
+#ntd_pair(rbind(c(1,0,1),c(0,0,0)),nts.mybpc3)
+```
+
+The simulation takes the list of allele frequencies from each ancestry and calculates mean nt diversity across "pairs" number of pairs: 
+```{r}
+ntd.simul <- function(cohort, pairs, nts) {
+  sapply(1:pairs, function(x) ntd_pair(
+    cohort[sample(nrow(cohort),2),], nts
+    ))
+}
+raw.output.mybpc3 <- sapply(data.mybpc3, function(x) ntd.simul(simul_cohort(x$Freq, 10000), 10000, nts.mybpc3))
+raw.output.myh7 <- sapply(data.myh7, function(x) ntd.simul(simul_cohort(x$Freq, 10000), 10000, nts.myh7))
+output <- rbind(colMeans(raw.output.mybpc3), colMeans(raw.output.myh7))
+rownames(output) <- c("MYBPC3","MYH7")
+bp <- barplot(output, ylim = c(0,max(output)*1.3), 
+              ylab = "Nucleotide Diversity by Simulation", col = c("Black","Red"), beside = T)
+legend("topright",c("MYBPC3","MYH7"), pch = 19, col = c("Black","Red"))
+output
+```
+
