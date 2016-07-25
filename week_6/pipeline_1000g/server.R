@@ -41,13 +41,14 @@ shinyServer(function(input, output, session) {
   withProgress(message = "--- Setting Up Dependencies ---", value = 0, {
     data.1000g <- NULL
 
-    ### Connect to UCSC to download all refGene names (used for checking gene validity)
+    ### Connect to UCSC to download all refGene names
     setProgress(0.25, detail = "Connecting to UCSC Genome Browser")
     for (con in dbListConnections(MySQL())) dbDisconnect(con)
     con <- dbConnect(MySQL(), user = 'genome',dbname = 'hg19', host = 'genome-mysql.cse.ucsc.edu',
                      unix.sock = "/Applications/MAMP/tmp/mysql/mysql.sock")
     query <- function (input) { suppressWarnings(dbGetQuery(con, input)) }
     total.genes <- "select name2 from refGene" %>% query %>% unlist %>% unique
+    updateSelectizeInput(session, "genes", choices = total.genes, server = TRUE)
 
     setProgress(0.5, detail ="Downloading Phase 3 Populations Map")
     ### Download phase 3 map from 1000 genomes FTP
@@ -83,53 +84,46 @@ shinyServer(function(input, output, session) {
 
   })
 
+  #Reactive values for genes vector and genes length
   rvalues <- reactiveValues()
 
-
   ### Three possibilities, depending on input$add (Radiobuttons)
-  ### (1) manual input: split by "," and " "; (2) HCM.panel; (3) ACMG.panel
+  ### (1) manual input; (2) HCM.panel; (3) ACMG.panel
   observe({
-    if (input$add == "HCM")
-      updateTextInput(session, "genes", value = paste(HCM.panel, collapse = ", "))
-    if (input$add == "ACMG")
-      updateTextInput(session, "genes", value = paste(ACMG.panel, collapse = ", "))
+    if (is.null(input$data)) {
+      if (input$add == "HCM")
+        updateSelectizeInput(session, "genes", choices = total.genes, selected = HCM.panel, server = TRUE)
+      if (input$add == "ACMG")
+        updateSelectizeInput(session, "genes", choices = total.genes, selected = ACMG.panel, server = TRUE)
+      if (input$add == "Manual")
+        updateSelectizeInput(session, "genes", choices = total.genes, selected = NULL, server = TRUE)
+    }
   })
 
   observe({
-    data.in <- input$data
-    if (!is.null(input$data)) {
-      if(grepl(".RData",data.in$name)) {
-        load(data.in$datapath, verbose = T)
-        print(names(data.1000g))
-        rvalues$genes.all <-names(data.1000g)
+    dt <- input$data
+    if (!is.null(dt)) {
+      if(grepl(".RData",dt$name)) {
+        load(dt$datapath, verbose = F)
+        rvalues$genes.all <- names(data.1000g)
+        updateSelectizeInput(session, "genes", choices = total.genes, selected = names(data.1000g), server = TRUE)
         showshinyalert(session, "override", "Note: File upload overrides other inputs")
       } else {
         showshinyalert(session, "wrongfile", "Incompatible file type. Please upload RData file", styleclass = "danger")
       }
-    }
-    else {
-      if (is.null(input$genes))
-        rvalues$genes.all <- NULL
-      else {
-        rvalues$genes.all <- switch(input$add,
-               Manual = strsplit(input$genes %>% toupper," ") %>% unlist %>% strsplit(",") %>% unlist,
-               HCM = HCM.panel,
-               ACMG = ACMG.panel
-        )
-      }
+    } else {
+      rvalues$genes.all <- input$genes
     }
     rvalues$genes.len <- length(rvalues$genes.all)
   })
 
   ### Outputs selected genes in tabulated format
   output$selected <- renderTable({
-    paste(rvalues$genes.all, collapse = ", ")
     if (!is.null(rvalues$genes.all)) {
-      # Aim for squarish table
-      row <- ceiling(sqrt(rvalues$genes.len))
+      column <- min(ceiling(sqrt(rvalues$genes.len)),6) #Squarish table, at most 6 columns
       # Fill in remaining squares with "---"
-      c(rvalues$genes.all,rep("---", ceiling(rvalues$genes.len/row)*row - rvalues$genes.len)) %>%
-        matrix(nrow = row, byrow = F) #%>% tbl_df
+      c(rvalues$genes.all,rep("---", ceiling(rvalues$genes.len/column)*column - rvalues$genes.len)) %>%
+        matrix(ncol = column, byrow = TRUE) #%>% tbl_df
     }
   } #, include.colnames=FALSE
   )
@@ -139,7 +133,7 @@ shinyServer(function(input, output, session) {
   output$est <- renderText({
     if (rvalues$genes.len>0) {
       m <- ceiling(c(18,23) * rvalues$genes.len/60)
-      if (diff(m)==0)
+      if (diff(m)<1)
         "Estimated Runtime: <1 minute"
       else
         sprintf("Estimated Runtime: %s-%s minutes", m[1], m[2] )
@@ -148,6 +142,7 @@ shinyServer(function(input, output, session) {
 
   ### Sets up new directory for relevant files
   observeEvent(input$set, {
+    system("ls")
     setwd(input$wd)
     dir <- sprintf("%s/1000genomes_%s",input$wd,Sys.Date())
     system(paste("mkdir",dir))
@@ -156,34 +151,21 @@ shinyServer(function(input, output, session) {
     showshinyalert(session, "setdir", styleclass = "success", paste("Directory set as:", short))
   })
 
-  ### Tracks whether genes are present in UCSC RefGene data table
-  valid <- reactive({ rvalues$genes.all %in% total.genes })
-  output$update <- renderText({
-    if (rvalues$genes.len>0 & mean(valid())!=1)
-      paste("Invalid Genes:", paste(rvalues$genes.all[!valid()], collapse = ", "))
-  })
-
-
   ### When you click "MAKE PLOT: "
   observeEvent(input$run, {
   if(!is.null(rvalues$genes.all)) {
-  if(mean(valid())==1) {
-    ptm <- proc.time()
-    data.in <- input$data
-    if (!is.null(data.in)) {
-      load(data.in$datapath, verbose = T)
-      print(names(data.1000g))
-      rvalues$genes.all <-names(data.1000g)
-    }
-
-    present.files <- system("ls", intern = T)
-    gene.list <- rvalues$genes.all
-    num.genes <- rvalues$genes.len
 
     withProgress(message = "Starting Downloads", value = 0, {
-
-    if (is.null(input$data)) {
-
+    ptm <- proc.time()
+    present.files <- system("ls", intern = T)
+    dt <- input$data
+    if (!is.null(dt)) {
+      load(dt$datapath, verbose = F)
+      gene.list <- names(data.1000g)
+      num.genes <- length(gene.list)
+    } else {
+    gene.list <- rvalues$genes.all
+    num.genes <- rvalues$genes.len
 
     ####################################################################################
     ###  Connecting to UCSC Genome Browser to extract gene info: chrom, start, stop  ###
@@ -361,7 +343,7 @@ shinyServer(function(input, output, session) {
     plot.pop <- ggplot(values, aes(x=Population, y=Mean, fill = Superpopulation)) +
       geom_bar(stat = "identity") + ylim(0,1.1*max(values$SD+values$Mean)) +
       geom_errorbar(aes(ymin=Mean - SD, ymax=Mean + SD, width = 0.5)) + theme_minimal() +
-      ggtitle(title) + xlab("Population") + ylab("Mean Number of (0|1) (1|0) (1|1) Variants Across All Genes")
+      ggtitle(title) + xlab("Population") + ylab("Mean Number of (0|1) (1|0) (1|1) Variants Across All Genes") +
       theme(axis.text.x = element_text(angle = -45, hjust = 0.4))
 
     label.1 <- data.frame(x=min(tx.length), y=max(var.num), label = paste("Slope =", mean(var.num/tx.length) %>% round(3), "variants per nucleotide"))
@@ -442,10 +424,6 @@ shinyServer(function(input, output, session) {
     })
 
     }) #Closes progress bar
-
-    } else {
-      showshinyalert(session, "invalid", "Please remove invalid genes", styleclass = "danger")
-    } #Closes (are any invalid)
 
    } else {
       showshinyalert(session, "noneselected", "Please select at least 1 gene", styleclass = "danger")
