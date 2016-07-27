@@ -51,18 +51,21 @@ shinyServer(function(input, output, session) {
     updateSelectizeInput(session, "genes", choices = total.genes, server = TRUE)
 
     setProgress(0.5, detail ="Downloading Phase 3 Populations Map")
-    ### Download phase 3 map from 1000 genomes FTP
-    download.file(url = "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/integrated_call_samples_v3.20130502.ALL.panel",
-                  destfile = paste(getwd(),"phase3map.txt",sep = "/"), method = "internal")
-    map <- read.table(file = paste(getwd(),"phase3map.txt",sep = "/"), header = T) %>% tbl_df
-    unlink("phase3map.txt")
-    header <- c("CHROM", "POS", "ID", "REF", "ALT", "QUAL", "FILTER", "INFO", "FORMAT", map$sample %>% as.character)
 
     #Download populations-superpoplations
     pop.table <- (scrape(url ="http://www.1000genomes.org/category/population/")[[1]] %>% readHTMLTable)[[1]] %>% tbl_df %>% select(contains("Population"))
     # Super and specific population codes
     super <- pop.table$`Super Population Code` %>% as.character
     names(super) <- pop.table$`Population Code`
+
+    ### Download phase 3 map from 1000 genomes FTP
+    download.file(url = "ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/integrated_call_samples_v3.20130502.ALL.panel",
+                  destfile = paste(getwd(),"phase3map.txt",sep = "/"), method = "internal")
+    map <- read.table(file = paste(getwd(),"phase3map.txt",sep = "/"), header = T) %>% tbl_df
+    ord <- super[levels(map$pop)] %>% order
+    map$pop <- factor(as.character(map$pop), levels = levels(map$pop)[ord])
+    unlink("phase3map.txt")
+    header <- c("CHROM", "POS", "ID", "REF", "ALT", "QUAL", "FILTER", "INFO", "FORMAT", map$sample %>% as.character)
 
     setProgress(0.75, detail ="Scraping LMM and Clinvar websites for HCM- and ACMG- relevant genes")
     ### Scrape from LMM and Clinvar websites for HCM- and ACMG- relevant genes
@@ -118,17 +121,18 @@ shinyServer(function(input, output, session) {
   })
 
   ### Outputs selected genes in tabulated format
-  output$selected <- renderTable({
-    if (!is.null(rvalues$genes.all)) {
+  output$selected <- renderDataTable(
+    options = list(processing = F, paging = F, searching = F, info = F, ordering = F),
+    expr={
+      if (!is.null(rvalues$genes.all)) {
       column <- min(ceiling(sqrt(rvalues$genes.len)),6) #Squarish table, at most 6 columns
       # Fill in remaining squares with "---"
       c(rvalues$genes.all,rep("---", ceiling(rvalues$genes.len/column)*column - rvalues$genes.len)) %>%
-        matrix(ncol = column, byrow = TRUE) #%>% tbl_df
-    }
-  } #, include.colnames=FALSE
-  )
+        matrix(ncol = column, byrow = TRUE) %>% as.data.frame
+      }
+    })
 
-  output$track <- renderText({  })
+  #output$track <- renderText({ })
 
   output$est <- renderText({
     if (rvalues$genes.len>0) {
@@ -160,6 +164,7 @@ shinyServer(function(input, output, session) {
     present.files <- system("ls", intern = T)
     dt <- input$data
     if (!is.null(dt)) {
+      title <- dt$name
       load(dt$datapath, verbose = F)
       gene.list <- names(data.1000g)
       num.genes <- length(gene.list)
@@ -316,7 +321,6 @@ shinyServer(function(input, output, session) {
     setProgress(10/10, message = "Step 3 of 3: Finalizing Plots", detail = " ")
 
     ### Values to be plotted
-    values <- NULL
     sapply(levels(map$pop), function(pop) {
       temp <- sapply(data.1000g, function(dt) {
         dt[,10+which(map$pop == pop)] %>% colSums
@@ -325,13 +329,10 @@ shinyServer(function(input, output, session) {
     }) %>% t %>% tbl_df -> values
 
     colnames(values) <- c("Mean","SD")
-    rownames(values) <- levels(map$pop)
-    values$Population <- levels(map$pop)
+    values$Population <- factor(levels(map$pop), levels = levels(map$pop))
     values$Superpopulation <- super[levels(map$pop)]
-    ord <- super[levels(map$pop)] %>% order
-    values <- values[ord,]
-    values$Population <- values$Population %>% factor(levels = values$Population)
 
+    if (is.null(input$data))
     title <- switch(input$add,
                     Manual = paste(gene.list, collapse = "-"),
                     paste(input$add,"Genes",sep = "_"))
@@ -343,7 +344,7 @@ shinyServer(function(input, output, session) {
     plot.pop <- ggplot(values, aes(x=Population, y=Mean, fill = Superpopulation)) +
       geom_bar(stat = "identity") + ylim(0,1.1*max(values$SD+values$Mean)) +
       geom_errorbar(aes(ymin=Mean - SD, ymax=Mean + SD, width = 0.5)) + theme_minimal() +
-      ggtitle(title) + xlab("Population") + ylab("Mean Number of (0|1) (1|0) (1|1) Variants Across All Genes") +
+      ggtitle(title) + xlab("Population") + ylab("Mean No. of Alternate Variants") +
       theme(axis.text.x = element_text(angle = -45, hjust = 0.4))
 
     label.1 <- data.frame(x=min(tx.length), y=max(var.num), label = paste("Slope =", mean(var.num/tx.length) %>% round(3), "variants per nucleotide"))
@@ -372,11 +373,12 @@ shinyServer(function(input, output, session) {
 
     observe({
       if (input$select %in% gene.list) {
-        pop.data <- data.frame("Population" = unique(map$pop) %>% as.character,
-                               "Fraction" = population.data[,input$select] %>% unlist %>% setNames(NULL))
-        plot.frac <- ggplot(pop.data, aes(x=Population, y=Fraction)) + geom_bar(stat = "identity") +
+        pop.data <- data.frame("Population" = factor(levels(map$pop), levels = levels(map$pop)),
+                               "Fraction" = population.data[,input$select] %>% unlist %>% setNames(NULL),
+                               "Superpopulation" = super[levels(map$pop)])
+        plot.frac <- ggplot(pop.data, aes(x=Population, y=Fraction, fill = Superpopulation)) + geom_bar(stat = "identity") +
           theme_minimal() + xlab("Population") + ylab("Fraction with at least 1 alternate variant") +
-          ggtitle(input$select) + theme(axis.text.x = element_text(angle = -45, hjust = 0.4))
+          ggtitle(label = input$select) + theme(axis.text.x = element_text(angle = -45, hjust = 0.4))
         output$frac_plot <- renderPlot({ plot.frac })
       }
     })
@@ -389,7 +391,8 @@ shinyServer(function(input, output, session) {
         pdf(file, onefile = TRUE, width = 8, height = 4)
         print(plot.pop)
         print(plot.line)
-        #print(plot.frac)
+        if (exists("plot.frac"))
+          print(plot.frac)
         dev.off()
       }
     )

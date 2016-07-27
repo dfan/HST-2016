@@ -57,6 +57,7 @@ merged <- process.clinvar(merged)
 #load("~/Documents/Kohane_Lab/Eigenstrat/data.1000g")
 #data.1000g <- do.call("rbind",ACMG.1000g)
 #save.image(file = "join_tools")
+
 load("join_tools")
 if (!("VarID" %in% colnames(data.1000g)))
   data.1000g <- data.1000g %>% unite(col = "VarID", CHROM, POS, REF, ALT, sep = "_", remove = FALSE)
@@ -114,12 +115,15 @@ plot.pop <- ggplot(values, aes(x=Gene, y=Mean)) +
 plot.pop
 ###### End
 
-data.1000g[,11:ncol(data.1000g)] <- apply(data.1000g[,11:ncol(data.1000g)], 2, function(y) grepl("1",y))
+#data.1000g[,11:ncol(data.1000g)] <- apply(data.1000g[,11:ncol(data.1000g)], 2, function(y) grepl("1",y))
 
+# For every population, sum up the columns in that population
+# Print the mean and sd
 sapply(levels(map$pop), function(pop) {
-    temp <- data.1000g[,11:ncol(data.1000g)][,which(map$pop == pop)] %>% colSums
+    temp <- data.1000g[,10+which(map$pop == pop)] %>% colSums
     c(mean(temp), sd(temp))
   }) %>% t %>% tbl_df -> values
+
 colnames(values) <- c("Mean","SD")
 rownames(values) <- levels(map$pop)
 values$Population <- levels(map$pop)
@@ -129,20 +133,57 @@ values <- values[ord,]
 values$Population <- values$Population %>% factor(levels = values$Population)
 
 plot.pop <- ggplot(values, aes(x=Population, y=Mean, fill = Superpopulation)) +
-  geom_bar(stat = "identity") + ylim(0,1.1*max(values$SD+values$Mean)) +
-  ggtitle("137 ClinVar Variants in ACMG genes") + xlab("Population") + ylab("Mean Number of (0|1) (1|0) (1|1) Variant Sites") +
+  geom_bar(stat = "identity") + ylim(-0.26,1.1*max(values$SD+values$Mean)) +
+  ggtitle("Only ClinVar-Pathogenic Variants (137)") + xlab("Population") + ylab("Mean Number of (0|1) (1|0) (1|1) Variant Sites") +
   geom_errorbar(aes(ymin=Mean - SD, ymax=Mean + SD, width = 0.5)) + theme_minimal() +
   theme(axis.text.x = element_text(angle = -45, hjust = 0.4))
+plot.pop
 
 
+# For every population, sum up the columns in that population ONLY in the
+# 137 pathogenic variants that overlap with Clinvar
+# Print the proportion of individuals in that population that have at least 1 variant
 sapply(levels(map$pop), function(pop) {
   temp <- data.1000g[ind.1000g,10+which(map$pop == pop)] %>% colSums
   mean(temp>0)
 })-> values
 
-col <- rainbow(5)[as.factor(super[levels(map$pop)[ord]]) %>% as.numeric]
-barplot(values[ord], las = 2, ylim = c(0,1), col = col, ylab = "Proportion with at least 1 variant", main = "Carrier Fraction Across All 137 ClinVar Variants")
+#sapply(levels(map$pop), function(pop) {
+#  temp <- data.1000g[ind.1000g,10+which(map$pop == pop)] %>% colSums
+#  c(mean(temp), sd(temp))
+#}) %>% t %>% tbl_df -> values.137
+
+# Calculating test statistics (F-values)
+# values <- values.138000$Mean
+# groups <- ifelse(super[values.138000$Population]=="AFR","AFR","Other")
+# data <- data.frame(y = values, group = factor(groups))
+# fit <- lm(y ~ group, data)
+# plot(y ~ group, data, las = 2)
+# anova(fit)
+
+# desired plotting order of populations (alphabetal WITHIN each superpopulation)
+ord <- super[levels(map$pop)] %>% order
+# levels of superpopulation ("AFR","AMR","EAS","EUR","SAS")
+super.levels <- sort(unique(super))
+# levels of population ("ACB","ASW","ESN"..."CEU","FIN","GBR"...)
+pop.levels <- levels(map$pop)[ord]
+
+# set of all colors used (by superpopulation)
+col.set <- length(super.levels) %>% rainbow %>% setNames(super.levels)
+# turn into a vector for plotting
+col.use <- col.set[super[pop.levels]]
+barplot(values[ord], las = 2, ylim = c(0,1), col = col.use, ylab = "Proportion with at least 1 variant", main = "Carrier Fraction Across All 137 ClinVar Variants")
 legend("topright", legend = sort(unique(super)), pch = 20, cex = 0.9, col = rainbow(5))
+
+values.all <- data.frame("Proportion" = values,
+                         "Population" = factor(names(values), levels = pop.levels),
+                         "Superpopulation" = factor(super[names(values)], levels = super.levels))
+plot.pop <- ggplot(values.all, aes(x=Population, y=Proportion, fill = Superpopulation)) +
+  geom_bar(stat = "identity") + ylim(0,1) +
+  ggtitle("Carrier Fraction Across All 137 ClinVar Variants") + xlab("Population") + ylab("Proportion with at least 1 variant") +
+  theme_minimal() + theme(axis.text.x = element_text(angle = -45, hjust = 0.4))
+plot.pop
+
 
 
 plot.pop <- ggplot(values, aes(x=Gene, y=Mean)) +
@@ -163,8 +204,13 @@ af.exac <- merged[ind.clinvar,'ExAc_Overall_Frequency']
 cor(af.1000g, af.exac)
 sum(!is.na(af.esp))
 
+
+
 ### Once you have the actual data.
-setwd("/Users/jamesdiao/Documents/Kohane_Lab/HST-2016/week_6")
+setwd("/Users/jamesdiao/Documents/Kohane_Lab/HST-2016/week_7")
+#save.image(file = "join_tools_7-27")
+load("join_tools_7-27")
+
 ACMG_Lit <- read.csv(file = "ACMG_Lit_Small.csv", header = TRUE, stringsAsFactors = F) #some table
 prevalence <- ACMG_Lit$Inverse.Prevalence #some vector
 disease <- ACMG_Lit$Disease
@@ -177,35 +223,77 @@ tags <- c("adenomatous", rep("aneurysm",3), rep("arrhythmogenic;dreifuss",5),
           "hyperthermia","Marfan",rep("neoplasia;men2a",3),"MYH;colon","neurofibromatosis",
           rep("paraganglioma;pheochromocytoma",4),"peutz;jeghers","pilomatrixoma",
           "Cowden;PTEN;hamartoma;Merkel","retinoblastoma",rep("tuberous",2),"Hippel;Lindau","Wilms")
-tags.cut <- sapply(unique(tags), function(t) substr(t,2,nchar(t)))
-freq <- sapply(tags.cut, function(tag) {
-  tag.vec <- strsplit(tag,";") %>% unlist
-  final = hits = 0
-  for(tag in tag.vec) {
-    freq.exac <- merged[grep(tag,merged$Disease, ignore.case = T),'ExAc_Overall_Frequency']
-    freq.esp <- merged[grep(tag,merged$Disease, ignore.case = T),'ESP_Overall_Frequency']
-    freq.exac[is.na(freq.exac)] <- freq.esp[is.na(freq.exac)]
-    freq.exac <- freq.exac[!is.na(freq.exac)]
-    hits <- hits + length(freq.exac)
-    final <- final + 1-prod(1-freq.exac)
-  }
-  c(final, hits)
-}) %>% t %>% tbl_df
-freq <- data.frame(unique(tags), freq)
-colnames(freq) <- c("Tags","AF","hits")
-freq
-bp <- freq$AF %>% setNames(freq$Tags)
-par(mar=c(15, 4, 3, 1))
-barplot(bp, las = 2, pch = 'h', ylab ="P(having a variant)", main = "Carrier frequency by disease")
-par(mar=c(5, 4, 4, 2)+0.1)
 
+getExACAlleleFreq <- function(input, tags, data) {
+  temp <- sapply(unique(tags), function(tag) {
+    tag.vec <- strsplit(tag,";") %>% unlist
+    loc <- rep(0,nrow(input))
+    for(tag in tag.vec)
+      loc <- loc | grepl(tag,input$Disease, ignore.case = T)
+    freq.data <- input %>% subset(loc) %>% select(contains(data))
+    #freq.esp <- input %>% subset(loc) %>% select(freq.use)
+    missing <- is.na(freq.data)
+    #freq.exac[missing] <- freq.esp[missing]
+    hits <- sum(loc)
+    final <- 1-prod(1-freq.data[!missing])
+    c(final, hits) %>% setNames(c("AF","Hits"))
+  }) %>% t %>% tbl_df
+  data.frame("Tags" = unique(tags), temp)
+}
+
+get1000GAlleleFreq <- function(input, tags) {
+  temp <- sapply(unique(tags), function(tag) {
+    tag.vec <- strsplit(tag,";") %>% unlist
+    loc <- rep(0,nrow(input))
+    for(tag in tag.vec)
+      loc <- loc | grepl(tag,input$Disease, ignore.case = T)
+    final <- mean(colSums(input[loc,11:ncol(input)] )>0)
+    hits <- sum(loc)
+    c(final, hits) %>% setNames(c("AF","Hits"))
+  }) %>% t %>% tbl_df
+  data.frame("Tags" = unique(tags), temp)
+}
+
+sub.clinvar$G1000_Overall_Frequency <- sapply(sub.clinvar$VarID, function(id) {
+  sub.1000g %>% subset(sub.1000g$VarID == id) %>% select(AF) %>% unlist %>% as.numeric
+})
+
+#Write the 1000G info into clinvar
+temp <- sapply(sub.clinvar$VarID, function(id) {
+  sub.1000g %>% subset(sub.1000g$VarID == id) %>% select(13:ncol(sub.1000g)) %>% unlist
+}) %>% t %>% tbl_df
+sub.clinvar <- cbind(sub.clinvar,temp)
+
+
+freq1 <- getExACAlleleFreq(merged,tags, "ExAc")
+freq2 <- get1000GAlleleFreq(sub.clinvar,tags)
+
+bp <- freq$AF %>% setNames(freq$Tags) %>% sort(decreasing = T)
+par(mar=c(5, 15, 5, 2)) #changes plotting window to have greater left-margins
+barplot(bp, las = 2, pch = 'h', xlab ="P(having a variant)", main = "Carrier frequency by disease",
+        horiz = T, xlim = c(0,max(bp))*1.1, las = 1)
+par(mar=c(5, 4, 4, 2)+0.1) #resets margins
+
+# Map of disease name to disease tags
 cbind("Disease" = disease,"PATTERN" = tags %>% unique)
 named.freqs <- bp[tags] %>% setNames(disease)
 named.prev <- 1/ACMG_Lit$Inverse.Prevalence %>% setNames(disease)
-allelic.het <- 0.02
-penetrance <- named.prev[unique(disease)]/named.freqs[unique(disease)] * allelic.het
-par(mar=c(22, 4, 3, 1))
-barplot(penetrance %>% log10,las = 2, ylab = "Penetrance")
+# Repeats allow for correct quartile calculations
+allelic.het <- c(0.001,0.001,0.02,0.5,0.5)
+# Point values for penetrance
+penetrance <- named.prev[unique(disease)]/named.freqs[unique(disease)] * median(allelic.het)
+
+# Matrix of penetrance values for allelic het range, capped at 1
+pen.unlist <- sapply(named.prev[unique(disease)]/named.freqs[unique(disease)], function(x) x*allelic.het) %>% as.vector
+inf.loc <- which(pen.unlist %>% is.infinite)[c(T,F,F,F,F)]
+for(i in inf.loc)
+  pen.unlist[seq(i,i+4)] <- c(0,0,1,1,1)
+pen.unlist[pen.unlist>1] <- 1
+
+# replicate each element n times to create labels
+data <- data.frame("penetrance" = pen.unlist, "disease" = sapply(disease, function(x) rep(x,length(allelic.het))) %>% as.vector)
+par(mar=c(5, 22, 5, 2))
+boxplot(penetrance ~ disease, data, horizontal = TRUE, las = 1, xlab = "Penetrance", main = "Penetrance Range Estimates for P(V|D) = 0.001, 0.02, 0.5, AF from 1000G")
 par(mar=c(5, 4, 4, 2)+0.1)
 
 

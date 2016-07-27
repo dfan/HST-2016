@@ -22,9 +22,9 @@ shinyUI(fluidPage(
       shinyalert("wrongfile", click.hide = FALSE, auto.close.after = 3)
       )),
     column(7,wellPanel(
-           h4("Selected Genes:"),
+           h4("Selected Genes"),
            textOutput("track"),
-           tableOutput("selected"),
+           dataTableOutput("selected"),
            textOutput("est"),
            textOutput("failure"),
            shinyalert("noneselected", click.hide = FALSE, auto.close.after = 3),
@@ -39,7 +39,7 @@ shinyUI(fluidPage(
       h2(" "),
       plotOutput("line_plot"),
       h2(" "),
-      selectInput("select", "Select Gene: ", choices = c("N/A"), width = '100%'),
+      selectInput("select", "Select Gene: ", choices = c("N/A"), selected = "N/A", width = '100%'),
       h2(" "),
       plotOutput("frac_plot"),
       h2(" "),
