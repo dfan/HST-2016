@@ -169,6 +169,7 @@ download <- lapply(1:num.genes, function(i) {
     unlink(sprintf("%s_genotypes.vcf", gene.list[i]))
   }
 })
+length(download) <- 50
 
 failed <- NULL
 for (i in length(download):1) {

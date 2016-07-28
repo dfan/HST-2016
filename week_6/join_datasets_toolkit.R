@@ -2,10 +2,10 @@
 #July 23, 2016
 #Kohane Lab
 
-library(dplyr)
-library(tidyr)
 library(ggbiplot)
 library(scrapeR)
+library(dplyr)
+library(tidyr)
 
 ########################
 ####  Dependencies  ####
@@ -153,13 +153,12 @@ sapply(levels(map$pop), function(pop) {
 #  c(mean(temp), sd(temp))
 #}) %>% t %>% tbl_df -> values.137
 
-# Calculating test statistics (F-values)
-# values <- values.138000$Mean
-# groups <- ifelse(super[values.138000$Population]=="AFR","AFR","Other")
-# data <- data.frame(y = values, group = factor(groups))
-# fit <- lm(y ~ group, data)
-# plot(y ~ group, data, las = 2)
-# anova(fit)
+#Calculating test statistics (F-values)
+ groups <- ifelse(super[levels(map$pop)]=="EUR","EUR","Other")
+ data <- data.frame(y = values, group = factor(groups))
+ fit <- lm(y ~ group, data)
+ plot(y ~ group, data, las = 2)
+ anova(fit)
 
 # desired plotting order of populations (alphabetal WITHIN each superpopulation)
 ord <- super[levels(map$pop)] %>% order
@@ -247,7 +246,7 @@ get1000GAlleleFreq <- function(input, tags) {
     loc <- rep(0,nrow(input))
     for(tag in tag.vec)
       loc <- loc | grepl(tag,input$Disease, ignore.case = T)
-    final <- mean(colSums(input[loc,11:ncol(input)] )>0)
+    final <- mean(colSums( input[loc,11:ncol(input)] )>0)
     hits <- sum(loc)
     c(final, hits) %>% setNames(c("AF","Hits"))
   }) %>% t %>% tbl_df
@@ -265,14 +264,17 @@ temp <- sapply(sub.clinvar$VarID, function(id) {
 sub.clinvar <- cbind(sub.clinvar,temp)
 
 
-freq1 <- getExACAlleleFreq(merged,tags, "ExAc")
-freq2 <- get1000GAlleleFreq(sub.clinvar,tags)
+freq <- getExACAlleleFreq(merged,tags, "ExAc")
+freq <- get1000GAlleleFreq(sub.clinvar,tags)
 
 bp <- freq$AF %>% setNames(freq$Tags) %>% sort(decreasing = T)
 par(mar=c(5, 15, 5, 2)) #changes plotting window to have greater left-margins
 barplot(bp, las = 2, pch = 'h', xlab ="P(having a variant)", main = "Carrier frequency by disease",
         horiz = T, xlim = c(0,max(bp))*1.1, las = 1)
 par(mar=c(5, 4, 4, 2)+0.1) #resets margins
+
+# 1000G frequency, ExAC frequency, prevalence estimate, penetrance estimate
+#
 
 # Map of disease name to disease tags
 cbind("Disease" = disease,"PATTERN" = tags %>% unique)
@@ -295,7 +297,6 @@ data <- data.frame("penetrance" = pen.unlist, "disease" = sapply(disease, functi
 par(mar=c(5, 22, 5, 2))
 boxplot(penetrance ~ disease, data, horizontal = TRUE, las = 1, xlab = "Penetrance", main = "Penetrance Range Estimates for P(V|D) = 0.001, 0.02, 0.5, AF from 1000G")
 par(mar=c(5, 4, 4, 2)+0.1)
-
 
 
 
