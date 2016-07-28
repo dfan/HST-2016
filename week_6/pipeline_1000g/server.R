@@ -3,6 +3,7 @@
 #Kohane Lab | HST
 #Pipeline Server
 
+# Dependencies
 library(shiny)
 library(shinysky)
 library(dplyr)
@@ -12,12 +13,7 @@ library(RMySQL)
 library(ggbiplot)
 options(shiny.maxRequestSize=2500*1024^2)
 
-#shinysky::run.shinysky.example()
-
-###### Things to add: ######
-# Autocomplete
-#   shinysky
-
+# Timing Function
 to_min <- function(timing) {
   timing <- as.numeric(timing)
   minutes <- floor(timing/60)
@@ -103,6 +99,7 @@ shinyServer(function(input, output, session) {
     }
   })
 
+  # Updating list of genes
   observe({
     dt <- input$data
     if (!is.null(dt)) {
@@ -179,8 +176,6 @@ shinyServer(function(input, output, session) {
     for (con in dbListConnections(MySQL())) dbDisconnect(con)
     con <- dbConnect(MySQL(), user = 'genome',dbname = 'hg19', host = 'genome-mysql.cse.ucsc.edu',
                      unix.sock = "/Applications/MAMP/tmp/mysql/mysql.sock")
-    query <- function (input) { suppressWarnings(dbGetQuery(con, input)) }
-
 
     ####################################################
     ###  Function for downloading 1000 genomes data  ###
@@ -221,7 +216,7 @@ shinyServer(function(input, output, session) {
     ###   Download  ###
     ###################
 
-    setProgress(0.1, message = sprintf("Step 1 of 3: Downloading VCF files from 1000 Genomes"))
+    setProgress(0.1, message = "Step 1 of 3: Downloading VCF files from 1000 Genomes")
     #present <- sapply(gene.list, function(x) paste(x,"genotypes.vcf",sep = "_") %in% present.files)
     download <- lapply(1:num.genes, function(i) {
       timing <- (proc.time()-ptm)['elapsed'] %>% to_min
