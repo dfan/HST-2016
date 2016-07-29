@@ -176,6 +176,7 @@ shinyServer(function(input, output, session) {
     for (con in dbListConnections(MySQL())) dbDisconnect(con)
     con <- dbConnect(MySQL(), user = 'genome',dbname = 'hg19', host = 'genome-mysql.cse.ucsc.edu',
                      unix.sock = "/Applications/MAMP/tmp/mysql/mysql.sock")
+    query <- function (input) { suppressWarnings(dbGetQuery(con, input)) }
 
     ####################################################
     ###  Function for downloading 1000 genomes data  ###

@@ -246,7 +246,7 @@ get1000GAlleleFreq <- function(input, tags) {
     loc <- rep(0,nrow(input))
     for(tag in tag.vec)
       loc <- loc | grepl(tag,input$Disease, ignore.case = T)
-    final <- mean(colSums( input[loc,11:ncol(input)] )>0)
+    final <- mean(colSums( input[loc,11:ncol(input)] ))
     hits <- sum(loc)
     c(final, hits) %>% setNames(c("AF","Hits"))
   }) %>% t %>% tbl_df
@@ -263,18 +263,18 @@ temp <- sapply(sub.clinvar$VarID, function(id) {
 }) %>% t %>% tbl_df
 sub.clinvar <- cbind(sub.clinvar,temp)
 
+freq_exac <- getExACAlleleFreq(merged,tags, "ExAc")
+freq_1000g <- get1000GAlleleFreq(sub.clinvar,tags)
+all.data <- data.frame("Disease" = disease, "Pattern" = tags %>% unique, "Freq_ExAC" = freq_exac$AF, "Freq_1000G" = freq_1000g$AF)
+plot(freq_exac$AF, freq_1000g$AF, ylim = c(0,0.3), xlim = c(0,0.3), xlab = "ExAC Frequency", ylab = "1000G Frequency")
 
-freq <- getExACAlleleFreq(merged,tags, "ExAc")
-freq <- get1000GAlleleFreq(sub.clinvar,tags)
+#bp <- freq$AF %>% setNames(freq$Tags) %>% sort(decreasing = T)
+#par(mar=c(5, 15, 5, 2)) #changes plotting window to have greater left-margins
+#barplot(bp, las = 2, pch = 'h', xlab ="P(having a variant)", main = "Carrier frequency by disease",
+#        horiz = T, xlim = c(0,max(bp))*1.1, las = 1)
+#par(mar=c(5, 4, 4, 2)+0.1) #resets margins
 
-bp <- freq$AF %>% setNames(freq$Tags) %>% sort(decreasing = T)
-par(mar=c(5, 15, 5, 2)) #changes plotting window to have greater left-margins
-barplot(bp, las = 2, pch = 'h', xlab ="P(having a variant)", main = "Carrier frequency by disease",
-        horiz = T, xlim = c(0,max(bp))*1.1, las = 1)
-par(mar=c(5, 4, 4, 2)+0.1) #resets margins
-
-# 1000G frequency, ExAC frequency, prevalence estimate, penetrance estimate
-#
+#table 1000G frequency, ExAC frequency, prevalence estimate, penetrance estimate
 
 # Map of disease name to disease tags
 cbind("Disease" = disease,"PATTERN" = tags %>% unique)
@@ -287,9 +287,9 @@ penetrance <- named.prev[unique(disease)]/named.freqs[unique(disease)] * median(
 
 # Matrix of penetrance values for allelic het range, capped at 1
 pen.unlist <- sapply(named.prev[unique(disease)]/named.freqs[unique(disease)], function(x) x*allelic.het) %>% as.vector
-inf.loc <- which(pen.unlist %>% is.infinite)[c(T,F,F,F,F)]
-for(i in inf.loc)
-  pen.unlist[seq(i,i+4)] <- c(0,0,1,1,1)
+#inf.loc <- which(pen.unlist %>% is.infinite)[c(T,F,F,F,F)]
+#for(i in inf.loc)
+#  pen.unlist[seq(i,i+4)] <- c(0,0,1,1,1)
 pen.unlist[pen.unlist>1] <- 1
 
 # replicate each element n times to create labels
@@ -298,6 +298,13 @@ par(mar=c(5, 22, 5, 2))
 boxplot(penetrance ~ disease, data, horizontal = TRUE, las = 1, xlab = "Penetrance", main = "Penetrance Range Estimates for P(V|D) = 0.001, 0.02, 0.5, AF from 1000G")
 par(mar=c(5, 4, 4, 2)+0.1)
 
+sub.clinvar$Gene <- sapply(sub.clinvar$VarID, function(id) {
+  sub.1000g[id == sub.1000g$VarID, 1]
+})
+#Gene v. Disease
+data.frame(sub.clinvar$Gene, sub.clinvar$Disease)
+#Take transcription regions to relabel the diseases:
+#
 
 
 sub.clinvar$Matched <- c("PTEN hamartoma tumor syndrome",

@@ -176,6 +176,7 @@ shinyServer(function(input, output, session) {
     for (con in dbListConnections(MySQL())) dbDisconnect(con)
     con <- dbConnect(MySQL(), user = 'genome',dbname = 'hg19', host = 'genome-mysql.cse.ucsc.edu',
                      unix.sock = "/Applications/MAMP/tmp/mysql/mysql.sock")
+    query <- function (input) { suppressWarnings(dbGetQuery(con, input)) }
 
     ####################################################
     ###  Function for downloading 1000 genomes data  ###
@@ -218,21 +219,16 @@ shinyServer(function(input, output, session) {
 
     setProgress(0.1, message = "Step 1 of 3: Downloading VCF files from 1000 Genomes")
     #present <- sapply(gene.list, function(x) paste(x,"genotypes.vcf",sep = "_") %in% present.files)
-    drop <- NULL
     download <- lapply(1:num.genes, function(i) {
       timing <- (proc.time()-ptm)['elapsed'] %>% to_min
       incProgress(0.4/num.genes, message = sprintf("Step 1 of 3: Downloading VCF from 1000 Genomes - %s [%s/%s]", gene.list[[i]], i, num.genes),
                   detail = paste("Elapsed Time: ", timing, sep = ""))
       #if (!present[i])
       download_1000g(gene.list[[i]])
-      if (!grepl("HG000",system(sprintf("tail -n 1 %s_genotypes.vcf", gene.list[i]), intern = T))) {
-        drop <- c(drop,i)
-        unlink(sprintf("%s_genotypes.vcf", gene.list[i]))
-      }
     })
     failed <- NULL
     for (i in length(download):1) {
-      if (length(download[[i]]) != 4 | (i %in% drop)) {
+      if (length(download[[i]]) != 4) {
         failed <- c(failed, gene.list[i])
         gene.list <- gene.list[-i]
         num.genes <- num.genes -1
@@ -344,7 +340,7 @@ shinyServer(function(input, output, session) {
     plot.pop <- ggplot(values, aes(x=Population, y=Mean, fill = Superpopulation)) +
       geom_bar(stat = "identity") + ylim(0,1.1*max(values$SD+values$Mean)) +
       geom_errorbar(aes(ymin=Mean - SD, ymax=Mean + SD, width = 0.5)) + theme_minimal() +
-      ggtitle(title) + xlab("Population") + ylab("Mean No. of Alternate Variants") +
+      ggtitle(title) + xlab("Population") + ylab("Mean No. of Non-Reference Variants") +
       theme(axis.text.x = element_text(angle = -45, hjust = 0.4))
 
     label.1 <- data.frame(x=min(tx.length), y=max(var.num), label = paste("Slope =", mean(var.num/tx.length) %>% round(3), "variants per nucleotide"))
@@ -377,7 +373,7 @@ shinyServer(function(input, output, session) {
                                "Fraction" = population.data[,input$select] %>% unlist %>% setNames(NULL),
                                "Superpopulation" = super[levels(map$pop)])
         plot.frac <- ggplot(pop.data, aes(x=Population, y=Fraction, fill = Superpopulation)) + geom_bar(stat = "identity") +
-          theme_minimal() + xlab("Population") + ylab("Fraction with at least 1 alternate variant") +
+          theme_minimal() + xlab("Population") + ylab("Fraction with at least 1 non-reference variant") +
           ggtitle(label = input$select) + theme(axis.text.x = element_text(angle = -45, hjust = 0.4))
         output$frac_plot <- renderPlot({ plot.frac })
       }
